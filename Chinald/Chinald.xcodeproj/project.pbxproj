@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2B733A82057816000D0F043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B733A72057816000D0F043 /* AppDelegate.m */; };
+		D2B733AB2057816000D0F043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B733AA2057816000D0F043 /* ViewController.m */; };
+		D2B733AE2057816000D0F043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B733AC2057816000D0F043 /* Main.storyboard */; };
+		D2B733B02057816000D0F043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B733AF2057816000D0F043 /* Assets.xcassets */; };
+		D2B733B32057816000D0F043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B733B12057816000D0F043 /* LaunchScreen.storyboard */; };
+		D2B733B62057816000D0F043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B733B52057816000D0F043 /* main.m */; };
+		D2B733C02057816000D0F043 /* ChinaldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B733BF2057816000D0F043 /* ChinaldTests.m */; };
+		D2B733CB2057816000D0F043 /* ChinaldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B733CA2057816000D0F043 /* ChinaldUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2B733BC2057816000D0F043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2B7339B2057816000D0F043 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2B733A22057816000D0F043;
+			remoteInfo = Chinald;
+		};
+		D2B733C72057816000D0F043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2B7339B2057816000D0F043 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2B733A22057816000D0F043;
+			remoteInfo = Chinald;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2B733A32057816000D0F043 /* Chinald.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinald.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B733A62057816000D0F043 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D2B733A72057816000D0F043 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D2B733A92057816000D0F043 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D2B733AA2057816000D0F043 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D2B733AD2057816000D0F043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2B733AF2057816000D0F043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2B733B22057816000D0F043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2B733B42057816000D0F043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B733B52057816000D0F043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2B733BB2057816000D0F043 /* ChinaldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinaldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B733BF2057816000D0F043 /* ChinaldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaldTests.m; sourceTree = "<group>"; };
+		D2B733C12057816000D0F043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B733C62057816000D0F043 /* ChinaldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinaldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B733CA2057816000D0F043 /* ChinaldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaldUITests.m; sourceTree = "<group>"; };
+		D2B733CC2057816000D0F043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2B733A02057816000D0F043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733B82057816000D0F043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733C32057816000D0F043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2B7339A2057816000D0F043 = {
+			isa = PBXGroup;
+			children = (
+				D2B733A52057816000D0F043 /* Chinald */,
+				D2B733BE2057816000D0F043 /* ChinaldTests */,
+				D2B733C92057816000D0F043 /* ChinaldUITests */,
+				D2B733A42057816000D0F043 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2B733A42057816000D0F043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2B733A32057816000D0F043 /* Chinald.app */,
+				D2B733BB2057816000D0F043 /* ChinaldTests.xctest */,
+				D2B733C62057816000D0F043 /* ChinaldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2B733A52057816000D0F043 /* Chinald */ = {
+			isa = PBXGroup;
+			children = (
+				D2B733A62057816000D0F043 /* AppDelegate.h */,
+				D2B733A72057816000D0F043 /* AppDelegate.m */,
+				D2B733A92057816000D0F043 /* ViewController.h */,
+				D2B733AA2057816000D0F043 /* ViewController.m */,
+				D2B733AC2057816000D0F043 /* Main.storyboard */,
+				D2B733AF2057816000D0F043 /* Assets.xcassets */,
+				D2B733B12057816000D0F043 /* LaunchScreen.storyboard */,
+				D2B733B42057816000D0F043 /* Info.plist */,
+				D2B733B52057816000D0F043 /* main.m */,
+			);
+			path = Chinald;
+			sourceTree = "<group>";
+		};
+		D2B733BE2057816000D0F043 /* ChinaldTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2B733BF2057816000D0F043 /* ChinaldTests.m */,
+				D2B733C12057816000D0F043 /* Info.plist */,
+			);
+			path = ChinaldTests;
+			sourceTree = "<group>";
+		};
+		D2B733C92057816000D0F043 /* ChinaldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2B733CA2057816000D0F043 /* ChinaldUITests.m */,
+				D2B733CC2057816000D0F043 /* Info.plist */,
+			);
+			path = ChinaldUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2B733A22057816000D0F043 /* Chinald */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2B733CF2057816000D0F043 /* Build configuration list for PBXNativeTarget "Chinald" */;
+			buildPhases = (
+				D2B7339F2057816000D0F043 /* Sources */,
+				D2B733A02057816000D0F043 /* Frameworks */,
+				D2B733A12057816000D0F043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chinald;
+			productName = Chinald;
+			productReference = D2B733A32057816000D0F043 /* Chinald.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2B733BA2057816000D0F043 /* ChinaldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2B733D22057816000D0F043 /* Build configuration list for PBXNativeTarget "ChinaldTests" */;
+			buildPhases = (
+				D2B733B72057816000D0F043 /* Sources */,
+				D2B733B82057816000D0F043 /* Frameworks */,
+				D2B733B92057816000D0F043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2B733BD2057816000D0F043 /* PBXTargetDependency */,
+			);
+			name = ChinaldTests;
+			productName = ChinaldTests;
+			productReference = D2B733BB2057816000D0F043 /* ChinaldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2B733C52057816000D0F043 /* ChinaldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2B733D52057816000D0F043 /* Build configuration list for PBXNativeTarget "ChinaldUITests" */;
+			buildPhases = (
+				D2B733C22057816000D0F043 /* Sources */,
+				D2B733C32057816000D0F043 /* Frameworks */,
+				D2B733C42057816000D0F043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2B733C82057816000D0F043 /* PBXTargetDependency */,
+			);
+			name = ChinaldUITests;
+			productName = ChinaldUITests;
+			productReference = D2B733C62057816000D0F043 /* ChinaldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2B7339B2057816000D0F043 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = HuaYing;
+				TargetAttributes = {
+					D2B733A22057816000D0F043 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D2B733BA2057816000D0F043 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D2B733A22057816000D0F043;
+					};
+					D2B733C52057816000D0F043 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D2B733A22057816000D0F043;
+					};
+				};
+			};
+			buildConfigurationList = D2B7339E2057816000D0F043 /* Build configuration list for PBXProject "Chinald" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2B7339A2057816000D0F043;
+			productRefGroup = D2B733A42057816000D0F043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2B733A22057816000D0F043 /* Chinald */,
+				D2B733BA2057816000D0F043 /* ChinaldTests */,
+				D2B733C52057816000D0F043 /* ChinaldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2B733A12057816000D0F043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B733B32057816000D0F043 /* LaunchScreen.storyboard in Resources */,
+				D2B733B02057816000D0F043 /* Assets.xcassets in Resources */,
+				D2B733AE2057816000D0F043 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733B92057816000D0F043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733C42057816000D0F043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2B7339F2057816000D0F043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B733AB2057816000D0F043 /* ViewController.m in Sources */,
+				D2B733B62057816000D0F043 /* main.m in Sources */,
+				D2B733A82057816000D0F043 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733B72057816000D0F043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B733C02057816000D0F043 /* ChinaldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B733C22057816000D0F043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B733CB2057816000D0F043 /* ChinaldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2B733BD2057816000D0F043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2B733A22057816000D0F043 /* Chinald */;
+			targetProxy = D2B733BC2057816000D0F043 /* PBXContainerItemProxy */;
+		};
+		D2B733C82057816000D0F043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2B733A22057816000D0F043 /* Chinald */;
+			targetProxy = D2B733C72057816000D0F043 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2B733AC2057816000D0F043 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2B733AD2057816000D0F043 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2B733B12057816000D0F043 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2B733B22057816000D0F043 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2B733CD2057816000D0F043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2B733CE2057816000D0F043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2B733D02057816000D0F043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Chinald/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.Chinald;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2B733D12057816000D0F043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Chinald/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.Chinald;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2B733D32057816000D0F043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChinaldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.ChinaldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinald.app/Chinald";
+			};
+			name = Debug;
+		};
+		D2B733D42057816000D0F043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChinaldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.ChinaldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinald.app/Chinald";
+			};
+			name = Release;
+		};
+		D2B733D62057816000D0F043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChinaldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.ChinaldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chinald;
+			};
+			name = Debug;
+		};
+		D2B733D72057816000D0F043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChinaldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.ChinaldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chinald;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2B7339E2057816000D0F043 /* Build configuration list for PBXProject "Chinald" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B733CD2057816000D0F043 /* Debug */,
+				D2B733CE2057816000D0F043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2B733CF2057816000D0F043 /* Build configuration list for PBXNativeTarget "Chinald" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B733D02057816000D0F043 /* Debug */,
+				D2B733D12057816000D0F043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2B733D22057816000D0F043 /* Build configuration list for PBXNativeTarget "ChinaldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B733D32057816000D0F043 /* Debug */,
+				D2B733D42057816000D0F043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2B733D52057816000D0F043 /* Build configuration list for PBXNativeTarget "ChinaldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B733D62057816000D0F043 /* Debug */,
+				D2B733D72057816000D0F043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2B7339B2057816000D0F043 /* Project object */;
+}
