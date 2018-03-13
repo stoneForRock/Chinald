@@ -613,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chinald/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.Chinald;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chinald/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuaYing.Chinald;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -700,6 +702,7 @@
 				E5DBAD8E20580B3600B29BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5DBAD8F20580B3600B29BFB /* Build configuration list for PBXNativeTarget "ChinaldTests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +711,7 @@
 				E5DBAD9120580B3600B29BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5DBAD9220580B3600B29BFB /* Build configuration list for PBXNativeTarget "ChinaldUITests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +720,7 @@
 				E5DBAD9420580B3600B29BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
