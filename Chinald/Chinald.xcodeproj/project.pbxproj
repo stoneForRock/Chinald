@@ -116,6 +116,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E559F8EF20581E8700DC12AE /* ThirdParts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParts;
+			sourceTree = "<group>";
+		};
 		E5DBAD5620580B3600B29BFB = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +148,7 @@
 		E5DBAD6120580B3600B29BFB /* Chinald */ = {
 			isa = PBXGroup;
 			children = (
+				E559F8EF20581E8700DC12AE /* ThirdParts */,
 				E5DBAD6520580B3600B29BFB /* AppDelegate.h */,
 				E5DBAD6620580B3600B29BFB /* AppDelegate.m */,
 				E5DBAD6820580B3600B29BFB /* ViewController.h */,
