@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Complete User InfoVC-->
+        <scene sceneID="dRs-1C-5id">
+            <objects>
+                <viewController storyboardIdentifier="ZNTCompleteUserInfoVC" id="wU7-ck-DtB" customClass="ZNTCompleteUserInfoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPN-Ee-gYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="DLv-IG-V1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LdY-zB-u7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="根据国家法律法规，运输公司注册需要提供统一社会信用代码并上传营业执照照片，个人车主注册需提供营运人身份证号码并上传营运证照片。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA6-9L-sB0">
+                                <rect key="frame" x="30" y="20" width="315" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="complete_userinfo_dashed" translatesAutoresizingMaskIntoConstraints="NO" id="3le-eU-rwn">
+                                <rect key="frame" x="23" y="197" width="329" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-FB-0cg">
+                                <rect key="frame" x="102" y="264" width="170" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upload_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dnc-Ul-v7A">
+                                        <rect key="frame" x="0.0" y="3" width="13" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击上传身份证照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAg-BT-s0p">
+                                        <rect key="frame" x="21" y="0.0" width="150" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择公司用户/个人用户：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqK-sV-cGS">
+                                <rect key="frame" x="30" y="80.5" width="315" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Jks-5n-A9G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT7-zx-EDF">
+                                <rect key="frame" x="34" y="113" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2lm-SD-nhJ"/>
+                                    <constraint firstAttribute="width" constant="90" id="6OF-FA-HBo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="poR-Js-3TS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="rK8-on-NEy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="运输公司" image="contract_unselectedIcon">
+                                    <color key="titleColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" image="contract_selectedIcon">
+                                    <color key="titleColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedCompany:" destination="wU7-ck-DtB" eventType="touchUpInside" id="IQ7-nt-vS6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77L-41-8X4">
+                                <rect key="frame" x="154" y="113" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="64n-cR-vBa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="RKo-iU-4si"/>
+                                    <constraint firstAttribute="height" constant="35" id="RTj-eS-sj3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="fzT-hr-E9h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="个人车主" image="contract_unselectedIcon">
+                                    <color key="titleColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" image="contract_selectedIcon">
+                                    <color key="titleColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedPersonal:" destination="wU7-ck-DtB" eventType="touchUpInside" id="bgc-Yl-Zqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XA6-9L-sB0" firstAttribute="leading" secondItem="LdY-zB-u7A" secondAttribute="leading" constant="30" id="5VZ-b0-IkR"/>
+                            <constraint firstItem="lT7-zx-EDF" firstAttribute="leading" secondItem="LdY-zB-u7A" secondAttribute="leading" constant="34" id="Kwd-nD-Mfa"/>
+                            <constraint firstItem="XA6-9L-sB0" firstAttribute="top" secondItem="LdY-zB-u7A" secondAttribute="topMargin" constant="20" id="PDk-xW-pvx"/>
+                            <constraint firstAttribute="trailing" secondItem="XA6-9L-sB0" secondAttribute="trailing" constant="30" id="PI1-96-Dxv"/>
+                            <constraint firstItem="77L-41-8X4" firstAttribute="leading" secondItem="lT7-zx-EDF" secondAttribute="trailing" constant="30" id="Vxz-wd-BcY"/>
+                            <constraint firstItem="lT7-zx-EDF" firstAttribute="top" secondItem="IqK-sV-cGS" secondAttribute="bottom" constant="11.5" id="WV1-2u-lfp"/>
+                            <constraint firstItem="IqK-sV-cGS" firstAttribute="top" secondItem="XA6-9L-sB0" secondAttribute="bottom" constant="10" id="cNk-cO-IPn"/>
+                            <constraint firstItem="IqK-sV-cGS" firstAttribute="leading" secondItem="LdY-zB-u7A" secondAttribute="leading" constant="30" id="cZR-hf-qH4"/>
+                            <constraint firstItem="77L-41-8X4" firstAttribute="top" secondItem="IqK-sV-cGS" secondAttribute="bottom" constant="11.5" id="tnr-Qh-c95"/>
+                            <constraint firstItem="77L-41-8X4" firstAttribute="leading" secondItem="lT7-zx-EDF" secondAttribute="trailing" constant="30" id="viR-Xw-4Zc"/>
+                            <constraint firstAttribute="trailing" secondItem="IqK-sV-cGS" secondAttribute="trailing" constant="30" id="yht-im-0a2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="businessImgView" destination="3le-eU-rwn" id="6Mt-nJ-Zxj"/>
+                        <outlet property="businessTipsView" destination="O1R-FB-0cg" id="HxI-70-ExN"/>
+                        <outlet property="companyBtn" destination="lT7-zx-EDF" id="BUG-og-tPR"/>
+                        <outlet property="imageTipsLabel" destination="YAg-BT-s0p" id="VGa-GN-yB9"/>
+                        <outlet property="personalBtn" destination="77L-41-8X4" id="u0B-a9-et4"/>
+                        <outlet property="tipsLabel" destination="XA6-9L-sB0" id="Cmx-6V-CXo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFw-oY-OuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.60000000000002" y="400.74962518740631"/>
+        </scene>
+        <!--Get CodeVC-->
+        <scene sceneID="mBg-Vd-RDZ">
+            <objects>
+                <viewController storyboardIdentifier="ZNTGetCodeVC" id="n24-8k-Wla" customClass="ZNTGetCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDf-bg-aAS"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ek-6P-Cyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZPP-OE-sVC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTf-gq-NoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="-255"/>
+        </scene>
+        <!--Forget PswVC-->
+        <scene sceneID="Y6Y-Xz-Mhu">
+            <objects>
+                <viewController storyboardIdentifier="ZNTForgetPswVC" id="tUW-Bj-2pW" customClass="ZNTForgetPswVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A81-Km-kZv"/>
+                        <viewControllerLayoutGuide type="bottom" id="4e4-Mm-LYb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nLJ-kH-1cm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gee-4h-wMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="-263"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="sOx-l1-riy">
+            <objects>
+                <viewController storyboardIdentifier="ZNTLoginVC" id="aYn-hW-M8Y" customClass="ZNTLoginVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F0M-UB-FsU"/>
+                        <viewControllerLayoutGuide type="bottom" id="yHE-oK-ytY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jkd-5v-1lB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-cq-A2I">
+                                <rect key="frame" x="151" y="40" width="73" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="IiY-Rw-vAo"/>
+                                    <constraint firstAttribute="width" constant="73" id="Od2-nr-olU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pC6-cq-A2I" firstAttribute="centerX" secondItem="jkd-5v-1lB" secondAttribute="centerX" id="NhT-eB-YWi"/>
+                            <constraint firstItem="pC6-cq-A2I" firstAttribute="top" secondItem="jkd-5v-1lB" secondAttribute="topMargin" constant="40" id="twI-bs-Ac6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="pC6-cq-A2I" id="Bie-BH-hZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ud3-fG-JSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-262"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="1Am-Th-4yE">
+            <objects>
+                <viewController storyboardIdentifier="ZNTRegisterVC" id="RcB-zo-Xar" customClass="ZNTRegisterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jsz-II-uRT"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJq-xU-mcm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="udS-4E-beE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zq-eW-vaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-255"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="complete_userinfo_dashed" width="329" height="172"/>
+        <image name="contract_selectedIcon" width="17" height="17"/>
+        <image name="contract_unselectedIcon" width="17" height="17"/>
+        <image name="login_logo" width="73" height="73"/>
+        <image name="upload_icon" width="13" height="13"/>
+    </resources>
+</document>
