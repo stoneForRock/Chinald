@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
+		D278537B205A1E990035FA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2785378205A1E990035FA27 /* LaunchScreen.storyboard */; };
 		D85D0724D97AE9E961B1C0AB /* libPods-Chinald.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507D2FA8AA6ABC89D1430F6C /* libPods-Chinald.a */; };
 		E5668718205963F6003D5EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5668717205963F6003D5EAB /* AppDelegate.m */; };
 		E566872C20596A30003D5EAB /* UIBarButtonItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = E566871C20596A30003D5EAB /* UIBarButtonItem+Custom.m */; };
@@ -434,8 +436,6 @@
 		E59C7FB72059733100075053 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E59C7FB62059733100075053 /* libz.tbd */; };
 		E59C7FB92059733A00075053 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E59C7FB82059733A00075053 /* libresolv.tbd */; };
 		E5DBAD6420580B3600B29BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD6320580B3600B29BFB /* main.m */; };
-		E5DBAD6F20580B3600B29BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DBAD6E20580B3600B29BFB /* Assets.xcassets */; };
-		E5DBAD7220580B3600B29BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DBAD7020580B3600B29BFB /* LaunchScreen.storyboard */; };
 		E5DBAD7D20580B3600B29BFB /* ChinaldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD7C20580B3600B29BFB /* ChinaldTests.m */; };
 		E5DBAD8820580B3600B29BFB /* ChinaldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD8720580B3600B29BFB /* ChinaldUITests.m */; };
 /* End PBXBuildFile section */
@@ -466,6 +466,8 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		D2785377205A1E990035FA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2785379205A1E990035FA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5668716205963F6003D5EAB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5668717205963F6003D5EAB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E566871B20596A30003D5EAB /* UIBarButtonItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Custom.h"; sourceTree = "<group>"; };
@@ -1301,8 +1303,6 @@
 		E59C7FB82059733A00075053 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		E5DBAD5F20580B3600B29BFB /* Chinald.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinald.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DBAD6320580B3600B29BFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E5DBAD6E20580B3600B29BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
-		E5DBAD7120580B3600B29BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5DBAD7320580B3600B29BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBAD7820580B3600B29BFB /* ChinaldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinaldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DBAD7C20580B3600B29BFB /* ChinaldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaldTests.m; sourceTree = "<group>"; };
@@ -1379,6 +1379,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D2785375205A1E990035FA27 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D2785376205A1E990035FA27 /* Images */,
+				D2785378205A1E990035FA27 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D2785376205A1E990035FA27 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D2785377205A1E990035FA27 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		E559F8EF20581E8700DC12AE /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1398,15 +1415,6 @@
 				E59C7C6920596CDF00075053 /* ZXing */,
 			);
 			path = ThirdParts;
-			sourceTree = "<group>";
-		};
-		E566870E2059626F003D5EAB /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				E59C7B6820596CBD00075053 /* Images */,
-				E5DBAD7020580B3600B29BFB /* LaunchScreen.storyboard */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		E566870F2059627A003D5EAB /* Utility */ = {
@@ -1755,14 +1763,6 @@
 				E59C7B3F20596C9200075053 /* ZLZSegmentView.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		E59C7B6820596CBD00075053 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				E5DBAD6E20580B3600B29BFB /* Assets.xcassets */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		E59C7B6920596CDF00075053 /* AMapSDK */ = {
@@ -2736,7 +2736,7 @@
 				E566871020596287003D5EAB /* Style */,
 				E566870F2059627A003D5EAB /* Utility */,
 				E559F8EF20581E8700DC12AE /* ThirdParts */,
-				E566870E2059626F003D5EAB /* Resource */,
+				D2785375205A1E990035FA27 /* Resource */,
 				E5DBAD6220580B3600B29BFB /* Supporting Files */,
 			);
 			path = Chinald;
@@ -2895,14 +2895,15 @@
 				E59C7E3320596CE100075053 /* AMap.bundle in Resources */,
 				E59C7E7720596CE100075053 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
 				E59C7E6420596CE100075053 /* ImageError@2x.png in Resources */,
+				D278537B205A1E990035FA27 /* LaunchScreen.storyboard in Resources */,
 				E59C7E7420596CE100075053 /* PlayButtonOverlayLarge@3x.png in Resources */,
 				E59C7F9720596F4900075053 /* Mine.storyboard in Resources */,
-				E5DBAD7220580B3600B29BFB /* LaunchScreen.storyboard in Resources */,
 				E59C7E5C20596CE100075053 /* MJPhotoBrowser.bundle in Resources */,
 				E59C7E6720596CE100075053 /* ImageSelectedOff@2x.png in Resources */,
 				E59C7E6D20596CE100075053 /* ImageSelectedSmallOff@2x.png in Resources */,
 				E59C7E7920596CE100075053 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				E59C7E6620596CE100075053 /* ImageSelectedOff.png in Resources */,
+				D278537A205A1E990035FA27 /* Assets.xcassets in Resources */,
 				E59C7E7620596CE100075053 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				E59C7E6320596CE100075053 /* ImageError.png in Resources */,
 				E59C7E7520596CE100075053 /* PlayButtonOverlayLargeTap.png in Resources */,
@@ -2910,7 +2911,6 @@
 				E59C7E7B20596CE100075053 /* UIBarButtonItemArrowRight.png in Resources */,
 				E59C7E7A20596CE100075053 /* UIBarButtonItemArrowLeft@3x.png in Resources */,
 				E59C7E6E20596CE100075053 /* ImageSelectedSmallOff@3x.png in Resources */,
-				E5DBAD6F20580B3600B29BFB /* Assets.xcassets in Resources */,
 				E59C7F9520596F3D00075053 /* MainPage.storyboard in Resources */,
 				E59C7E8320596CE100075053 /* VideoOverlay@3x.png in Resources */,
 				E59C7E7F20596CE100075053 /* UIBarButtonItemGrid@2x.png in Resources */,
@@ -3499,13 +3499,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E5DBAD7020580B3600B29BFB /* LaunchScreen.storyboard */ = {
+		D2785378205A1E990035FA27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E5DBAD7120580B3600B29BFB /* Base */,
+				D2785379205A1E990035FA27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
