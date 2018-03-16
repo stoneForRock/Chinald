@@ -18,6 +18,9 @@
 
 - (void)enterLoginWithGuideVC:(BOOL)bShowGuideVC {
     
+    [self directEnterZNT];
+    return;
+    
     //如果已经登陆过，就直接进入主页
     if ([ZNTDataConfig sharedConfig].user.token.length > 0) {
         [self directEnterZNT];
