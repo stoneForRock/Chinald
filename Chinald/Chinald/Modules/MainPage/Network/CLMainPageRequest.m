@@ -10,4 +10,47 @@
 
 @implementation CLMainPageRequest
 
++ (void)getMainPageGoodListOnSuccess:(ZNTSuccessBlock)successBlock
+                           onFailure:(ZNTFailureBlock)failureBlock {
+    [self sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"/index/index";
+//        request.parameters = @{@"ownerId":customId};
+        request.httpMethod = kXMHTTPMethodGET;
+    } onSuccess:^(id  _Nullable responseObject) {
+        successBlock(responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        failureBlock(error);
+    }];
+}
+
++ (void)getMainBannerListOnSuccess:(ZNTSuccessBlock)successBlock
+                         onFailure:(ZNTFailureBlock)failureBlock {
+    [self sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"/index/banner";
+        //        request.parameters = @{@"ownerId":customId};
+        request.httpMethod = kXMHTTPMethodGET;
+    } onSuccess:^(id  _Nullable responseObject) {
+        successBlock(responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        failureBlock(error);
+    }];
+}
+
++ (void)getGoodsDetailWithGoodsId:(NSString *)goodsId
+                        onSuccess:(ZNTSuccessBlock)successBlock
+                        onFailure:(ZNTFailureBlock)failureBlock {
+    [self sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"/goods/detail";
+        request.parameters = @{@"goods_id":goodsId};
+        request.httpMethod = kXMHTTPMethodPOST;
+    } onSuccess:^(id  _Nullable responseObject) {
+        successBlock(responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        failureBlock(error);
+    }];
+}
+
 @end

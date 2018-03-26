@@ -9,13 +9,13 @@
 #import "ZNTURLPathManager.h"
 
 //正式环境
-static NSString *const ZNTURL = @"http://www.zhinitong.com";
+static NSString *const ZNTURL = @"http://www.chinald.cc";
 
 //Test
-static NSString *const ZNTURL_TEST = @"http://www.zhinitong.com";
+static NSString *const ZNTURL_TEST = @"http://www.chinald.cc";
 
 //Dev
-static NSString *const ZNTURL_Dev = @"http://www.zhinitong.com";
+static NSString *const ZNTURL_Dev = @"http://www.chinald.cc";
 
 NSString *const ZNTURLChangeNotification = @"ZNTURLChangeNotification";
 
