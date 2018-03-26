@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
+		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
 		D278537B205A1E990035FA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2785378205A1E990035FA27 /* LaunchScreen.storyboard */; };
 		D85D0724D97AE9E961B1C0AB /* libPods-Chinald.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507D2FA8AA6ABC89D1430F6C /* libPods-Chinald.a */; };
@@ -466,6 +468,10 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
+		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
+		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
+		D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageListModel.m; sourceTree = "<group>"; };
 		D2785377205A1E990035FA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2785379205A1E990035FA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5668716205963F6003D5EAB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1379,6 +1385,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D21D8E5620689BCC00CDD04F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */,
+				D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D21D8E5A20689BF400CDD04F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */,
+				D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D21D8E5B20689BFA00CDD04F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D21D8E5E20689C1B00CDD04F /* CustomViews */,
+				D21D8E5C20689C1100CDD04F /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D21D8E5C20689C1100CDD04F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D21D8E5E20689C1B00CDD04F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		D2785375205A1E990035FA27 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1574,6 +1621,9 @@
 		E566873720596A8F003D5EAB /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				D21D8E5B20689BFA00CDD04F /* Views */,
+				D21D8E5A20689BF400CDD04F /* Model */,
+				D21D8E5620689BCC00CDD04F /* Network */,
 				E59C7F9420596F3D00075053 /* MainPage.storyboard */,
 				E59C7F9A20596F6300075053 /* CLMainPageVC.h */,
 				E59C7F9B20596F6300075053 /* CLMainPageVC.m */,
@@ -3136,6 +3186,7 @@
 				E59C7B5720596C9200075053 /* UILabel+ZNTCopy.m in Sources */,
 				E59C7EB120596CE100075053 /* ZXAbstractExpandedDecoder.m in Sources */,
 				E59C7F0220596CE100075053 /* ZXEmailAddressResultParser.m in Sources */,
+				D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */,
 				E59C7E8820596CE100075053 /* MWPhotoBrowser.m in Sources */,
 				E59C7F3620596CE100075053 /* ZXPDF417Detector.m in Sources */,
 				E59C7F6A20596CE100075053 /* ZXRSSExpandedFieldParser.m in Sources */,
@@ -3435,6 +3486,7 @@
 				E59C7E4020596CE100075053 /* QNDnspodEnterprise.m in Sources */,
 				E59C7EEA20596CE100075053 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E59C7FA220596F8600075053 /* CLMineVC.m in Sources */,
+				D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */,
 				E59C7F3E20596CE100075053 /* ZXPDF417ScanningDecoder.m in Sources */,
 				E59C7E8A20596CE100075053 /* MWTapDetectingView.m in Sources */,
 				E59C7F0E20596CE100075053 /* ZXGridSampler.m in Sources */,

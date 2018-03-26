@@ -7,8 +7,9 @@
 //
 
 #import "CLMainPageVC.h"
+#import "CLMainPageRequest.h"
 
-@interface CLMainPageVC ()
+@interface CLMainPageVC ()<UINavigationControllerDelegate>
 
 @end
 
@@ -19,9 +20,34 @@ INSTANCE_XIB_M(@"MainPage", CLMainPageVC)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    [self initUI];
+    
+    [self initDataInfo];
+    
+    [self requestMainPageData];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)initUI {
+    self.title = @"首页";
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)initDataInfo {
+    self.navigationController.delegate = self;
+}
+
+- (void)requestMainPageData {
+    
+}
+
+
+//隐藏导航栏
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    RTContainerController *currentController = (RTContainerController *)viewController;
+    BOOL isShowHomePage = [currentController.contentViewController isKindOfClass:[self class]];
+    [self.navigationController setNavigationBarHidden:isShowHomePage animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {

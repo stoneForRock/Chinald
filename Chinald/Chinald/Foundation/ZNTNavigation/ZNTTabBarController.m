@@ -63,12 +63,6 @@
     return badgeValueView;
 }
 
-//- (XTUnreadImageView *)hasBadgeValueViewAtIndex:(NSInteger)index {
-//    NSInteger tag = 999999 + index;
-//    XTUnreadImageView *badgeValueView = (XTUnreadImageView *)[self viewWithTag:tag];
-//    return badgeValueView;
-//}
-
 - (void)setupBadgeValueView:(UILabel *)badgeValueView
                 unreadCount:(int)unreadCount
                     atIndex:(NSInteger)index {
@@ -155,11 +149,11 @@
 }
 
 - (void)refreshUnReadCount {
-    UITabBarItem * item=[self.tabBar.items objectAtIndex:2];
-    NSInteger unreadCount = 0;
-    item.badgeValue = [NSString stringWithFormat:@"%ld",(long)unreadCount];
+//    UITabBarItem * item=[self.tabBar.items objectAtIndex:2];
+//    NSInteger unreadCount = 0;
+//    item.badgeValue = [NSString stringWithFormat:@"%ld",(long)unreadCount];
     
-    [UIApplication sharedApplication].applicationIconBadgeNumber = unreadCount;
+//    [UIApplication sharedApplication].applicationIconBadgeNumber = unreadCount;
 }
 
 - (void)viewWillLayoutSubviews{

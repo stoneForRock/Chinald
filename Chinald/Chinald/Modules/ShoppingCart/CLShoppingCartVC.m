@@ -19,11 +19,27 @@ INSTANCE_XIB_M(@"ShoppingCart", CLShoppingCartVC)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    [self initUI];
+    
+    [self initDataInfo];
+    
+    [self requestMainPageData];
     
     // Do any additional setup after loading the view.
 }
 
+- (void)initUI {
+    self.title = @"购物车";
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)initDataInfo {
+    
+}
+
+- (void)requestMainPageData {
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

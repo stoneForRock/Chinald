@@ -11,7 +11,7 @@
 @implementation UIColor (ZNTShipper)
 
 + (UIColor *)zntThemeTintColor {
-    return [self colorWithRGB:0x38adff];
+    return [self colorWithRGB:0xA366FF];
 }
 
 + (UIColor *)orangeColor {

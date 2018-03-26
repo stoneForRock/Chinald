@@ -125,9 +125,9 @@
     //此处进入页面的时候注册推送服务
     
     NSArray *tabbarItemInfos = @[
-                                 @{@"title":@"首页",@"selectedImage":@"contract_selected",@"image":@"contract_unselected"},
-                                 @{@"title":@"购物车",@"selectedImage":@"order_selected",@"image":@"order_unselected"},
-                                 @{@"title":@"个人中心",@"selectedImage":@"mine_selected",@"image":@"mine_unselected"}
+                                 @{@"title":@"首页",@"selectedImage":@"nva_home_pre",@"image":@"nva_home"},
+                                 @{@"title":@"购物车",@"selectedImage":@"nva_shoppingcar_pre",@"image":@"nva_shoppingcar"},
+                                 @{@"title":@"个人中心",@"selectedImage":@"nva_mine_pre",@"image":@"nva_mine"}
                                  ];
     
     NSMutableArray *tabbarNavs = [NSMutableArray arrayWithCapacity:0];
