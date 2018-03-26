@@ -18,8 +18,28 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initUI];
+    
+    [self initDataInfo];
+    
+    [self requestData];
+    
+    // Do any additional setup after loading the view.
 }
 
+- (void)initUI {
+    self.title = @"个人中心";
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)initDataInfo {
+    
+}
+
+- (void)requestData {
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

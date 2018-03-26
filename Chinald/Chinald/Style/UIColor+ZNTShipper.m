@@ -19,7 +19,7 @@
 }
 
 + (UIColor *)zntThemeTextColor {
-    return [self colorWithRGB:0x2d2d2d];
+    return [self colorWithRGB:0xB4B4B4];
 }
 
 + (UIColor *)zntNavTitleColor {
