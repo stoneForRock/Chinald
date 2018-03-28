@@ -8,8 +8,12 @@
 
 #import "CLMainPageVC.h"
 #import "CLMainPageRequest.h"
+#import "UnlimitedScrollView.h"
+#import "CLMainPageListModel.h"
 
-@interface CLMainPageVC ()<UINavigationControllerDelegate>
+@interface CLMainPageVC ()<UINavigationControllerDelegate, UnlimitedScrollViewDelegate>
+
+@property (nonatomic, strong) UnlimitedScrollView *adScrollView;
 
 @end
 
@@ -48,6 +52,22 @@ INSTANCE_XIB_M(@"MainPage", CLMainPageVC)
     RTContainerController *currentController = (RTContainerController *)viewController;
     BOOL isShowHomePage = [currentController.contentViewController isKindOfClass:[self class]];
     [self.navigationController setNavigationBarHidden:isShowHomePage animated:animated];
+}
+
+#pragma mark - delegate
+
+- (void)clickWithPage:(NSInteger)intPage view:(UnlimitedScrollView *)unlimitedScrollView {
+    
+}
+
+#pragma mark - setter&&getter
+
+- (UnlimitedScrollView *)adScrollView {
+    if (!_adScrollView) {
+        _adScrollView = [[UnlimitedScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenFullWidth, 165)];
+        _adScrollView.delegate = self;
+    }
+    return _adScrollView;
 }
 
 - (void)didReceiveMemoryWarning {

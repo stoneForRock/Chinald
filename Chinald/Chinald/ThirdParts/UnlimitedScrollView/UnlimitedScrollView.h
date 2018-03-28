@@ -12,6 +12,7 @@
 @class UnlimitedScrollView;
 
 @protocol UnlimitedScrollViewDelegate <NSObject>
+@optional
 
 - (void)clickWithPage:(NSInteger)intPage view:(UnlimitedScrollView *)unlimitedScrollView;
 
