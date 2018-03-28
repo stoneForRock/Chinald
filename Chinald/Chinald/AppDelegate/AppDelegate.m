@@ -146,6 +146,8 @@
         UIViewController *tabbarVC = tabbarVCs[i];
         tabbarVC.tabBarItem = [[UITabBarItem alloc] init];
         tabbarVC.tabBarItem.title = tabbarItemInfoDic[@"title"];
+        [tabbarVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:ThemeColor} forState:UIControlStateSelected];
+        [tabbarVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:ThemeTextColor} forState:UIControlStateNormal];
         [tabbarVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -5)];
         tabbarVC.tabBarItem.selectedImage = [[UIImage imageNamed:tabbarItemInfoDic[@"selectedImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         tabbarVC.tabBarItem.image = [[UIImage imageNamed:tabbarItemInfoDic[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

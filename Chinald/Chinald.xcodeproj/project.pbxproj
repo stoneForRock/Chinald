@@ -437,6 +437,10 @@
 		E59C7FB52059732B00075053 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E59C7FB42059732B00075053 /* libc++.tbd */; };
 		E59C7FB72059733100075053 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E59C7FB62059733100075053 /* libz.tbd */; };
 		E59C7FB92059733A00075053 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E59C7FB82059733A00075053 /* libresolv.tbd */; };
+		E59C7FC520692FA800075053 /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C7FC420692FA800075053 /* Comments.storyboard */; };
+		E59C7FC820692FB800075053 /* CLCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7FC720692FB800075053 /* CLCommentList.m */; };
+		E59C7FCD20692FD500075053 /* CLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7FCC20692FD500075053 /* CLComment.m */; };
+		E59C7FD020692FE900075053 /* CLCommentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7FCF20692FE900075053 /* CLCommentRequest.m */; };
 		E5DBAD6420580B3600B29BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD6320580B3600B29BFB /* main.m */; };
 		E5DBAD7D20580B3600B29BFB /* ChinaldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD7C20580B3600B29BFB /* ChinaldTests.m */; };
 		E5DBAD8820580B3600B29BFB /* ChinaldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBAD8720580B3600B29BFB /* ChinaldUITests.m */; };
@@ -1307,6 +1311,13 @@
 		E59C7FB42059732B00075053 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		E59C7FB62059733100075053 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E59C7FB82059733A00075053 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		E59C7FC420692FA800075053 /* Comments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Comments.storyboard; sourceTree = "<group>"; };
+		E59C7FC620692FB800075053 /* CLCommentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCommentList.h; sourceTree = "<group>"; };
+		E59C7FC720692FB800075053 /* CLCommentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCommentList.m; sourceTree = "<group>"; };
+		E59C7FCB20692FD500075053 /* CLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLComment.h; sourceTree = "<group>"; };
+		E59C7FCC20692FD500075053 /* CLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLComment.m; sourceTree = "<group>"; };
+		E59C7FCE20692FE900075053 /* CLCommentRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCommentRequest.h; sourceTree = "<group>"; };
+		E59C7FCF20692FE900075053 /* CLCommentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCommentRequest.m; sourceTree = "<group>"; };
 		E5DBAD5F20580B3600B29BFB /* Chinald.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinald.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DBAD6320580B3600B29BFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5DBAD7320580B3600B29BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1518,6 +1529,7 @@
 				E566873A20596AA5003D5EAB /* Guide */,
 				E566873920596A9C003D5EAB /* Launch */,
 				E566873820596A97003D5EAB /* Login */,
+				E59C7FBE20692F1A00075053 /* Comments */,
 				E566873720596A8F003D5EAB /* MainPage */,
 				E566873620596A71003D5EAB /* ShoppingCart */,
 				E566873520596A6C003D5EAB /* Mine */,
@@ -2729,6 +2741,36 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E59C7FBE20692F1A00075053 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				E59C7FCA20692FC300075053 /* Network */,
+				E59C7FC920692FBE00075053 /* Model */,
+				E59C7FC420692FA800075053 /* Comments.storyboard */,
+				E59C7FC620692FB800075053 /* CLCommentList.h */,
+				E59C7FC720692FB800075053 /* CLCommentList.m */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		E59C7FC920692FBE00075053 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E59C7FCB20692FD500075053 /* CLComment.h */,
+				E59C7FCC20692FD500075053 /* CLComment.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E59C7FCA20692FC300075053 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E59C7FCE20692FE900075053 /* CLCommentRequest.h */,
+				E59C7FCF20692FE900075053 /* CLCommentRequest.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		E5DBAD5620580B3600B29BFB = {
 			isa = PBXGroup;
 			children = (
@@ -2948,6 +2990,7 @@
 				E59C7E6820596CE100075053 /* ImageSelectedOff@3x.png in Resources */,
 				E59C7FAB2059724D00075053 /* ZLZAddressPickerView.xib in Resources */,
 				E59C7E7220596CE100075053 /* PlayButtonOverlayLarge.png in Resources */,
+				E59C7FC520692FA800075053 /* Comments.storyboard in Resources */,
 				E59C7E6520596CE100075053 /* ImageError@3x.png in Resources */,
 				E59C7E6F20596CE100075053 /* ImageSelectedSmallOn.png in Resources */,
 				E59C7E8020596CE100075053 /* UIBarButtonItemGrid@3x.png in Resources */,
@@ -3158,6 +3201,7 @@
 				E59C7F1920596CE100075053 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				E59C7AF220596C4500075053 /* ZNTReachabilityManager.m in Sources */,
 				E59C7EB520596CE100075053 /* ZXAddressBookParsedResult.m in Sources */,
+				E59C7FCD20692FD500075053 /* CLComment.m in Sources */,
 				E59C7B4920596C9200075053 /* NSDictionary+ZNTAdd.m in Sources */,
 				E59C7F1420596CE100075053 /* ZXISBNResultParser.m in Sources */,
 				E59C7F1B20596CE100075053 /* ZXMaxiCodeDecoder.m in Sources */,
@@ -3254,7 +3298,9 @@
 				E59C7F1F20596CE100075053 /* ZXMonochromeRectangleDetector.m in Sources */,
 				E59C7F0720596CE100075053 /* ZXExpandedProductResultParser.m in Sources */,
 				E59C7EE220596CE100075053 /* ZXCode93Reader.m in Sources */,
+				E59C7FC820692FB800075053 /* CLCommentList.m in Sources */,
 				E59C7E4D20596CE100075053 /* IQUIScrollView+Additions.m in Sources */,
+				E59C7FD020692FE900075053 /* CLCommentRequest.m in Sources */,
 				E59C7EFD20596CE100075053 /* ZXEAN13Writer.m in Sources */,
 				E59C7E4720596CE100075053 /* QNRefresher.m in Sources */,
 				E59C7EA320596CE100075053 /* TZImageManager.m in Sources */,

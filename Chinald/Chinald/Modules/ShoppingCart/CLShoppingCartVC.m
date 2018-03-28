@@ -23,7 +23,7 @@ INSTANCE_XIB_M(@"ShoppingCart", CLShoppingCartVC)
     
     [self initDataInfo];
     
-    [self requestMainPageData];
+    [self requestData];
     
     // Do any additional setup after loading the view.
 }
@@ -37,9 +37,10 @@ INSTANCE_XIB_M(@"ShoppingCart", CLShoppingCartVC)
     
 }
 
-- (void)requestMainPageData {
+- (void)requestData {
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
