@@ -27,13 +27,22 @@
 + (UIColor *)zntTextColor2;
 + (UIColor *)zntTextColor3;
 + (UIColor *)zntTextColor4;
++ (UIColor *)zntTextColor5;
 
++ (UIColor *)zntTextColor6;/**< 666666 字体淡灰色 */
 
 + (UIColor *)zntBackgroundColor3;
 + (UIColor *)zntBackgroundColor4;
 + (UIColor *)zntBackgroundColor5;
 + (UIColor *)zntBackgroundColor6;    /**< F7F9FA v8下所有列表cell的背景色 */
 + (UIColor *)zntBackgroundColor7;
+
+/**
+ 主背景色
+ @return 背景色
+ */
++ (UIColor *)clVCBackgroundColor;
+
 + (UIColor *)zntDividingLineColor;
 + (UIColor *)zntSubtitleColor;
 
