@@ -60,8 +60,10 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         CLMineAccountInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:accountInfoCellString forIndexPath:indexPath];
         if (!cell) {
             cell = [[CLMineAccountInfoTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:accountInfoCellString];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         cell.selectMineAccountCellBlock = ^(MineAccountSelectType accountCellSelectType) {
             if (accountCellSelectType == CL_MINE_ACCOUNT_MANAGEMENT) {
                 [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
@@ -75,7 +77,8 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         if (!cell) {
             cell = [[CLMineOrderAboutTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:orderAboutTableViewCellString];
         }
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }
     if (indexPath.section == 2) {
@@ -83,15 +86,18 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         if (!cell) {
             cell = [[CLMineShareTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:shareTableViewCellString];
         }
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:otherTableViewCellString forIndexPath:indexPath];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:otherTableViewCellString];
-        
+
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
     cell.textLabel.font = [UIFont zntFont15];
@@ -99,8 +105,17 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
+        }
+    }
+    if (indexPath.section == 3) {
+        if (indexPath.row == 1) {
+            [self performSegueWithIdentifier:@"mineVCToFeedbackVC" sender:nil];
+        }
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) return 200;
