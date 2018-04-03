@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		C494127C206F853500FE19A9 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494127B206F853500FE19A9 /* Mine.storyboard */; };
+		C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */; };
+		C4941282206F854300FE19A9 /* CLAccountManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941280206F854200FE19A9 /* CLAccountManagementVC.m */; };
+		C494128A206F855500FE19A9 /* CLMineShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941284206F855400FE19A9 /* CLMineShareTableViewCell.m */; };
+		C494128B206F855500FE19A9 /* CLMineAccountInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941285206F855400FE19A9 /* CLMineAccountInfoTableViewCell.m */; };
+		C494128C206F855500FE19A9 /* CLMineOrderAboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941288206F855500FE19A9 /* CLMineOrderAboutTableViewCell.m */; };
+		C494128F206F858D00FE19A9 /* UIView+CLShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494128E206F858D00FE19A9 /* UIView+CLShadowView.m */; };
+		C4941292206F859600FE19A9 /* UIButton+CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941291206F859600FE19A9 /* UIButton+CLButton.m */; };
+		C4941295206F89CA00FE19A9 /* CLChangeNicknameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941294206F89CA00FE19A9 /* CLChangeNicknameVC.m */; };
+		C4941298207080DB00FE19A9 /* CLFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941297207080DB00FE19A9 /* CLFeedbackVC.m */; };
+		C494129B2070A7D400FE19A9 /* CLOrderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C494129A2070A7D400FE19A9 /* CLOrderCollectionViewCell.m */; };
+		C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */; };
+		C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */; };
+		C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A32070D28A00FE19A9 /* CLDottedLineView.m */; };
+		C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -423,7 +438,6 @@
 		E59C7F9220596F0D00075053 /* AppDelegate+PushNotificcation.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7F8F20596F0D00075053 /* AppDelegate+PushNotificcation.m */; };
 		E59C7F9320596F0D00075053 /* AppDelegate+ZNTPrivacy.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7F9120596F0D00075053 /* AppDelegate+ZNTPrivacy.m */; };
 		E59C7F9520596F3D00075053 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C7F9420596F3D00075053 /* MainPage.storyboard */; };
-		E59C7F9720596F4900075053 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C7F9620596F4900075053 /* Mine.storyboard */; };
 		E59C7F9920596F5400075053 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C7F9820596F5400075053 /* ShoppingCart.storyboard */; };
 		E59C7F9C20596F6300075053 /* CLMainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7F9B20596F6300075053 /* CLMainPageVC.m */; };
 		E59C7F9F20596F7A00075053 /* CLShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C7F9E20596F7A00075053 /* CLShoppingCartVC.m */; };
@@ -472,6 +486,35 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		C494127B206F853500FE19A9 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		C494127D206F854100FE19A9 /* CLAccountManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAccountManagementVC.h; sourceTree = "<group>"; };
+		C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLChangePhoneViewController.m; sourceTree = "<group>"; };
+		C494127F206F854200FE19A9 /* CLChangePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLChangePhoneViewController.h; sourceTree = "<group>"; };
+		C4941280206F854200FE19A9 /* CLAccountManagementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAccountManagementVC.m; sourceTree = "<group>"; };
+		C4941284206F855400FE19A9 /* CLMineShareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMineShareTableViewCell.m; sourceTree = "<group>"; };
+		C4941285206F855400FE19A9 /* CLMineAccountInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMineAccountInfoTableViewCell.m; sourceTree = "<group>"; };
+		C4941286206F855400FE19A9 /* CLMineAccountInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMineAccountInfoTableViewCell.h; sourceTree = "<group>"; };
+		C4941287206F855500FE19A9 /* CLMineShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMineShareTableViewCell.h; sourceTree = "<group>"; };
+		C4941288206F855500FE19A9 /* CLMineOrderAboutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMineOrderAboutTableViewCell.m; sourceTree = "<group>"; };
+		C4941289206F855500FE19A9 /* CLMineOrderAboutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMineOrderAboutTableViewCell.h; sourceTree = "<group>"; };
+		C494128D206F858C00FE19A9 /* UIView+CLShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLShadowView.h"; sourceTree = "<group>"; };
+		C494128E206F858D00FE19A9 /* UIView+CLShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLShadowView.m"; sourceTree = "<group>"; };
+		C4941290206F859600FE19A9 /* UIButton+CLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CLButton.h"; sourceTree = "<group>"; };
+		C4941291206F859600FE19A9 /* UIButton+CLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CLButton.m"; sourceTree = "<group>"; };
+		C4941293206F89CA00FE19A9 /* CLChangeNicknameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLChangeNicknameVC.h; sourceTree = "<group>"; };
+		C4941294206F89CA00FE19A9 /* CLChangeNicknameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLChangeNicknameVC.m; sourceTree = "<group>"; };
+		C4941296207080DB00FE19A9 /* CLFeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFeedbackVC.h; sourceTree = "<group>"; };
+		C4941297207080DB00FE19A9 /* CLFeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLFeedbackVC.m; sourceTree = "<group>"; };
+		C49412992070A7D400FE19A9 /* CLOrderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderCollectionViewCell.h; sourceTree = "<group>"; };
+		C494129A2070A7D400FE19A9 /* CLOrderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderCollectionViewCell.m; sourceTree = "<group>"; };
+		C494129C2070AC1B00FE19A9 /* CLMyOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMyOrderVC.h; sourceTree = "<group>"; };
+		C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMyOrderVC.m; sourceTree = "<group>"; };
+		C494129F2070BADD00FE19A9 /* CLOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderTableViewCell.h; sourceTree = "<group>"; };
+		C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderTableViewCell.m; sourceTree = "<group>"; };
+		C49412A22070D28A00FE19A9 /* CLDottedLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDottedLineView.h; sourceTree = "<group>"; };
+		C49412A32070D28A00FE19A9 /* CLDottedLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDottedLineView.m; sourceTree = "<group>"; };
+		C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderGoodsTableViewCell.h; sourceTree = "<group>"; };
+		C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderGoodsTableViewCell.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1291,7 +1334,6 @@
 		E59C7F9020596F0D00075053 /* AppDelegate+ZNTPrivacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ZNTPrivacy.h"; sourceTree = "<group>"; };
 		E59C7F9120596F0D00075053 /* AppDelegate+ZNTPrivacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ZNTPrivacy.m"; sourceTree = "<group>"; };
 		E59C7F9420596F3D00075053 /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
-		E59C7F9620596F4900075053 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		E59C7F9820596F5400075053 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
 		E59C7F9A20596F6300075053 /* CLMainPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMainPageVC.h; sourceTree = "<group>"; };
 		E59C7F9B20596F6300075053 /* CLMainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMainPageVC.m; sourceTree = "<group>"; };
@@ -1396,6 +1438,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C4941283206F854500FE19A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4941286206F855400FE19A9 /* CLMineAccountInfoTableViewCell.h */,
+				C4941285206F855400FE19A9 /* CLMineAccountInfoTableViewCell.m */,
+				C4941289206F855500FE19A9 /* CLMineOrderAboutTableViewCell.h */,
+				C4941288206F855500FE19A9 /* CLMineOrderAboutTableViewCell.m */,
+				C4941287206F855500FE19A9 /* CLMineShareTableViewCell.h */,
+				C4941284206F855400FE19A9 /* CLMineShareTableViewCell.m */,
+				C49412992070A7D400FE19A9 /* CLOrderCollectionViewCell.h */,
+				C494129A2070A7D400FE19A9 /* CLOrderCollectionViewCell.m */,
+				C494129F2070BADD00FE19A9 /* CLOrderTableViewCell.h */,
+				C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */,
+				C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */,
+				C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D21D8E5620689BCC00CDD04F /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -1489,17 +1550,23 @@
 				E59C7AF620596C5B00075053 /* KDInputView.m */,
 				E59C7AF720596C5B00075053 /* NSNumber+ZNTStyleDistance.h */,
 				E59C7AF820596C5B00075053 /* NSNumber+ZNTStyleDistance.m */,
+				C4941290206F859600FE19A9 /* UIButton+CLButton.h */,
+				C4941291206F859600FE19A9 /* UIButton+CLButton.m */,
 				E59C7AF920596C5B00075053 /* UIColor+ZNTShipper.h */,
 				E59C7AFA20596C5B00075053 /* UIColor+ZNTShipper.m */,
 				E59C7AFB20596C5B00075053 /* UIFont+ZNTShipper.h */,
 				E59C7AFC20596C5B00075053 /* UIFont+ZNTShipper.m */,
 				E59C7AFD20596C5B00075053 /* UISearchBar+ZNTStyle.h */,
 				E59C7AFE20596C5B00075053 /* UISearchBar+ZNTStyle.m */,
+				C494128D206F858C00FE19A9 /* UIView+CLShadowView.h */,
+				C494128E206F858D00FE19A9 /* UIView+CLShadowView.m */,
 				E59C7AFF20596C5B00075053 /* ZNTStyle.h */,
 				E59C7B0020596C5B00075053 /* ZNTStyle.m */,
 				E59C7B0120596C5B00075053 /* ZNTStyleSyntaxSugar.h */,
 				E59C7B0220596C5B00075053 /* ZNTThemeButton.h */,
 				E59C7B0320596C5B00075053 /* ZNTThemeButton.m */,
+				C49412A22070D28A00FE19A9 /* CLDottedLineView.h */,
+				C49412A32070D28A00FE19A9 /* CLDottedLineView.m */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1613,9 +1680,20 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				E59C7F9620596F4900075053 /* Mine.storyboard */,
+				C4941283206F854500FE19A9 /* View */,
+				C494127B206F853500FE19A9 /* Mine.storyboard */,
 				E59C7FA020596F8600075053 /* CLMineVC.h */,
 				E59C7FA120596F8600075053 /* CLMineVC.m */,
+				C494127D206F854100FE19A9 /* CLAccountManagementVC.h */,
+				C4941280206F854200FE19A9 /* CLAccountManagementVC.m */,
+				C4941293206F89CA00FE19A9 /* CLChangeNicknameVC.h */,
+				C4941294206F89CA00FE19A9 /* CLChangeNicknameVC.m */,
+				C494127F206F854200FE19A9 /* CLChangePhoneViewController.h */,
+				C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */,
+				C4941296207080DB00FE19A9 /* CLFeedbackVC.h */,
+				C4941297207080DB00FE19A9 /* CLFeedbackVC.m */,
+				C494129C2070AC1B00FE19A9 /* CLMyOrderVC.h */,
+				C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2915,6 +2993,7 @@
 				TargetAttributes = {
 					E5DBAD5E20580B3600B29BFB = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PLMQ7GZFKX;
 						ProvisioningStyle = Automatic;
 					};
 					E5DBAD7720580B3600B29BFB = {
@@ -2965,8 +3044,8 @@
 				E59C7E6420596CE100075053 /* ImageError@2x.png in Resources */,
 				D278537B205A1E990035FA27 /* LaunchScreen.storyboard in Resources */,
 				E59C7E7420596CE100075053 /* PlayButtonOverlayLarge@3x.png in Resources */,
-				E59C7F9720596F4900075053 /* Mine.storyboard in Resources */,
 				E59C7E5C20596CE100075053 /* MJPhotoBrowser.bundle in Resources */,
+				C494127C206F853500FE19A9 /* Mine.storyboard in Resources */,
 				E59C7E6720596CE100075053 /* ImageSelectedOff@2x.png in Resources */,
 				E59C7E6D20596CE100075053 /* ImageSelectedSmallOff@2x.png in Resources */,
 				E59C7E7920596CE100075053 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
@@ -3165,6 +3244,7 @@
 				E59C7ECF20596CE100075053 /* ZXBitArrayBuilder.m in Sources */,
 				E59C7EDC20596CE100075053 /* ZXCodaBarReader.m in Sources */,
 				E59C7EC620596CE100075053 /* ZXAztecHighLevelEncoder.m in Sources */,
+				C494128F206F858D00FE19A9 /* UIView+CLShadowView.m in Sources */,
 				E59C7F1E20596CE100075053 /* ZXModulusPoly.m in Sources */,
 				E59C7E8B20596CE100075053 /* MWZoomingScrollView.m in Sources */,
 				E59C7E5B20596CE100075053 /* MJPhoto.m in Sources */,
@@ -3231,6 +3311,7 @@
 				E59C7EB120596CE100075053 /* ZXAbstractExpandedDecoder.m in Sources */,
 				E59C7F0220596CE100075053 /* ZXEmailAddressResultParser.m in Sources */,
 				D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */,
+				C494129B2070A7D400FE19A9 /* CLOrderCollectionViewCell.m in Sources */,
 				E59C7E8820596CE100075053 /* MWPhotoBrowser.m in Sources */,
 				E59C7F3620596CE100075053 /* ZXPDF417Detector.m in Sources */,
 				E59C7F6A20596CE100075053 /* ZXRSSExpandedFieldParser.m in Sources */,
@@ -3272,6 +3353,7 @@
 				E59C7E4E20596CE100075053 /* IQUITextFieldView+Additions.m in Sources */,
 				E59C7F2D20596CE100075053 /* ZXPDF417BarcodeValue.m in Sources */,
 				E59C7E4C20596CE100075053 /* IQNSArray+Sort.m in Sources */,
+				C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */,
 				E59C7EBB20596CE100075053 /* ZXAI013x0xDecoder.m in Sources */,
 				E566876720596BC5003D5EAB /* ZNTPublicConfig.m in Sources */,
 				E59C7EBA20596CE100075053 /* ZXAI013x0x1xDecoder.m in Sources */,
@@ -3280,6 +3362,7 @@
 				E59C7F4E20596CE100075053 /* ZXQRCodeDetector.m in Sources */,
 				E59C7B5220596C9200075053 /* UIDevice+ZNTAdd.m in Sources */,
 				E59C7F1A20596CE100075053 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
+				C4941282206F854300FE19A9 /* CLAccountManagementVC.m in Sources */,
 				E59C7ECD20596CE100075053 /* ZXBinaryBitmap.m in Sources */,
 				E59C7F5420596CE100075053 /* ZXQRCodeFormatInformation.m in Sources */,
 				E59C7F7820596CE100075053 /* ZXTelResultParser.m in Sources */,
@@ -3289,7 +3372,9 @@
 				E59C7EB920596CE100075053 /* ZXAI01393xDecoder.m in Sources */,
 				E59C7F2420596CE100075053 /* ZXMultiFormatUPCEANReader.m in Sources */,
 				E59C7EBD20596CE100075053 /* ZXAI01decoder.m in Sources */,
+				C4941298207080DB00FE19A9 /* CLFeedbackVC.m in Sources */,
 				E59C7EC420596CE100075053 /* ZXAztecDetectorResult.m in Sources */,
+				C494128C206F855500FE19A9 /* CLMineOrderAboutTableViewCell.m in Sources */,
 				E59C7E8F20596CE100075053 /* QNAsyncRun.m in Sources */,
 				E59C7F8820596CE100075053 /* ZXVINResultParser.m in Sources */,
 				E59C7B4C20596C9200075053 /* NSString+DZCategory.m in Sources */,
@@ -3307,6 +3392,7 @@
 				E59C7F2720596CE100075053 /* ZXOneDReader.m in Sources */,
 				E59C7B5820596C9200075053 /* UITableView+DZCategory.m in Sources */,
 				E59C7F6320596CE100075053 /* ZXRSSDataCharacter.m in Sources */,
+				C494128A206F855500FE19A9 /* CLMineShareTableViewCell.m in Sources */,
 				E59C7EAA20596CE100075053 /* RMPageControl.m in Sources */,
 				E59C7ED220596CE100075053 /* ZXBizcardResultParser.m in Sources */,
 				E59C7E5D20596CE100075053 /* MJPhotoBrowser.m in Sources */,
@@ -3326,6 +3412,7 @@
 				E59C7EC520596CE100075053 /* ZXAztecEncoder.m in Sources */,
 				E59C7EEF20596CE100075053 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				E566873D20596B14003D5EAB /* CLGuideVC.m in Sources */,
+				C4941295206F89CA00FE19A9 /* CLChangeNicknameVC.m in Sources */,
 				E59C7E4220596CE100075053 /* QNHijackingDetectWrapper.m in Sources */,
 				E59C7EF820596CE100075053 /* ZXDecoderResult.m in Sources */,
 				E59C7F4820596CE100075053 /* ZXQRCodeBlockPair.m in Sources */,
@@ -3375,12 +3462,14 @@
 				E59C7B4A20596C9200075053 /* NSMutableAttributedString+KDCategory.m in Sources */,
 				E59C7F8420596CE100075053 /* ZXURLTOResultParser.m in Sources */,
 				E59C7F2920596CE100075053 /* ZXPDF417.m in Sources */,
+				C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */,
 				E59C7EDD20596CE100075053 /* ZXCodaBarWriter.m in Sources */,
 				E59C7ED820596CE100075053 /* ZXCalendarParsedResult.m in Sources */,
 				E59C7F0920596CE100075053 /* ZXGenericGFPoly.m in Sources */,
 				E59C7F8920596CE100075053 /* ZXWhiteRectangleDetector.m in Sources */,
 				E59C7F3F20596CE100075053 /* ZXPDF417Writer.m in Sources */,
 				E59C7ED120596CE100075053 /* ZXBitSource.m in Sources */,
+				C494128B206F855500FE19A9 /* CLMineAccountInfoTableViewCell.m in Sources */,
 				E59C7F6F20596CE100075053 /* ZXRSSFinderPattern.m in Sources */,
 				E59C7F5120596CE100075053 /* ZXQRCodeFinderPattern.m in Sources */,
 				E59C7E6220596CE100075053 /* SDWebImageManager+MJ.m in Sources */,
@@ -3411,6 +3500,7 @@
 				E59C7EC220596CE100075053 /* ZXAztecDecoder.m in Sources */,
 				E59C7EDF20596CE100075053 /* ZXCode128Writer.m in Sources */,
 				E59C7F0520596CE100075053 /* ZXErrors.m in Sources */,
+				C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */,
 				E59C7AE820596C1100075053 /* ZNTURLPathManager.m in Sources */,
 				E59C7B0420596C5B00075053 /* KDInputView.m in Sources */,
 				E59C7E9920596CE100075053 /* QNUserAgent.m in Sources */,
@@ -3482,6 +3572,7 @@
 				E59C7F6020596CE100075053 /* ZXResultPoint.m in Sources */,
 				E59C7F5220596CE100075053 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				E59C7E4120596CE100075053 /* QNDnspodFree.m in Sources */,
+				C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */,
 				E59C7F2C20596CE100075053 /* ZXPDF417BarcodeRow.m in Sources */,
 				E59C7F0320596CE100075053 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				E59C7E8E20596CE100075053 /* QNALAssetFile.m in Sources */,
@@ -3537,6 +3628,8 @@
 				E59C7E8A20596CE100075053 /* MWTapDetectingView.m in Sources */,
 				E59C7F0E20596CE100075053 /* ZXGridSampler.m in Sources */,
 				E59C7EBE20596CE100075053 /* ZXAI01weightDecoder.m in Sources */,
+				C4941292206F859600FE19A9 /* UIButton+CLButton.m in Sources */,
+				C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */,
 				E59C7F0120596CE100075053 /* ZXEmailAddressParsedResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3680,6 +3773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = PLMQ7GZFKX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chinald/ThirdParts/AMapSDK",
@@ -3703,6 +3797,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = PLMQ7GZFKX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chinald/ThirdParts/AMapSDK",

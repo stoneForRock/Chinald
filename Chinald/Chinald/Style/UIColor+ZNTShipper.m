@@ -34,6 +34,10 @@
     return [self colorWithRGB:0xF2F2F2];
 }
 
++ (UIColor *)clVCBackgroundColor {
+    return [self colorWithRGB:0xF6F6F6];
+}
+
 + (UIColor *)zntNavBackgroundColor {
     return [self colorWithRGB:0xFFFFFF];
 }
@@ -61,6 +65,22 @@
 + (UIColor *)zntTextColor4 {
     return [self colorWithRGB:0x030303];
 }
+
+/**
+ 字体灰色333333
+
+ @return UIColor
+ */
++ (UIColor *)zntTextColor5 {
+    return [self colorWithRGB:0x333333];
+}
++ (UIColor *)zntTextColor6 {
+    return [self colorWithRGB:0x666666];
+}
++ (UIColor *)zntTextColor7 {
+    return [self colorWithRGB:0x999999];
+}
+
 
 + (UIColor *)zntBackgroundColor3 {
     return [self colorWithRGB:0x030303];
