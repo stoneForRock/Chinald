@@ -23,6 +23,7 @@
 		C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */; };
 		C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */; };
 		C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A32070D28A00FE19A9 /* CLDottedLineView.m */; };
+		C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -512,6 +513,8 @@
 		C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderTableViewCell.m; sourceTree = "<group>"; };
 		C49412A22070D28A00FE19A9 /* CLDottedLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDottedLineView.h; sourceTree = "<group>"; };
 		C49412A32070D28A00FE19A9 /* CLDottedLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDottedLineView.m; sourceTree = "<group>"; };
+		C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderGoodsTableViewCell.h; sourceTree = "<group>"; };
+		C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderGoodsTableViewCell.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1448,6 +1451,8 @@
 				C494129A2070A7D400FE19A9 /* CLOrderCollectionViewCell.m */,
 				C494129F2070BADD00FE19A9 /* CLOrderTableViewCell.h */,
 				C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */,
+				C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */,
+				C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3624,6 +3629,7 @@
 				E59C7F0E20596CE100075053 /* ZXGridSampler.m in Sources */,
 				E59C7EBE20596CE100075053 /* ZXAI01weightDecoder.m in Sources */,
 				C4941292206F859600FE19A9 /* UIButton+CLButton.m in Sources */,
+				C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */,
 				E59C7F0120596CE100075053 /* ZXEmailAddressParsedResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

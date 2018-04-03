@@ -27,10 +27,15 @@
 + (UIColor *)zntTextColor2;
 + (UIColor *)zntTextColor3;
 + (UIColor *)zntTextColor4;
+/**
+ 字体灰色333333
+ 
+ @return UIColor
+ */
 + (UIColor *)zntTextColor5;
 
 + (UIColor *)zntTextColor6;/**< 666666 字体淡灰色 */
-
++ (UIColor *)zntTextColor7;/**< 999999 字体淡灰色 */
 + (UIColor *)zntBackgroundColor3;
 + (UIColor *)zntBackgroundColor4;
 + (UIColor *)zntBackgroundColor5;

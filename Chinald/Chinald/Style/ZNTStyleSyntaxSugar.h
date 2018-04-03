@@ -26,6 +26,8 @@
 #define Color4 [UIColor zntTextColor4]
 #define Color5 [UIColor zntTextColor5] //!<0x333333 字体主色
 #define Color6 [UIColor zntTextColor6] //!<0x666666 字体主色
+#define Color7 [UIColor zntTextColor7] //!<0x999999 字体主色
+
 #define LineColor [UIColor zntDividingLineColor]
 
 #define Font10 [UIFont zntFont10]

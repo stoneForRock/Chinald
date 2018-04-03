@@ -66,12 +66,21 @@
     return [self colorWithRGB:0x030303];
 }
 
+/**
+ 字体灰色333333
+
+ @return UIColor
+ */
 + (UIColor *)zntTextColor5 {
     return [self colorWithRGB:0x333333];
 }
 + (UIColor *)zntTextColor6 {
     return [self colorWithRGB:0x666666];
 }
++ (UIColor *)zntTextColor7 {
+    return [self colorWithRGB:0x999999];
+}
+
 
 + (UIColor *)zntBackgroundColor3 {
     return [self colorWithRGB:0x030303];
