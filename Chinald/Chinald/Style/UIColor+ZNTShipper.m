@@ -106,7 +106,9 @@
 + (UIColor *)zntDividingLineColor {
     return [self colorWithRGB:0xcecece];
 }
-
++ (UIColor *)clDividingLineColor{
+    return [self colorWithRGB:0xd9d9d9];
+}
 + (UIColor *)zntSubtitleColor {
     return [self colorWithRGB:0xFFFFFF];
 }

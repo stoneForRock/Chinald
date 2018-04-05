@@ -8,6 +8,7 @@
 
 #import "CLMineAccountInfoTableViewCell.h"
 #import "UIView+CLShadowView.h"
+#import <QuartzCore/QuartzCore.h>
 @interface CLMineAccountInfoTableViewCell()
 @property(nonatomic, strong)UILabel *vipNumberLabel;  //!<会员号
 @property(nonatomic, strong)UILabel *nicknameLabel;  //!<昵称
@@ -118,29 +119,38 @@
         make.height.mas_offset(15);
     }];
     
+    UIView *buttonBackgroundView = [[UIView alloc]init];
+    buttonBackgroundView.backgroundColor = [UIColor colorWithHexRGB:@"0xFFFFFF" alpha:0.2];
+//
+
+    [self.contentView addSubview:buttonBackgroundView];
+    [buttonBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.contentView.mas_right).with.offset(25);
+        make.top.equalTo(self.contentView.mas_top).with.offset(62);
+        make.width.mas_offset(120);
+        make.height.mas_offset(26);
+    }];
+    buttonBackgroundView.layer.cornerRadius = 13;
+    buttonBackgroundView.layer.borderColor = [UIColor whiteColor].CGColor;
+    buttonBackgroundView.layer.borderWidth = 1;
+    buttonBackgroundView.layer.masksToBounds = YES;
+    
     UIButton *managementButton = [[UIButton alloc]init];
     managementButton.titleLabel.font = [UIFont zntFont12];
     [managementButton addTarget:self action:@selector(managementButtonClick) forControlEvents:UIControlEventTouchUpInside];
-
+    
     [managementButton setTitleColor:ThemeBacgroundColor forState:0];
     [managementButton setTitle:@"账户管理" forState:0];
-    managementButton.backgroundColor = Color5;
+    managementButton.backgroundColor = [UIColor clearColor];
+    managementButton.layer.opaque = YES;
+
     [self.contentView addSubview:managementButton];
     [managementButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView.mas_right).with.offset(0);
         make.top.equalTo(self.contentView.mas_top).with.offset(60);
-        make.width.mas_offset(70);
+        make.width.mas_offset(95);
         make.height.mas_offset(31);
     }];
-    
-//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:managementButton.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomLeft cornerRadii:CGSizeMake(27, 27)];
-//    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-////    maskLayer.backgroundColor = ThemeBacgroundColor.CGColor;
-//    maskLayer.frame = managementButton.bounds;
-//    CGRectMake(managementButton.frame.origin.x - 1.5, managementButton.frame.origin.y - 1.5, managementButton.bounds.size.width + 1.5, managementButton.bounds.size.height + 1.5);
-    
-//    maskLayer.path = maskPath.CGPath;
-//    managementButton.layer.mask = maskLayer;
 }
 -(void)amountButtonClick{
     if (self.selectMineAccountCellBlock) {

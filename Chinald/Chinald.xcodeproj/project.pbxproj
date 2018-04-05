@@ -24,6 +24,17 @@
 		C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */; };
 		C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A32070D28A00FE19A9 /* CLDottedLineView.m */; };
 		C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */; };
+		C4E860012073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860002073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m */; };
+		C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */; };
+		C4E860072075C55900B0264E /* CLOrderStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860062075C55900B0264E /* CLOrderStatusTableViewCell.m */; };
+		C4E8600B2075D51200B0264E /* CLOrderOperationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8600A2075D51200B0264E /* CLOrderOperationItem.m */; };
+		C4E8600E2075D59C00B0264E /* CLOrderOperationItemViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8600D2075D59C00B0264E /* CLOrderOperationItemViewBase.m */; };
+		C4E860112075D63100B0264E /* CLForPaymentOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860102075D63100B0264E /* CLForPaymentOperationItemView.m */; };
+		C4E860142075D66000B0264E /* CLToSendGoodsOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860132075D66000B0264E /* CLToSendGoodsOperationItemView.m */; };
+		C4E860172075D6D700B0264E /* CLWaitingForGoodsOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860162075D6D700B0264E /* CLWaitingForGoodsOperationItemView.m */; };
+		C4E8601A2075D70E00B0264E /* CLAfterSalesOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860192075D70E00B0264E /* CLAfterSalesOperationItemView.m */; };
+		C4E8601D2075FD1000B0264E /* CLReceivedOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */; };
+		C4E8602020761AD600B0264E /* CLOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -515,6 +526,28 @@
 		C49412A32070D28A00FE19A9 /* CLDottedLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDottedLineView.m; sourceTree = "<group>"; };
 		C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderGoodsTableViewCell.h; sourceTree = "<group>"; };
 		C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderGoodsTableViewCell.m; sourceTree = "<group>"; };
+		C4E85FFF2073BB4F00B0264E /* CLOrderCostDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderCostDetailTableViewCell.h; sourceTree = "<group>"; };
+		C4E860002073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderCostDetailTableViewCell.m; sourceTree = "<group>"; };
+		C4E860022073C40600B0264E /* CLOrderInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderInfoTableViewCell.h; sourceTree = "<group>"; };
+		C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderInfoTableViewCell.m; sourceTree = "<group>"; };
+		C4E860052075C55900B0264E /* CLOrderStatusTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderStatusTableViewCell.h; sourceTree = "<group>"; };
+		C4E860062075C55900B0264E /* CLOrderStatusTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderStatusTableViewCell.m; sourceTree = "<group>"; };
+		C4E860092075D51200B0264E /* CLOrderOperationItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderOperationItem.h; sourceTree = "<group>"; };
+		C4E8600A2075D51200B0264E /* CLOrderOperationItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderOperationItem.m; sourceTree = "<group>"; };
+		C4E8600C2075D59C00B0264E /* CLOrderOperationItemViewBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderOperationItemViewBase.h; sourceTree = "<group>"; };
+		C4E8600D2075D59C00B0264E /* CLOrderOperationItemViewBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderOperationItemViewBase.m; sourceTree = "<group>"; };
+		C4E8600F2075D63100B0264E /* CLForPaymentOperationItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLForPaymentOperationItemView.h; sourceTree = "<group>"; };
+		C4E860102075D63100B0264E /* CLForPaymentOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLForPaymentOperationItemView.m; sourceTree = "<group>"; };
+		C4E860122075D66000B0264E /* CLToSendGoodsOperationItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLToSendGoodsOperationItemView.h; sourceTree = "<group>"; };
+		C4E860132075D66000B0264E /* CLToSendGoodsOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLToSendGoodsOperationItemView.m; sourceTree = "<group>"; };
+		C4E860152075D6D700B0264E /* CLWaitingForGoodsOperationItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLWaitingForGoodsOperationItemView.h; sourceTree = "<group>"; };
+		C4E860162075D6D700B0264E /* CLWaitingForGoodsOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLWaitingForGoodsOperationItemView.m; sourceTree = "<group>"; };
+		C4E860182075D70E00B0264E /* CLAfterSalesOperationItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAfterSalesOperationItemView.h; sourceTree = "<group>"; };
+		C4E860192075D70E00B0264E /* CLAfterSalesOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAfterSalesOperationItemView.m; sourceTree = "<group>"; };
+		C4E8601B2075FD1000B0264E /* CLReceivedOperationItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLReceivedOperationItemView.h; sourceTree = "<group>"; };
+		C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLReceivedOperationItemView.m; sourceTree = "<group>"; };
+		C4E8601E20761AD600B0264E /* CLOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderDetailViewController.h; sourceTree = "<group>"; };
+		C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderDetailViewController.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1453,8 +1486,35 @@
 				C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */,
 				C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */,
 				C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */,
+				C4E85FFF2073BB4F00B0264E /* CLOrderCostDetailTableViewCell.h */,
+				C4E860002073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m */,
+				C4E860022073C40600B0264E /* CLOrderInfoTableViewCell.h */,
+				C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */,
+				C4E860052075C55900B0264E /* CLOrderStatusTableViewCell.h */,
+				C4E860062075C55900B0264E /* CLOrderStatusTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C4E860082075D44500B0264E /* OrderOperationItemView */ = {
+			isa = PBXGroup;
+			children = (
+				C4E860092075D51200B0264E /* CLOrderOperationItem.h */,
+				C4E8600A2075D51200B0264E /* CLOrderOperationItem.m */,
+				C4E8600C2075D59C00B0264E /* CLOrderOperationItemViewBase.h */,
+				C4E8600D2075D59C00B0264E /* CLOrderOperationItemViewBase.m */,
+				C4E8600F2075D63100B0264E /* CLForPaymentOperationItemView.h */,
+				C4E860102075D63100B0264E /* CLForPaymentOperationItemView.m */,
+				C4E860122075D66000B0264E /* CLToSendGoodsOperationItemView.h */,
+				C4E860132075D66000B0264E /* CLToSendGoodsOperationItemView.m */,
+				C4E860152075D6D700B0264E /* CLWaitingForGoodsOperationItemView.h */,
+				C4E860162075D6D700B0264E /* CLWaitingForGoodsOperationItemView.m */,
+				C4E860182075D70E00B0264E /* CLAfterSalesOperationItemView.h */,
+				C4E860192075D70E00B0264E /* CLAfterSalesOperationItemView.m */,
+				C4E8601B2075FD1000B0264E /* CLReceivedOperationItemView.h */,
+				C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */,
+			);
+			path = OrderOperationItemView;
 			sourceTree = "<group>";
 		};
 		D21D8E5620689BCC00CDD04F /* Network */ = {
@@ -1680,6 +1740,7 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C4E860082075D44500B0264E /* OrderOperationItemView */,
 				C4941283206F854500FE19A9 /* View */,
 				C494127B206F853500FE19A9 /* Mine.storyboard */,
 				E59C7FA020596F8600075053 /* CLMineVC.h */,
@@ -1694,6 +1755,8 @@
 				C4941297207080DB00FE19A9 /* CLFeedbackVC.m */,
 				C494129C2070AC1B00FE19A9 /* CLMyOrderVC.h */,
 				C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */,
+				C4E8601E20761AD600B0264E /* CLOrderDetailViewController.h */,
+				C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -3303,6 +3366,7 @@
 				E59C7EA020596CE100075053 /* QNUpToken.m in Sources */,
 				E59C7E4820596CE100075053 /* QNDes.m in Sources */,
 				E59C7B4B20596C9200075053 /* NSObject+ZNTAdd.m in Sources */,
+				C4E8602020761AD600B0264E /* CLOrderDetailViewController.m in Sources */,
 				E59C7F5020596CE100075053 /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				E5668718205963F6003D5EAB /* AppDelegate.m in Sources */,
 				E59C7F7920596CE100075053 /* ZXTextParsedResult.m in Sources */,
@@ -3326,9 +3390,11 @@
 				E566873220596A30003D5EAB /* ZNTTabBarController.m in Sources */,
 				E59C7F5320596CE100075053 /* ZXQRCodeFinderPatternInfo.m in Sources */,
 				E59C7F6E20596CE100075053 /* ZXRSSExpandedRow.m in Sources */,
+				C4E8600E2075D59C00B0264E /* CLOrderOperationItemViewBase.m in Sources */,
 				E59C7F4920596CE100075053 /* ZXQRCodeDataBlock.m in Sources */,
 				E59C7F0F20596CE100075053 /* ZXHybridBinarizer.m in Sources */,
 				E59C7EE420596CE100075053 /* ZXDataMatrixBase256Encoder.m in Sources */,
+				C4E860172075D6D700B0264E /* CLWaitingForGoodsOperationItemView.m in Sources */,
 				E59C7F2E20596CE100075053 /* ZXPDF417BoundingBox.m in Sources */,
 				E59C7B0A20596C5B00075053 /* ZNTThemeButton.m in Sources */,
 				E59C7E9B20596CE100075053 /* QNConfiguration.m in Sources */,
@@ -3356,9 +3422,11 @@
 				C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */,
 				E59C7EBB20596CE100075053 /* ZXAI013x0xDecoder.m in Sources */,
 				E566876720596BC5003D5EAB /* ZNTPublicConfig.m in Sources */,
+				C4E8601D2075FD1000B0264E /* CLReceivedOperationItemView.m in Sources */,
 				E59C7EBA20596CE100075053 /* ZXAI013x0x1xDecoder.m in Sources */,
 				E59C7E9C20596CE100075053 /* QNFormUpload.m in Sources */,
 				E59C7F9F20596F7A00075053 /* CLShoppingCartVC.m in Sources */,
+				C4E860142075D66000B0264E /* CLToSendGoodsOperationItemView.m in Sources */,
 				E59C7F4E20596CE100075053 /* ZXQRCodeDetector.m in Sources */,
 				E59C7B5220596C9200075053 /* UIDevice+ZNTAdd.m in Sources */,
 				E59C7F1A20596CE100075053 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
@@ -3414,6 +3482,7 @@
 				E566873D20596B14003D5EAB /* CLGuideVC.m in Sources */,
 				C4941295206F89CA00FE19A9 /* CLChangeNicknameVC.m in Sources */,
 				E59C7E4220596CE100075053 /* QNHijackingDetectWrapper.m in Sources */,
+				C4E860112075D63100B0264E /* CLForPaymentOperationItemView.m in Sources */,
 				E59C7EF820596CE100075053 /* ZXDecoderResult.m in Sources */,
 				E59C7F4820596CE100075053 /* ZXQRCodeBlockPair.m in Sources */,
 				E59C7EF520596CE100075053 /* ZXDataMatrixWriter.m in Sources */,
@@ -3442,6 +3511,7 @@
 				E59C7EF020596CE100075053 /* ZXDataMatrixReader.m in Sources */,
 				E59C7F2F20596CE100075053 /* ZXPDF417Codeword.m in Sources */,
 				E59C7E4520596CE100075053 /* QNResolvUtil.m in Sources */,
+				C4E8601A2075D70E00B0264E /* CLAfterSalesOperationItemView.m in Sources */,
 				E59C7E5520596CE100075053 /* IQBarButtonItem.m in Sources */,
 				E59C7F5A20596CE100075053 /* ZXQRCodeVersion.m in Sources */,
 				E59C7F8320596CE100075053 /* ZXURIResultParser.m in Sources */,
@@ -3491,6 +3561,7 @@
 				E566874020596B2F003D5EAB /* ZNTLaunchManager.m in Sources */,
 				E59C7F4720596CE100075053 /* ZXQRCodeBitMatrixParser.m in Sources */,
 				E59C7F7B20596CE100075053 /* ZXUPCAWriter.m in Sources */,
+				C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */,
 				E59C7E8720596CE100075053 /* MWPhoto.m in Sources */,
 				E59C7F7C20596CE100075053 /* ZXUPCEANExtension2Support.m in Sources */,
 				E59C7F6920596CE100075053 /* ZXRSSExpandedDecodedObject.m in Sources */,
@@ -3506,6 +3577,7 @@
 				E59C7E9920596CE100075053 /* QNUserAgent.m in Sources */,
 				E59C7F8520596CE100075053 /* ZXVCardResultParser.m in Sources */,
 				E59C7F1520596CE100075053 /* ZXITFReader.m in Sources */,
+				C4E860012073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m in Sources */,
 				E59C7B5D20596C9200075053 /* DGBKeyChain.m in Sources */,
 				E59C7F3C20596CE100075053 /* ZXPDF417Reader.m in Sources */,
 				E59C7F3720596CE100075053 /* ZXPDF417DetectorResult.m in Sources */,
@@ -3547,6 +3619,7 @@
 				E59C7EB720596CE100075053 /* ZXAI01320xDecoder.m in Sources */,
 				E59C7F5B20596CE100075053 /* ZXQRCodeWriter.m in Sources */,
 				E59C7F6520596CE100075053 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
+				C4E8600B2075D51200B0264E /* CLOrderOperationItem.m in Sources */,
 				E59C7E4420596CE100075053 /* QNResolver.m in Sources */,
 				E59C7E3D20596CE100075053 /* QNLruCache.m in Sources */,
 				E59C7F1D20596CE100075053 /* ZXModulusGF.m in Sources */,
@@ -3585,6 +3658,7 @@
 				E59C7F2620596CE100075053 /* ZXOneDimensionalCodeWriter.m in Sources */,
 				E59C7F3420596CE100075053 /* ZXPDF417DetectionResultColumn.m in Sources */,
 				E59C7B0520596C5B00075053 /* NSNumber+ZNTStyleDistance.m in Sources */,
+				C4E860072075C55900B0264E /* CLOrderStatusTableViewCell.m in Sources */,
 				E59C7F6D20596CE100075053 /* ZXRSSExpandedReader.m in Sources */,
 				E59C7EEE20596CE100075053 /* ZXDataMatrixErrorCorrection.m in Sources */,
 				E59C7E4B20596CE100075053 /* QNIP.m in Sources */,

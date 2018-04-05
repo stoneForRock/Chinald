@@ -29,6 +29,7 @@
 #define Color7 [UIColor zntTextColor7] //!<0x999999 字体主色
 
 #define LineColor [UIColor zntDividingLineColor]
+#define CLLineColor [UIColor clDividingLineColor]//!<0xD9D9D9 分割线颜色
 
 #define Font10 [UIFont zntFont10]
 #define Font11 [UIFont zntFont11]

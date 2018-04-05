@@ -49,6 +49,7 @@
 + (UIColor *)clVCBackgroundColor;
 
 + (UIColor *)zntDividingLineColor;
++ (UIColor *)clDividingLineColor;
 + (UIColor *)zntSubtitleColor;
 
 + (UIColor *)colorWithRGB:(int)rgbValue;

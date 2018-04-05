@@ -66,6 +66,10 @@
     }
     return self;
 }
+//刷新数据
+-(void)layoutSubviews{
+    [super layoutSubviews];
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
