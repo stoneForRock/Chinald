@@ -53,7 +53,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             button.titleLabel.font = [UIFont zntFont12];
             button.layer.cornerRadius = 2;
             button.layer.borderWidth = 1;
-            button.layer.borderColor = [UIColor colorWithHexRGB:@"0xD9D9D9"].CGColor;
+            button.layer.borderColor = [UIColor clDividingLineColor].CGColor;
             [button setTitle:@"显示" forState:0];
             [button setTitleColor:Color5 forState:0];
             cell.accessoryView = button;

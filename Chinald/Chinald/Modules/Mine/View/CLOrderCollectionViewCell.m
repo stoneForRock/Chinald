@@ -10,7 +10,17 @@
 #import "CLOrderTableViewCell.h"
 #import "CLDottedLineView.h"
 #import "NSString+DZCategory.h"
+#import "CLOrderOperationItem.h"
+#import "CLOrderOperationItemViewBase.h"
+@interface CLOrderCollectionViewCell()
+@property (strong, nonatomic) IBOutlet UITableView *orderListTableView;
+
+@end
 @implementation CLOrderCollectionViewCell
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    [self.orderListTableView reloadData];
+}
 #pragma mark-------tableview代理方法  UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -63,8 +73,15 @@
     [view addSubview:orderStatusLabel];
     
     UIView *vLineView = [[UIView alloc]initWithFrame:CGRectMake(12, 42.5, ScreenFullWidth - 24, 0.5)];
-    vLineView.backgroundColor = [UIColor zntThemeTintColor];
+    vLineView.backgroundColor = CLLineColor;
     [view addSubview:vLineView];
+    
+    UIButton *headerButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, ScreenFullWidth, 43)];
+    headerButton.backgroundColor = [UIColor clearColor];
+    //使用button记录订单编号、id
+    [headerButton setTitle:@"" forState:0];
+    [headerButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:headerButton];
     return view;
 }
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
@@ -100,42 +117,21 @@
     [view addSubview:goodsCountLabel];
     CLDottedLineView *dottedLineView = [[CLDottedLineView alloc]initWithFrame:CGRectMake(13, 36, ScreenFullWidth - 26, 1)];
     [view addSubview:dottedLineView];
-    
-    UIButton *buyAgainButton = [[UIButton alloc]initWithFrame:CGRectMake(ScreenFullWidth - 91, 51, 79, 29)];
-    [buyAgainButton setTitle:@"再次购买" forState:0];
-    buyAgainButton.titleLabel.font = [UIFont zntFont13];
-    [buyAgainButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
-    buyAgainButton.layer.borderWidth = 0.5;
-    buyAgainButton.layer.borderColor = [UIColor zntThemeTintColor].CGColor;
-    buyAgainButton.layer.cornerRadius = 2;
-    buyAgainButton.layer.masksToBounds = YES;
-    [view addSubview:buyAgainButton];
-    
-    UIButton *assessButton = [[UIButton alloc]initWithFrame:CGRectMake(ScreenFullWidth - 180, 51, 79, 29)];
-    [assessButton setTitle:@"评价" forState:0];
-    [assessButton setTitleColor:Color5 forState:0];
-    assessButton.titleLabel.font = [UIFont zntFont13];
-    
-    assessButton.layer.borderWidth = 0.5;
-    assessButton.layer.borderColor = [UIColor colorWithHexRGB:@"0xD9D9D9"].CGColor;
-    assessButton.layer.cornerRadius = 2;
-    assessButton.layer.masksToBounds = YES;
-    [view addSubview:assessButton];
-    
-    UIButton *seeWuLiuButton = [[UIButton alloc]initWithFrame:CGRectMake(ScreenFullWidth - 269, 51, 79, 29)];
-    [seeWuLiuButton setTitle:@"查看物流" forState:0];
-    [seeWuLiuButton setTitleColor:Color5 forState:0];
-    seeWuLiuButton.titleLabel.font = [UIFont zntFont13];
-    seeWuLiuButton.layer.borderWidth = 0.5;
-    seeWuLiuButton.layer.borderColor = [UIColor colorWithHexRGB:@"0xD9D9D9"].CGColor;
-    seeWuLiuButton.layer.cornerRadius = 2;
-    seeWuLiuButton.layer.masksToBounds = YES;
-    [view addSubview:seeWuLiuButton];
+    CLOrderOperationItemViewBase *orderOperationItemView = [CLOrderOperationItem showOrderOperationItemWithFrame:CGRectMake(0, dottedLineView.frame.origin.y + dottedLineView.frame.size.height, ScreenFullWidth, 55) pullMenuViewType:CL_FOR_PAY_OPERATION theOrder:nil];
+    [view addSubview:orderOperationItemView];
+
     return backgroundView;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
     return 102;
+}
+
+//查看订单详情，将订单详情的数据返回
+-(void)headerButtonClick:(UIButton *)button{
+    if (self.orderCellClickBlock) {
+        self.orderCellClickBlock(nil);
+    }
 }
 @end

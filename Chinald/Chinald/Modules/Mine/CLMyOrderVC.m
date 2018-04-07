@@ -8,14 +8,21 @@
 
 #import "CLMyOrderVC.h"
 #import "CLOrderCollectionViewCell.h"
+#import "CLOrderDetailViewController.h"
 @interface CLMyOrderVC ()
 
 @end
 
 @implementation CLMyOrderVC
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationCustomStyleWithColor:[UIColor whiteColor]];
+    [self.navigationController setNavigationStyle:ZNTNavigationStyleCustom];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.navigationItem.title = @"我的订单";
     // Do any additional setup after loading the view.
 }
 
@@ -26,9 +33,13 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *orderCollectionViewCellString = @"orderCollectionViewCell";
     CLOrderCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:orderCollectionViewCellString forIndexPath:indexPath];
-    
+    cell.orderCellClickBlock = ^(id orderInfo) {
+      //跳转到订单详情页
+        [self performSegueWithIdentifier:@"orderListToOrderDetailVC" sender:nil];
+    };
 
     
     return cell;
@@ -41,7 +52,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(ScreenFullWidth, ScreenFullHeight - 108);
+    return CGSizeMake(ScreenFullWidth - 1, ScreenFullHeight - 108);
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
@@ -60,6 +71,7 @@
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
+    
     return UIEdgeInsetsMake(0,0, 0, 0);
 }
 - (void)didReceiveMemoryWarning {

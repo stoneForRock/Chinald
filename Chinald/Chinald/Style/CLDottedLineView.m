@@ -25,7 +25,7 @@
     
     CGContextFillRect(context,self.bounds);//把整个空间用刚设置的颜色填充
     //上面是准备工作，下面开始画线了
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithHexRGB:@"0xD9D9D9"].CGColor);//设置线的颜色
+    CGContextSetStrokeColorWithColor(context, [UIColor clDividingLineColor].CGColor);//设置线的颜色
     CGContextMoveToPoint(context,0,(self.frame.size.height - 1) / 2.0);//画线的起始点位置
     CGContextAddLineToPoint(context,self.frame.size.width,(self.frame.size.height - 1) / 2.0);//画第一条线的终点位置
     
