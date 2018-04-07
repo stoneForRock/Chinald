@@ -54,6 +54,8 @@
             make.height.mas_offset(15);
         }];
         
+
+        
         //费用明细数据
         UILabel *goodsAmountLabel = [[UILabel alloc]init];
         goodsAmountLabel.font = [UIFont zntFont14];
@@ -98,7 +100,7 @@
         vLineView.backgroundColor = CLLineColor;
         [self.contentView addSubview:vLineView];
         [vLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_offset(14);
+            make.top.equalTo(freightLabel.mas_bottom).with.offset(14);
             make.left.mas_offset(12);
             make.right.mas_offset(-12);
             make.height.mas_offset(0.5);
@@ -110,10 +112,10 @@
         [self.contentView addSubview:payLabel];
         self.payLabel = payLabel;
         [payLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_offset(16);
+            make.top.equalTo(vLineView.mas_bottom).with.offset(0);
             make.left.mas_offset(24);
             make.right.mas_offset(-24);
-            make.bottom.mas_offset(16);
+            make.bottom.mas_offset(0);
         }];
     }
     return self;
@@ -121,6 +123,7 @@
 //刷新数据
 -(void)layoutSubviews{
     [super layoutSubviews];
+    self.payLabel.text = @"实付款：￥89.00";
 }
 
 - (void)awakeFromNib {

@@ -32,7 +32,7 @@
         self.orderStatusImageView = orderStatusImageView;
         [orderStatusImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_offset(15);
-            make.left.mas_offset(-12);
+            make.left.mas_offset(12);
             make.width.mas_offset(19);
             make.height.mas_offset(19);
         }];
@@ -94,6 +94,11 @@
 //刷新数据
 -(void)layoutSubviews{
     [super layoutSubviews];
+    self.orderStatusImageView.image = [UIImage imageNamed:@"icon_indent_dfk"];
+    self.orderStatusLabel.text = @"待付款";
+    self.orderStatusDetailLabel.text = @"请在11：59完成支付";
+    self.recipientAndPhoneLabel.text = @"他大爷";
+    self.recipinetAddressLabel.text = @"广东，广州，天河区，圆圆路8号方方大厦502";
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

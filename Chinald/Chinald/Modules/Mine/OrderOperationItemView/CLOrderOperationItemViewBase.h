@@ -31,11 +31,11 @@ typedef NS_ENUM(NSInteger, OrderAfterSalesOperationType){
     ORDER_AFTER_ASLES_REFUND
 };
 @property(nonatomic, strong)id orderInfo;  //!<
-@property (copy, nonatomic)void(^orderForPayOperationItemClickBlock)(OrderForPayOperationType operationType,id orderInfo);
-@property (copy, nonatomic)void(^orderToSendOperationItemClickBlock)(OrderToSendOperationType operationType,id orderInfo);
-@property (copy, nonatomic)void(^orderWaitingForGoodsOperationItemClickBlock)(OrderWaitingForGoodsOperationType operationType,id orderInfo);
-@property (copy, nonatomic)void(^orderReceiveOperationItemClickBlock)(OrderReceivedOperationType operationType,id orderInfo);
-@property (copy, nonatomic)void(^orderAfterSalesOperationItemClickBlock)(OrderAfterSalesOperationType operationType,id orderInfo);
+@property (copy, nonatomic)void(^orderForPayOperationItemClickBlock)(OrderForPayOperationType operationType,id orderInfo);//!<待支付的回调
+@property (copy, nonatomic)void(^orderToSendOperationItemClickBlock)(OrderToSendOperationType operationType,id orderInfo);//!<待发货的回调
+@property (copy, nonatomic)void(^orderWaitingForGoodsOperationItemClickBlock)(OrderWaitingForGoodsOperationType operationType,id orderInfo);//!<待收货的回调
+@property (copy, nonatomic)void(^orderReceiveOperationItemClickBlock)(OrderReceivedOperationType operationType,id orderInfo);//!<订单完成的回调
+@property (copy, nonatomic)void(^orderAfterSalesOperationItemClickBlock)(OrderAfterSalesOperationType operationType,id orderInfo);//!<售后的回调
 -(instancetype)initWithFrame:(CGRect)frame;
 
 //添加子视图

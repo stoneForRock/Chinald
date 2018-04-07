@@ -35,6 +35,10 @@
 		C4E8601A2075D70E00B0264E /* CLAfterSalesOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860192075D70E00B0264E /* CLAfterSalesOperationItemView.m */; };
 		C4E8601D2075FD1000B0264E /* CLReceivedOperationItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */; };
 		C4E8602020761AD600B0264E /* CLOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */; };
+		C4E860232077769100B0264E /* CLLogisticsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860222077769100B0264E /* CLLogisticsDetailViewController.m */; };
+		C4E860262078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */; };
+		C4E860292078B37100B0264E /* CLLogisticsCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */; };
+		C4E8602C2078D5F300B0264E /* CLRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8602B2078D5F300B0264E /* CLRefundViewController.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -548,6 +552,14 @@
 		C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLReceivedOperationItemView.m; sourceTree = "<group>"; };
 		C4E8601E20761AD600B0264E /* CLOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderDetailViewController.h; sourceTree = "<group>"; };
 		C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderDetailViewController.m; sourceTree = "<group>"; };
+		C4E860212077769100B0264E /* CLLogisticsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLogisticsDetailViewController.h; sourceTree = "<group>"; };
+		C4E860222077769100B0264E /* CLLogisticsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLogisticsDetailViewController.m; sourceTree = "<group>"; };
+		C4E860242078AFF900B0264E /* CLLogisticsHistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLogisticsHistoryTableViewCell.h; sourceTree = "<group>"; };
+		C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLogisticsHistoryTableViewCell.m; sourceTree = "<group>"; };
+		C4E860272078B37100B0264E /* CLLogisticsCompanyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLogisticsCompanyTableViewCell.h; sourceTree = "<group>"; };
+		C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLogisticsCompanyTableViewCell.m; sourceTree = "<group>"; };
+		C4E8602A2078D5F300B0264E /* CLRefundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLRefundViewController.h; sourceTree = "<group>"; };
+		C4E8602B2078D5F300B0264E /* CLRefundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLRefundViewController.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1492,6 +1504,10 @@
 				C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */,
 				C4E860052075C55900B0264E /* CLOrderStatusTableViewCell.h */,
 				C4E860062075C55900B0264E /* CLOrderStatusTableViewCell.m */,
+				C4E860242078AFF900B0264E /* CLLogisticsHistoryTableViewCell.h */,
+				C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */,
+				C4E860272078B37100B0264E /* CLLogisticsCompanyTableViewCell.h */,
+				C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1757,6 +1773,10 @@
 				C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */,
 				C4E8601E20761AD600B0264E /* CLOrderDetailViewController.h */,
 				C4E8601F20761AD600B0264E /* CLOrderDetailViewController.m */,
+				C4E860212077769100B0264E /* CLLogisticsDetailViewController.h */,
+				C4E860222077769100B0264E /* CLLogisticsDetailViewController.m */,
+				C4E8602A2078D5F300B0264E /* CLRefundViewController.h */,
+				C4E8602B2078D5F300B0264E /* CLRefundViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -3518,6 +3538,7 @@
 				E59C7F3020596CE100075053 /* ZXPDF417CodewordDecoder.m in Sources */,
 				E59C7E9A20596CE100075053 /* QNFileRecorder.m in Sources */,
 				E59C7B0820596C5B00075053 /* UISearchBar+ZNTStyle.m in Sources */,
+				C4E860232077769100B0264E /* CLLogisticsDetailViewController.m in Sources */,
 				E59C7F8120596CE100075053 /* ZXUPCEReader.m in Sources */,
 				E59C7EBC20596CE100075053 /* ZXAI01AndOtherAIs.m in Sources */,
 				E59C7EAD20596CE100075053 /* XMEngine.m in Sources */,
@@ -3539,6 +3560,7 @@
 				E59C7F8920596CE100075053 /* ZXWhiteRectangleDetector.m in Sources */,
 				E59C7F3F20596CE100075053 /* ZXPDF417Writer.m in Sources */,
 				E59C7ED120596CE100075053 /* ZXBitSource.m in Sources */,
+				C4E8602C2078D5F300B0264E /* CLRefundViewController.m in Sources */,
 				C494128B206F855500FE19A9 /* CLMineAccountInfoTableViewCell.m in Sources */,
 				E59C7F6F20596CE100075053 /* ZXRSSFinderPattern.m in Sources */,
 				E59C7F5120596CE100075053 /* ZXQRCodeFinderPattern.m in Sources */,
@@ -3570,6 +3592,7 @@
 				E5DBAD6420580B3600B29BFB /* main.m in Sources */,
 				E59C7EC220596CE100075053 /* ZXAztecDecoder.m in Sources */,
 				E59C7EDF20596CE100075053 /* ZXCode128Writer.m in Sources */,
+				C4E860292078B37100B0264E /* CLLogisticsCompanyTableViewCell.m in Sources */,
 				E59C7F0520596CE100075053 /* ZXErrors.m in Sources */,
 				C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */,
 				E59C7AE820596C1100075053 /* ZNTURLPathManager.m in Sources */,
@@ -3601,6 +3624,7 @@
 				E59C7F5D20596CE100075053 /* ZXReedSolomonEncoder.m in Sources */,
 				E59C7B4D20596C9200075053 /* NSString+ZNTAdd.m in Sources */,
 				E59C7F1820596CE100075053 /* ZXMathUtils.m in Sources */,
+				C4E860262078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m in Sources */,
 				E59C7F2220596CE100075053 /* ZXMultiFormatOneDReader.m in Sources */,
 				E59C7F2120596CE100075053 /* ZXMultiFinderPatternFinder.m in Sources */,
 				E59C7EEB20596CE100075053 /* ZXDataMatrixDetector.m in Sources */,
@@ -3848,6 +3872,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = PLMQ7GZFKX;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chinald/ThirdParts/AMapSDK",
@@ -3872,6 +3897,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = PLMQ7GZFKX;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chinald/ThirdParts/AMapSDK",

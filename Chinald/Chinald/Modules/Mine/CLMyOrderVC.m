@@ -8,6 +8,7 @@
 
 #import "CLMyOrderVC.h"
 #import "CLOrderCollectionViewCell.h"
+#import "CLOrderDetailViewController.h"
 @interface CLMyOrderVC ()
 
 @end
@@ -32,10 +33,12 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *orderCollectionViewCellString = @"orderCollectionViewCell";
     CLOrderCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:orderCollectionViewCellString forIndexPath:indexPath];
     cell.orderCellClickBlock = ^(id orderInfo) {
       //跳转到订单详情页
+        [self performSegueWithIdentifier:@"orderListToOrderDetailVC" sender:nil];
     };
 
     
