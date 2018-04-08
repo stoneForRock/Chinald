@@ -7,10 +7,12 @@
 //
 
 #import "CLAccountManagementVC.h"
+#import "EIPChoosePhotoViewController.h"
 
 @interface CLAccountManagementVC ()
 @property (strong, nonatomic) IBOutlet UITableView *managementTableView;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
+@property (strong, nonatomic) UIImage *headIcon;
 @property(nonatomic, copy)NSArray *tableViewData;  //!<
 @end
 
@@ -44,7 +46,6 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:managementTableCellString];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     if (indexPath.section == 0) {
@@ -60,8 +61,15 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
         }
     }
     if (indexPath.section == 1) {
-        if (indexPath.row == 1 && indexPath.row == 3 && indexPath.row == 4) {
+        if (indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 4) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        if (indexPath.row == 0) {
+            UIImageView *headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 7, 50, 50)];
+            headImageView.image = _headIcon;
+            headImageView.layer.cornerRadius = 25;
+            headImageView.layer.masksToBounds = YES;
+            cell.accessoryView = headImageView;
         }
         if (indexPath.row == 2) {
             UISwitch *switchView = [[UISwitch alloc]initWithFrame:CGRectMake(0, 7, 32, 30)];
@@ -77,14 +85,32 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
+        //选择头像
+        if (indexPath.row == 0) {
+            __weak __typeof(self) weakSelf = self;
+
+            EIPChoosePhotoViewController *choosePhotoVC = [EIPChoosePhotoViewController new];
+            [choosePhotoVC seletTheImageFormAlert:self AlertTitle:@"选择头像照片"];
+            choosePhotoVC.isCropperImage = YES;
+            choosePhotoVC.entryInvoiceDataBlock = ^(UIImage *image){
+                
+                
+                [self dismissViewControllerAnimated:YES completion:^{
+                    weakSelf.headIcon = image;
+                    [weakSelf.managementTableView reloadData];
+                }];
+            };
+            
+        }
+        //修改用户名
         if (indexPath.row == 1) {
             [self performSegueWithIdentifier:@"accountManagementVCToChamgeNicknameVC" sender:nil];
         }
+        //修改绑定的手机号
         if (indexPath.row == 3) {
             [self performSegueWithIdentifier:@"acountManageVCToChangePhoneVC" sender:nil];
         }
     }
-    
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

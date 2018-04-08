@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
+		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
+		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
+		C48DDB94207A556A0067D5BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48DDB93207A55690067D5BC /* MobileCoreServices.framework */; };
 		C494127C206F853500FE19A9 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494127B206F853500FE19A9 /* Mine.storyboard */; };
 		C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */; };
 		C4941282206F854300FE19A9 /* CLAccountManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941280206F854200FE19A9 /* CLAccountManagementVC.m */; };
@@ -501,6 +505,14 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
+		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
+		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
+		C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		C48DDB8D207A539C0067D5BC /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EIPUploadImage.m"; sourceTree = "<group>"; };
+		C48DDB91207A544F0067D5BC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C48DDB93207A55690067D5BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C494127B206F853500FE19A9 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		C494127D206F854100FE19A9 /* CLAccountManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAccountManagementVC.h; sourceTree = "<group>"; };
 		C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLChangePhoneViewController.m; sourceTree = "<group>"; };
@@ -1422,6 +1434,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48DDB94207A556A0067D5BC /* MobileCoreServices.framework in Frameworks */,
 				E59C7FB92059733A00075053 /* libresolv.tbd in Frameworks */,
 				E59C7FB72059733100075053 /* libz.tbd in Frameworks */,
 				E59C7FB52059732B00075053 /* libc++.tbd in Frameworks */,
@@ -1458,6 +1471,8 @@
 		1DB4B920423D62A5335582D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C48DDB93207A55690067D5BC /* MobileCoreServices.framework */,
+				C48DDB91207A544F0067D5BC /* MediaPlayer.framework */,
 				E59C7FB82059733A00075053 /* libresolv.tbd */,
 				E59C7FB62059733100075053 /* libz.tbd */,
 				E59C7FB42059732B00075053 /* libc++.tbd */,
@@ -1622,6 +1637,10 @@
 		E566871020596287003D5EAB /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */,
+				C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */,
+				C48DDB8D207A539C0067D5BC /* UIImage+fixOrientation.h */,
+				C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */,
 				E59C7AF520596C5B00075053 /* KDInputView.h */,
 				E59C7AF620596C5B00075053 /* KDInputView.m */,
 				E59C7AF720596C5B00075053 /* NSNumber+ZNTStyleDistance.h */,
@@ -1756,6 +1775,8 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */,
+				C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */,
 				C4E860082075D44500B0264E /* OrderOperationItemView */,
 				C4941283206F854500FE19A9 /* View */,
 				C494127B206F853500FE19A9 /* Mine.storyboard */,
@@ -3512,6 +3533,7 @@
 				E59C7E4A20596CE100075053 /* QNHex.m in Sources */,
 				E59C7F8620596CE100075053 /* ZXVEventResultParser.m in Sources */,
 				E59C7EB620596CE100075053 /* ZXAI013103decoder.m in Sources */,
+				C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */,
 				E59C7EB320596CE100075053 /* ZXAddressBookAUResultParser.m in Sources */,
 				E59C7EE320596CE100075053 /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				E59C7EC720596CE100075053 /* ZXAztecReader.m in Sources */,
@@ -3580,6 +3602,7 @@
 				E59C7B5020596C9200075053 /* UIButton+ZNTStyle.m in Sources */,
 				E59C7F7520596CE100075053 /* ZXSMTPResultParser.m in Sources */,
 				E59C7EFC20596CE100075053 /* ZXEAN13Reader.m in Sources */,
+				C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */,
 				E566874020596B2F003D5EAB /* ZNTLaunchManager.m in Sources */,
 				E59C7F4720596CE100075053 /* ZXQRCodeBitMatrixParser.m in Sources */,
 				E59C7F7B20596CE100075053 /* ZXUPCAWriter.m in Sources */,
@@ -3718,6 +3741,7 @@
 				E59C7F4D20596CE100075053 /* ZXQRCodeDecoderMetaData.m in Sources */,
 				E59C7EE520596CE100075053 /* ZXDataMatrixBitMatrixParser.m in Sources */,
 				E59C7F7F20596CE100075053 /* ZXUPCEANReader.m in Sources */,
+				C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */,
 				E59C7E4020596CE100075053 /* QNDnspodEnterprise.m in Sources */,
 				E59C7EEA20596CE100075053 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E59C7FA220596F8600075053 /* CLMineVC.m in Sources */,
