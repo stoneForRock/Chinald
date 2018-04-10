@@ -110,7 +110,11 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
         if (indexPath.row == 3) {
             [self performSegueWithIdentifier:@"acountManageVCToChangePhoneVC" sender:nil];
         }
+        if (indexPath.row == 4) {
+            [self performSegueWithIdentifier:@"accountManagementVCToAddressVC" sender:nil];
+        }
     }
+
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

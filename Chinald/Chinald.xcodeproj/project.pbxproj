@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		C404C9A8207CF4B70083DF2B /* CLAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */; };
+		C404C9AC207CF5AC0083DF2B /* CLTheGoodsAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */; };
+		C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */; };
+		C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */; };
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
 		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
@@ -505,6 +509,14 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		C404C9A6207CF4B70083DF2B /* CLAddressTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressTableViewCell.h; sourceTree = "<group>"; };
+		C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressTableViewCell.m; sourceTree = "<group>"; };
+		C404C9AA207CF5AC0083DF2B /* CLTheGoodsAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTheGoodsAddressModel.h; sourceTree = "<group>"; };
+		C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTheGoodsAddressModel.m; sourceTree = "<group>"; };
+		C404C9AD207D06390083DF2B /* CLForGoodsAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLForGoodsAddressViewController.h; sourceTree = "<group>"; };
+		C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLForGoodsAddressViewController.m; sourceTree = "<group>"; };
+		C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLEditAddressViewController.h; sourceTree = "<group>"; };
+		C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLEditAddressViewController.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
 		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
@@ -1498,6 +1510,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C404C9A9207CF58B0083DF2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C404C9AA207CF5AC0083DF2B /* CLTheGoodsAddressModel.h */,
+				C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C4941283206F854500FE19A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,6 +1544,8 @@
 				C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */,
 				C4E860272078B37100B0264E /* CLLogisticsCompanyTableViewCell.h */,
 				C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */,
+				C404C9A6207CF4B70083DF2B /* CLAddressTableViewCell.h */,
+				C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1775,6 +1798,7 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C404C9A9207CF58B0083DF2B /* Model */,
 				C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */,
 				C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */,
 				C4E860082075D44500B0264E /* OrderOperationItemView */,
@@ -1798,6 +1822,10 @@
 				C4E860222077769100B0264E /* CLLogisticsDetailViewController.m */,
 				C4E8602A2078D5F300B0264E /* CLRefundViewController.h */,
 				C4E8602B2078D5F300B0264E /* CLRefundViewController.m */,
+				C404C9AD207D06390083DF2B /* CLForGoodsAddressViewController.h */,
+				C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */,
+				C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */,
+				C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -3497,6 +3525,7 @@
 				E59C7FD020692FE900075053 /* CLCommentRequest.m in Sources */,
 				E59C7EFD20596CE100075053 /* ZXEAN13Writer.m in Sources */,
 				E59C7E4720596CE100075053 /* QNRefresher.m in Sources */,
+				C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */,
 				E59C7EA320596CE100075053 /* TZImageManager.m in Sources */,
 				E59C7F2720596CE100075053 /* ZXOneDReader.m in Sources */,
 				E59C7B5820596C9200075053 /* UITableView+DZCategory.m in Sources */,
@@ -3642,6 +3671,7 @@
 				E59C7F6120596CE100075053 /* ZXRGBLuminanceSource.m in Sources */,
 				E59C7F7E20596CE100075053 /* ZXUPCEANExtensionSupport.m in Sources */,
 				E59C7EE920596CE100075053 /* ZXDataMatrixDecoder.m in Sources */,
+				C404C9AC207CF5AC0083DF2B /* CLTheGoodsAddressModel.m in Sources */,
 				E566872F20596A30003D5EAB /* UIViewController+NavigationStyle.m in Sources */,
 				E59C7F0A20596CE100075053 /* ZXGenericMultipleBarcodeReader.m in Sources */,
 				E59C7F5D20596CE100075053 /* ZXReedSolomonEncoder.m in Sources */,
@@ -3747,7 +3777,9 @@
 				E59C7FA220596F8600075053 /* CLMineVC.m in Sources */,
 				D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */,
 				E59C7F3E20596CE100075053 /* ZXPDF417ScanningDecoder.m in Sources */,
+				C404C9A8207CF4B70083DF2B /* CLAddressTableViewCell.m in Sources */,
 				E59C7E8A20596CE100075053 /* MWTapDetectingView.m in Sources */,
+				C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */,
 				E59C7F0E20596CE100075053 /* ZXGridSampler.m in Sources */,
 				E59C7EBE20596CE100075053 /* ZXAI01weightDecoder.m in Sources */,
 				C4941292206F859600FE19A9 /* UIButton+CLButton.m in Sources */,
