@@ -29,7 +29,7 @@
     self.forGoodsAddressLabelHeight.constant = size.height;
     self.forGoodsAddressLabel.text = forGoodsAddressDetailString;
     //是否是默认的收货地址
-    if (self.goodsAddressModel.is_default) {
+    if (self.goodsAddressModel.isDefault) {
         [self.setDefaultButton setImage:[UIImage imageNamed:@""] forState:0];
     }else{
         [self.setDefaultButton setImage:[UIImage imageNamed:@""] forState:0];

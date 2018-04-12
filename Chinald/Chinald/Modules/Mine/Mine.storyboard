@@ -1217,7 +1217,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-Hu-kcd">
-                                                    <rect key="frame" x="0.0" y="77" width="95" height="40"/>
+                                                    <rect key="frame" x="0.0" y="76" width="95" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="95" id="abu-ov-dsV"/>
                                                     </constraints>
@@ -1230,7 +1230,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPy-zp-Drn">
-                                                    <rect key="frame" x="313" y="77" width="50" height="40"/>
+                                                    <rect key="frame" x="313" y="76" width="50" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Yjc-1i-H3C"/>
                                                     </constraints>
@@ -1243,7 +1243,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-wY-t3y">
-                                                    <rect key="frame" x="248" y="77" width="52" height="40"/>
+                                                    <rect key="frame" x="248" y="76" width="52" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="52" id="Yhf-U3-LsZ"/>
                                                     </constraints>
@@ -1405,6 +1405,9 @@
                                                         <state key="normal" title="请选择收货人所在区域">
                                                             <color key="titleColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCityButtonClick:" destination="pca-5B-UGH" eventType="touchUpInside" id="9BR-yl-pLN"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7B0-4d-NAJ">
                                                         <rect key="frame" x="13" y="165" width="349" height="1"/>
@@ -1487,6 +1490,9 @@
                                                 <state key="normal" title="设为默认地址">
                                                     <color key="titleColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="changeDefaultButtonClick:" destination="pca-5B-UGH" eventType="touchUpInside" id="Nit-Pu-mkT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -1540,6 +1546,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ntc-vN-gUm"/>
+                    <connections>
+                        <outlet property="changeDefaultButton" destination="iM3-Zi-asi" id="m9K-jr-9rT"/>
+                        <outlet property="detailAddressTextView" destination="yyR-Eq-g0p" id="DNk-Bl-FnY"/>
+                        <outlet property="forGoodsUserNameTextField" destination="Xiy-A6-Rxl" id="2XP-9X-BdB"/>
+                        <outlet property="forGoodsUserPhoneTextField" destination="QBk-bC-dVd" id="tGA-oM-fcx"/>
+                        <outlet property="selectCityButton" destination="wFf-xT-Oe7" id="vpc-ik-EaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGC-jV-gwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

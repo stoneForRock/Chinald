@@ -30,4 +30,36 @@
 + (NSString *)kd_dz_stringFileSizeWithValue:(double)dValue;
 - (NSArray *)kd_dz_forEachString;
 - (NSUInteger)kd_dz_bytes;
+
+/**
+ 限制textField最大输入的字数  适配系统输入法和第三方输入法
+ 
+ @param inputClass 输入的字符串
+ @param maxNumber 最大限制数
+ */
++ (void)restrictionInputTextField:(UITextField *)inputClass maxNumber:(NSInteger)maxNumber;
+
+/**
+ 限制textView最大输入的字数  适配系统输入法和第三方输入法
+
+ @param inputClass 输入的字符串
+ @param maxNumber 最大限制数
+ */
++ (void)restrictionInputTextView:(UITextView *)inputClass maxNumber:(NSInteger)maxNumber;
+
+/**
+ 判断是否是以1开头的11位数字（手机号码）
+
+ @param input 需要判断的字符串
+ @return 是否符合的结果
+ */
++(BOOL)clCheckPhoneNumberLength:(NSString *)input;
+
+/**
+ 判断输入的是否是纯数字
+
+ @param input 输入的内容
+ @return 是否符合的结果
+ */
++(BOOL)clCheckNumberInput:(NSString *)input;
 @end

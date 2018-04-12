@@ -12,17 +12,20 @@
 +(JSONKeyMapper*)keyMapper
 {
     return [[JSONKeyMapper alloc] initWithDictionary:@{
-                                                       @"address_id": @"address_id",
+                                                       @"addressId": @"address_id",
                                                        @"name": @"name",
                                                        @"phone": @"phone",
                                                        @"province": @"province",
                                                        @"city": @"city",
                                                        @"area": @"area",
-                                                       @"province_code": @"province_code",
-                                                       @"city_code": @"city_code",
-                                                       @"area_code": @"area_code",
+                                                       @"provinceCode": @"province_code",
+                                                       @"cityCode": @"city_code",
+                                                       @"areCode": @"area_code",
                                                        @"detail": @"detail",
-                                                       @"is_default": @"is_default"
+                                                       @"isDefault": @"is_default"
                                                        }];
+}
++(BOOL)propertyIsOptional:(NSString *)propertyName{
+    return true;
 }
 @end

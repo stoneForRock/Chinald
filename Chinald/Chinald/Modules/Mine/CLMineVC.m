@@ -7,6 +7,8 @@
 //
 
 #import "CLMineVC.h"
+#import "ZNTLoginVC.h"
+
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
@@ -66,7 +68,11 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 
         cell.selectMineAccountCellBlock = ^(MineAccountSelectType accountCellSelectType) {
             if (accountCellSelectType == CL_MINE_ACCOUNT_MANAGEMENT) {
-                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
+                ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+                [weakSelf presentViewController:loginVC animated:YES completion:^{
+                    
+                }];
+//                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
             }
         };
         return cell;

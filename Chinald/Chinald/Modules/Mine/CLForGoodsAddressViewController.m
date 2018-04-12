@@ -54,7 +54,7 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
     if (!cell) {
         cell = [[CLAddressTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:forGoodsAddressCell];
     }
-    cell.goodsAddressModel = _addressArray[indexPath.section];
+//    cell.goodsAddressModel = _addressArray[indexPath.section];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectForGoodsAddresCellBlock = ^(ForGoodsAddressOperationType forGoodsAddressOperationType, CLTheGoodsAddressModel *addressModel) {
         _selectAddressModel = addressModel;

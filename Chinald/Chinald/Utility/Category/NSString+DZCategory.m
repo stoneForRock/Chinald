@@ -139,5 +139,87 @@
     return strlength;
 }
 
+//限制textField输入的长度
++ (void)restrictionInputTextField:(UITextField *)inputClass maxNumber:(NSInteger)maxNumber{
+    //    NSString *toBeString = inputClass.text;
+    NSString *lang = [[inputClass textInputMode] primaryLanguage]; // 获取当前键盘输入模式
+    if([lang isEqualToString:@"zh-Hans"]) { //简体中文输入,第三方输入法（搜狗）所有模式下都会显示“zh-Hans”
+        UITextRange *selectedRange = [inputClass markedTextRange];
+        //获取高亮部分
+        UITextPosition *position = [inputClass positionFromPosition:selectedRange.start offset:0];
+        //没有高亮选择的字，则对已输入的文字进行字数统计和限制
+        if(!position) {
+            
+            if (inputClass.text.length > maxNumber) {
+                inputClass.text = [inputClass.text substringToIndex:maxNumber];
+            }
+        }
+    } else{
+        
+        if (inputClass.text.length > maxNumber) {
+            inputClass.text = [inputClass.text substringToIndex:maxNumber];
+        }
+    }
+    
+}
+
+//textView输入框的限制 最大输入的字符长度
++ (void)restrictionInputTextView:(UITextView *)inputClass maxNumber:(NSInteger)maxNumber;
+{
+    NSString *lang = [[inputClass textInputMode] primaryLanguage]; // 获取当前键盘输入模式
+    if([lang isEqualToString:@"zh-Hans"]) { //简体中文输入,第三方输入法（搜狗）所有模式下都会显示“zh-Hans”
+        UITextRange *selectedRange = [inputClass markedTextRange];
+        //获取高亮部分
+        UITextPosition *position = [inputClass positionFromPosition:selectedRange.start offset:0];
+        //没有高亮选择的字，则对已输入的文字进行字数统计和限制
+        if(!position) {
+            
+            if (inputClass.text.length > maxNumber) {
+                inputClass.text = [inputClass.text substringToIndex:maxNumber];
+            }
+        }
+    } else{
+        
+        if (inputClass.text.length > maxNumber) {
+            inputClass.text = [inputClass.text substringToIndex:maxNumber];
+        }
+    }
+}
+
+#pragma mark------判断是否是11位的纯数字
++(BOOL)clCheckPhoneNumberLength:(NSString *)input{
+    //    NSString *inputRegex = @"^1\\d{10}$";
+    //    NSPredicate *inputPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",inputRegex];
+    NSString *inputRegex = @"^[0-9]*$";
+    NSPredicate *inputPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",inputRegex];
+    //    return [inputPredicate evaluateWithObject:input];
+    
+    if ([inputPredicate evaluateWithObject:input]) {
+        if ([input length] == 11) {
+            if ([[input substringToIndex:1] intValue] == 1) {
+                return YES;
+            }else{
+                return NO;
+            }
+        }else{
+            return NO;
+        }
+    }else{
+        return NO;
+    }
+}
+
+/**
+ 判断输入的是否是纯数字
+ 
+ @param input 输入的内容
+ @return 是否符合的结果
+ */
++(BOOL)clCheckNumberInput:(NSString *)input
+{
+    NSString *inputRegex = @"^[0-9]*$";
+    NSPredicate *inputPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",inputRegex];
+    return [inputPredicate evaluateWithObject:input];
+}
 @end
 

@@ -13,6 +13,7 @@
 		C404C9AC207CF5AC0083DF2B /* CLTheGoodsAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */; };
 		C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */; };
 		C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */; };
+		C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C406FAF6207E5D2A00FC6682 /* CLUserModel.m */; };
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
 		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
@@ -517,6 +518,8 @@
 		C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLForGoodsAddressViewController.m; sourceTree = "<group>"; };
 		C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLEditAddressViewController.h; sourceTree = "<group>"; };
 		C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLEditAddressViewController.m; sourceTree = "<group>"; };
+		C406FAF5207E5D2A00FC6682 /* CLUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUserModel.h; sourceTree = "<group>"; };
+		C406FAF6207E5D2A00FC6682 /* CLUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLUserModel.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
 		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
@@ -1515,6 +1518,8 @@
 			children = (
 				C404C9AA207CF5AC0083DF2B /* CLTheGoodsAddressModel.h */,
 				C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */,
+				C406FAF5207E5D2A00FC6682 /* CLUserModel.h */,
+				C406FAF6207E5D2A00FC6682 /* CLUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3373,6 +3378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59C7E5620596CE100075053 /* IQPreviousNextView.m in Sources */,
+				C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */,
 				E59C7ECF20596CE100075053 /* ZXBitArrayBuilder.m in Sources */,
 				E59C7EDC20596CE100075053 /* ZXCodaBarReader.m in Sources */,
 				E59C7EC620596CE100075053 /* ZXAztecHighLevelEncoder.m in Sources */,
