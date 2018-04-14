@@ -12,6 +12,32 @@
 
 /**
  登录
+ 
+ @param phone 手机号
+ @param code 登录的验证码
+
+ @param successBlock successBlock
+ @param failureBlock failureBlock
+ */
++ (void)loginWithPhone:(NSString *)phone
+             phoneCode:(NSString *)code
+             onSuccess:(ZNTSuccessBlock)successBlock
+             onFailure:(ZNTFailureBlock)failureBlock;
+
+/**
+ 发送验证码
+ 
+ @param phone 手机号
+ @param type 获取验证码的类型 0注册 1更改密码
+ @param successBlock successBlock
+ @param failureBlock failureBlock
+ */
++ (void)sendCodeWithPhone:(NSString *)phone codeType:(int)type
+                onSuccess:(ZNTSuccessBlock)successBlock
+                onFailure:(ZNTFailureBlock)failureBlock;
+
+/**
+ 登录
 
  @param telephone 手机号
  @param password 密码
@@ -34,9 +60,11 @@
 + (void)loginAutoZNTOnSuccess:(ZNTSuccessBlock)successBlock
                     onFailure:(ZNTFailureBlock)failureBlock;
 
+
+
 /**
  发送验证码
-
+ 
  @param phone 手机号
  @param successBlock successBlock
  @param failureBlock failureBlock

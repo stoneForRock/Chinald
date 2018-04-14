@@ -14,6 +14,8 @@
 		C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */; };
 		C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */; };
 		C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C406FAF6207E5D2A00FC6682 /* CLUserModel.m */; };
+		C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696222081E19800437E3B /* CLNetworkingRequestBase.m */; };
+		C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696262081FB4600437E3B /* CLLoginRequest.m */; };
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
 		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
@@ -520,6 +522,10 @@
 		C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLEditAddressViewController.m; sourceTree = "<group>"; };
 		C406FAF5207E5D2A00FC6682 /* CLUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUserModel.h; sourceTree = "<group>"; };
 		C406FAF6207E5D2A00FC6682 /* CLUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLUserModel.m; sourceTree = "<group>"; };
+		C44696222081E19800437E3B /* CLNetworkingRequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNetworkingRequestBase.m; sourceTree = "<group>"; };
+		C44696232081E19800437E3B /* CLNetworkingRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetworkingRequestBase.h; sourceTree = "<group>"; };
+		C44696252081FB4600437E3B /* CLLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLoginRequest.h; sourceTree = "<group>"; };
+		C44696262081FB4600437E3B /* CLLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLoginRequest.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
 		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
@@ -1707,6 +1713,8 @@
 		E566871220596295003D5EAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C44696232081E19800437E3B /* CLNetworkingRequestBase.h */,
+				C44696222081E19800437E3B /* CLNetworkingRequestBase.m */,
 				E59C7ADE20596C1100075053 /* RequestServer */,
 				E59C7AE320596C1100075053 /* UrlServer */,
 			);
@@ -1911,6 +1919,8 @@
 			children = (
 				E566874620596B97003D5EAB /* ZNTLoginRequest.h */,
 				E566874720596B97003D5EAB /* ZNTLoginRequest.m */,
+				C44696252081FB4600437E3B /* CLLoginRequest.h */,
+				C44696262081FB4600437E3B /* CLLoginRequest.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3501,6 +3511,7 @@
 				E59C7EBA20596CE100075053 /* ZXAI013x0x1xDecoder.m in Sources */,
 				E59C7E9C20596CE100075053 /* QNFormUpload.m in Sources */,
 				E59C7F9F20596F7A00075053 /* CLShoppingCartVC.m in Sources */,
+				C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */,
 				C4E860142075D66000B0264E /* CLToSendGoodsOperationItemView.m in Sources */,
 				E59C7F4E20596CE100075053 /* ZXQRCodeDetector.m in Sources */,
 				E59C7B5220596C9200075053 /* UIDevice+ZNTAdd.m in Sources */,
@@ -3750,6 +3761,7 @@
 				E59C7F5520596CE100075053 /* ZXQRCodeMaskUtil.m in Sources */,
 				E59C7ECE20596CE100075053 /* ZXBitArray.m in Sources */,
 				E59C7F0B20596CE100075053 /* ZXGeoParsedResult.m in Sources */,
+				C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */,
 				E59C7E9E20596CE100075053 /* QNUploadManager.m in Sources */,
 				E59C7F4C20596CE100075053 /* ZXQRCodeDecoder.m in Sources */,
 				E59C7EDA20596CE100075053 /* ZXCGImageLuminanceSource.m in Sources */,

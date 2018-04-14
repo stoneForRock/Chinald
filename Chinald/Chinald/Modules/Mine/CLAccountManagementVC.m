@@ -8,12 +8,15 @@
 
 #import "CLAccountManagementVC.h"
 #import "EIPChoosePhotoViewController.h"
-
+#import "CLUserModel.h"
 @interface CLAccountManagementVC ()
 @property (strong, nonatomic) IBOutlet UITableView *managementTableView;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 @property (strong, nonatomic) UIImage *headIcon;
 @property(nonatomic, copy)NSArray *tableViewData;  //!<
+@property(nonatomic, strong)CLUserModel *userModel;  //!<
+@property(nonatomic, strong)UIButton *showUserPhoneButton;  //!<
+@property(nonatomic, copy)NSString *userPhone;  //!<
 @end
 
 @implementation CLAccountManagementVC
@@ -21,13 +24,29 @@ static NSString *managementTableCellString = @"CLAccountManagementVCCell";
 INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
 //    [self.tabBarController.tabBar setHidden:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _tableViewData = @[@{@"headTitle":@"个人资料",@"cellTitel":@[@"会员号",@"推荐人",@"关注时间",@"手机号码"]},@{@"headTitle":@"个人资料",@"cellTitel":@[@"更换头像",@"更换昵称",@"公开手机号",@"修改绑定手机",@"收货地址管理"]}];
-    [_managementTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:managementTableCellString];
+    _userModel = [CLUserModel sharedUserModel];
+   _userPhone = _userModel.phone ? _userModel.phone :@"";
+    
+    _tableViewData = @[@{@"headTitle":@"个人资料",@"cellTitel":@[@{@"title":@"会员号",@"detailTitle":_userModel.number ? _userModel.number :@""},@{@"title":@"推荐人",@"detailTitle":_userModel.recommendName ? _userModel.recommendName :@""},@{@"title":@"关注时间",@"detailTitle":_userModel.addTime ? _userModel.addTime :@""},@{@"title":@"手机号码",@"detailTitle":_userModel.phone ? _userModel.phone :@""}]},@{@"headTitle":@"修改资料",@"cellTitel":@[@"更换头像",@"更换昵称",@"公开手机号",@"修改绑定手机",@"收货地址管理"]}];
+//    [_managementTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:managementTableCellString];
+    _userPhone = [_userPhone stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+
+    _showUserPhoneButton = [[UIButton alloc]init];
+    _showUserPhoneButton.frame = CGRectMake(10, 0, 39, 24);
+    _showUserPhoneButton.titleLabel.font = [UIFont zntFont12];
+    _showUserPhoneButton.layer.cornerRadius = 2;
+    _showUserPhoneButton.layer.borderWidth = 1;
+    _showUserPhoneButton.layer.borderColor = [UIColor clDividingLineColor].CGColor;
+    [_showUserPhoneButton setTitleColor:Color5 forState:0];
+    [_showUserPhoneButton addTarget:self action:@selector(shouAllUserPhoneNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [_showUserPhoneButton setTitle:@"显示" forState:0];
+    
     _logoutButton.layer.borderColor = [UIColor colorWithHexRGB:@"0x999999"].CGColor;
     self.navigationItem.title = @"账号管理";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -42,23 +61,25 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:managementTableCellString forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:managementTableCellString];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:managementTableCellString];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     if (indexPath.section == 0) {
+
         if (indexPath.row == 3) {
-            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 10, 39, 24)];
-            button.titleLabel.font = [UIFont zntFont12];
-            button.layer.cornerRadius = 2;
-            button.layer.borderWidth = 1;
-            button.layer.borderColor = [UIColor clDividingLineColor].CGColor;
-            [button setTitle:@"显示" forState:0];
-            [button setTitleColor:Color5 forState:0];
-            cell.accessoryView = button;
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 10, 49, 24)];
+            [view addSubview:_showUserPhoneButton];
+            cell.accessoryView = view;
+            cell.detailTextLabel.text = _userPhone;
+
+        }else{
+            cell.detailTextLabel.text = _tableViewData[indexPath.section][@"cellTitel"][indexPath.row][@"detailTitle"];
         }
+        cell.textLabel.text = _tableViewData[indexPath.section][@"cellTitel"][indexPath.row][@"title"];
+
     }
     if (indexPath.section == 1) {
         if (indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 4) {
@@ -69,17 +90,25 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             headImageView.image = _headIcon;
             headImageView.layer.cornerRadius = 25;
             headImageView.layer.masksToBounds = YES;
+            [headImageView sd_setImageWithURL:[NSURL URLWithString:_userModel.headIcon]];
             cell.accessoryView = headImageView;
+        }
+        
+        if (indexPath.row == 1) {
+            cell.detailTextLabel.text = _userModel.name;
         }
         if (indexPath.row == 2) {
             UISwitch *switchView = [[UISwitch alloc]initWithFrame:CGRectMake(0, 7, 32, 30)];
             cell.accessoryView = switchView;
         }
+            cell.textLabel.text = _tableViewData[indexPath.section][@"cellTitel"][indexPath.row];
     }
 
-    cell.textLabel.text = _tableViewData[indexPath.section][@"cellTitel"][indexPath.row];
     cell.textLabel.font = [UIFont zntFont13];
     cell.textLabel.textColor = Color5;
+    cell.detailTextLabel.font = [UIFont zntFont13];
+    cell.detailTextLabel.textColor = Color5;
+
     return cell;
 }
 
@@ -159,6 +188,23 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 //        return 111;
 //    }
     return 0.0001f;
+}
+
+
+-(void)shouAllUserPhoneNumber:(UIButton *)button{
+    if ([button.titleLabel.text isEqualToString:@"显示"]) {
+        [button setTitle:@"隐藏" forState:0];
+            _userPhone = _userModel.phone;
+
+    }else{
+        [button setTitle:@"显示" forState:0];
+        if (_userPhone.length >= 11) {
+            _userPhone = [_userPhone stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+        }
+    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+//    [_managementTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
+    [_managementTableView reloadData];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,7 +8,7 @@
 
 #import "CLMineVC.h"
 #import "ZNTLoginVC.h"
-
+#import "CLUserModel.h"
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
@@ -25,7 +25,17 @@ static NSString *shareTableViewCellString = @"CLMineShareTableViewCell";
 static NSString *otherTableViewCellString = @"CLMineOtherTableViewCell";
 
 INSTANCE_XIB_M(@"Mine", CLMineVC)
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    if (!userModel.token) {
+        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+        [self presentViewController:loginVC animated:YES completion:^{
+        }];
+    }else{
+        [_mineTableView reloadData];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor blueColor];
@@ -68,11 +78,8 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 
         cell.selectMineAccountCellBlock = ^(MineAccountSelectType accountCellSelectType) {
             if (accountCellSelectType == CL_MINE_ACCOUNT_MANAGEMENT) {
-                ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
-                [weakSelf presentViewController:loginVC animated:YES completion:^{
-                    
-                }];
-//                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
+
+                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
             }
         };
         return cell;

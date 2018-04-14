@@ -7,10 +7,25 @@
 //
 
 #import "CLUserModel.h"
+static CLUserModel *_userModel;
 @implementation CLUserModel
++(instancetype)allocWithZone:(struct _NSZone *)zone{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (_userModel == nil) {
+            _userModel = [super allocWithZone:zone];
+        }
+    });
+    return _userModel;
+}
++ (instancetype)sharedUserModel
+{
+    return [[self alloc]init];;
+}
+
 +(JSONKeyMapper*)keyMapper
 {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
                                                        @"userId": @"user_id",
                                                        @"number": @"number",
                                                        @"phone": @"phone",
