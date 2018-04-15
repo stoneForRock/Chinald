@@ -12,7 +12,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "UIImage+fixOrientation.h"
-#import "UIImage+EIPUploadImage.h"
+#import "UIImage+UploadImage.h"
 #define ORIGINAL_MAX_WIDTH 640.0f
 
 @interface EIPChoosePhotoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIScrollViewDelegate>
@@ -96,7 +96,7 @@
         
         _selectImage = [image fixOrientation];
 
-        self.entryInvoiceDataBlock([UIImage eipCompressImageQuality:image toByte:250000]);
+        self.entryInvoiceDataBlock([UIImage clCompressImageQuality:image toByte:250000]);
 
     }else{
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -105,7 +105,7 @@
 
         if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-            self.entryInvoiceDataBlock([UIImage eipCompressImageQuality:_selectImage toByte:300000]);
+            self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:300000]);
 //            self.entryInvoiceDataBlock(image);
 
         }else{
@@ -192,7 +192,7 @@
 
 -(void)sureButtonClick{
     [_backView removeFromSuperview];
-    self.entryInvoiceDataBlock([UIImage eipCompressImageQuality:_selectImage toByte:300000]);
+    self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:300000]);
 
 }
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

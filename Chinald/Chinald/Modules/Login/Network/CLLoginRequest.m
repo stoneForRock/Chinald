@@ -12,7 +12,7 @@
 @implementation CLLoginRequest
 +(void)userLogin:(NSDictionary *)parameters complete:(void(^)(CLUserModel *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     NSString *urlString = [NSString stringWithFormat:@"%@/user/login",[ZNTURLPathManager sharedURLPathManager].baseUrl];
-    [CLNetworkingRequestBase clPostRequestTheURL:urlString parameters:parameters theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+    [self clPostRequestTheURL:urlString parameters:parameters theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         CLUserModel *userModel = [CLUserModel sharedUserModel];
         CLUserModel *user = [[CLUserModel alloc]initWithDictionary:resultsObj[@"data"] error:nil];
         userModel = user;

@@ -647,6 +647,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveNickname:" destination="5vM-GX-9sc" eventType="touchUpInside" id="71o-Vx-I4i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -663,6 +666,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7md-KY-JUX"/>
+                    <connections>
+                        <outlet property="nicknameTextField" destination="1T5-5c-7Fc" id="acN-hd-j7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ZM-0h-boC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,6 +694,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="flv-Jc-7b6" id="qtn-bB-KNx"/>
+                                    <outlet property="pasteDelegate" destination="flv-Jc-7b6" id="XMQ-wF-4Hl"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-iT-5r2">
                                 <rect key="frame" x="38" y="106" width="299" height="1"/>
@@ -704,6 +714,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="flv-Jc-7b6" id="g1j-L6-of5"/>
+                                    <outlet property="pasteDelegate" destination="flv-Jc-7b6" id="BEN-Vq-sGR"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-AH-MPy">
                                 <rect key="frame" x="38" y="158" width="299" height="1"/>
@@ -730,6 +744,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendCodeButtonClick:" destination="flv-Jc-7b6" eventType="touchUpInside" id="6Xb-3u-BE4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-De-tYQ">
                                 <rect key="frame" x="38" y="199" width="299" height="44"/>
@@ -746,6 +763,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="savePhoneButtonClick:" destination="flv-Jc-7b6" eventType="touchUpInside" id="TEL-Lp-TPj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -770,6 +790,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FXQ-yL-bgm"/>
+                    <connections>
+                        <outlet property="codeTextField" destination="weo-dx-ZwY" id="BjP-Z1-cDN"/>
+                        <outlet property="phoneTextField" destination="GRv-TH-ibR" id="Pku-el-WHp"/>
+                        <outlet property="sendCodeButton" destination="909-6O-CTc" id="pyF-7n-7gr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nI3-bY-7qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1343,7 +1368,7 @@
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入收货人真是姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-A6-Rxl">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入收货人真实姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-A6-Rxl">
                                                         <rect key="frame" x="83" y="1" width="279" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="roJ-GB-Zrf"/>
@@ -1531,6 +1556,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveAddressButtonClick:" destination="pca-5B-UGH" eventType="touchUpInside" id="5qf-Rd-Ese"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>

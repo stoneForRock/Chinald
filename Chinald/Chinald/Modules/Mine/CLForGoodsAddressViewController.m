@@ -9,6 +9,10 @@
 #import "CLForGoodsAddressViewController.h"
 #import "CLAddressTableViewCell.h"
 #import "CLEditAddressViewController.h"
+#import "CLMineNetworking.h"
+#import "UIView+ZNTHud.h"
+#define KWeakSelf(type)  __weak typeof(type) weak##type = type
+
 @interface CLForGoodsAddressViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *forGoodsAddressTableView;
 @property(nonatomic, strong) NSMutableArray *addressArray; //!<
@@ -27,16 +31,25 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
     [_forGoodsAddressTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:addAddressCell];
     
 }
+-(void)requestAddressList{
+    KWeakSelf(self);
+    [CLMineNetworking addressIndexComplete:^(NSMutableArray *resultsObj) {
+        [weakself.addressArray removeAllObjects];
+        [weakself.addressArray addObjectsFromArray:resultsObj];
+    } theFailure:^(NSString *errorCode) {
+        [weakself.view znt_showToast:errorCode];
+    }];
+}
 #pragma mark-------tableview代理方法  UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return _addressArray.count;
-    return 10;
+    return _addressArray.count + 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    KWeakSelf(self);
     if (indexPath.section == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:addAddressCell forIndexPath:indexPath];
         if (!cell) {
@@ -54,12 +67,19 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
     if (!cell) {
         cell = [[CLAddressTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:forGoodsAddressCell];
     }
-//    cell.goodsAddressModel = _addressArray[indexPath.section];
+    
+    cell.goodsAddressModel = _addressArray[indexPath.section - 1];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectForGoodsAddresCellBlock = ^(ForGoodsAddressOperationType forGoodsAddressOperationType, CLTheGoodsAddressModel *addressModel) {
         _selectAddressModel = addressModel;
         if (forGoodsAddressOperationType == CL_ADDRESS_EDIT) {
                 [self performSegueWithIdentifier:@"addressListVCToEditAddressVC" sender:nil];
+        }
+        if (forGoodsAddressOperationType == CL_ADDRESS_DELETE) {
+            [weakself deleteAddress];
+        }
+        if (forGoodsAddressOperationType == CL_ADDRESS_DEFAULT) {
+            [weakself defaultAddress];
         }
     };
     return cell;
@@ -86,6 +106,25 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.0001f;
+}
+
+//删除收货地址
+-(void)deleteAddress{
+    KWeakSelf(self);
+    [CLMineNetworking addressDelete:_selectAddressModel complete:^(NSMutableDictionary *resultsObj) {
+        [weakself requestAddressList];
+    } theFailure:^(NSString *errorCode) {
+        [weakself.view znt_showToast:errorCode];
+    }];
+}
+//设置为默认地址
+-(void)defaultAddress{
+    KWeakSelf(self);
+    [CLMineNetworking addressDefault:_selectAddressModel complete:^(NSMutableDictionary *resultsObj) {
+        [weakself requestAddressList];
+    } theFailure:^(NSString *errorCode) {
+        [weakself.view znt_showToast:errorCode];
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

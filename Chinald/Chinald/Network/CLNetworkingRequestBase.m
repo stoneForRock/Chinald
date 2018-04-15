@@ -74,7 +74,7 @@ static int refreshTokenCount = 0;
     
     //设置请求超时
     [kHTTPSession.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    kHTTPSession.requestSerializer.timeoutInterval = 60.f;
+    kHTTPSession.requestSerializer.timeoutInterval = 10.f;
     [kHTTPSession.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     [kHTTPSession.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [kHTTPSession setObservationInfo:(__bridge void * _Nullable)([NSDictionary dictionaryWithObjectsAndKeys:@"data",@"name", nil])];

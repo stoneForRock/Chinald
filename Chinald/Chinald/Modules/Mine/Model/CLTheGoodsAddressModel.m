@@ -11,7 +11,7 @@
 @implementation CLTheGoodsAddressModel
 +(JSONKeyMapper*)keyMapper
 {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
                                                        @"addressId": @"address_id",
                                                        @"name": @"name",
                                                        @"phone": @"phone",

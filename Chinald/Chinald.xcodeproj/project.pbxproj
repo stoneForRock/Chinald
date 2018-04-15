@@ -16,9 +16,13 @@
 		C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C406FAF6207E5D2A00FC6682 /* CLUserModel.m */; };
 		C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696222081E19800437E3B /* CLNetworkingRequestBase.m */; };
 		C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696262081FB4600437E3B /* CLLoginRequest.m */; };
+		C4856BA52082F95700DB552D /* CLMineNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BA42082F95700DB552D /* CLMineNetworking.m */; };
+		C4856BAA2082FBCE00DB552D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BA92082FBCE00DB552D /* NSString+MD5.m */; };
+		C4856BAD2082FC6300DB552D /* UIImage+UploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */; };
+		C4856BAE2082FD4B00DB552D /* UIImage+UploadImage.h in Sources */ = {isa = PBXBuildFile; fileRef = C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */; };
+		C4856BB120835C5D00DB552D /* CLAddressRequsetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */; };
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
-		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
 		C48DDB94207A556A0067D5BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48DDB93207A55690067D5BC /* MobileCoreServices.framework */; };
 		C494127C206F853500FE19A9 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494127B206F853500FE19A9 /* Mine.storyboard */; };
 		C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */; };
@@ -526,6 +530,14 @@
 		C44696232081E19800437E3B /* CLNetworkingRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetworkingRequestBase.h; sourceTree = "<group>"; };
 		C44696252081FB4600437E3B /* CLLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLoginRequest.h; sourceTree = "<group>"; };
 		C44696262081FB4600437E3B /* CLLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLoginRequest.m; sourceTree = "<group>"; };
+		C4856BA32082F95700DB552D /* CLMineNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMineNetworking.h; sourceTree = "<group>"; };
+		C4856BA42082F95700DB552D /* CLMineNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMineNetworking.m; sourceTree = "<group>"; };
+		C4856BA82082FBCE00DB552D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		C4856BA92082FBCE00DB552D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UploadImage.h"; sourceTree = "<group>"; };
+		C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UploadImage.m"; sourceTree = "<group>"; };
+		C4856BAF20835C5D00DB552D /* CLAddressRequsetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressRequsetModel.h; sourceTree = "<group>"; };
+		C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressRequsetModel.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
 		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
@@ -1526,8 +1538,28 @@
 				C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */,
 				C406FAF5207E5D2A00FC6682 /* CLUserModel.h */,
 				C406FAF6207E5D2A00FC6682 /* CLUserModel.m */,
+				C4856BAF20835C5D00DB552D /* CLAddressRequsetModel.h */,
+				C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C4856BA62082F96000DB552D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C4856BA32082F95700DB552D /* CLMineNetworking.h */,
+				C4856BA42082F95700DB552D /* CLMineNetworking.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C4856BA72082FBCE00DB552D /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				C4856BA82082FBCE00DB552D /* NSString+MD5.h */,
+				C4856BA92082FBCE00DB552D /* NSString+MD5.m */,
+			);
+			path = MD5;
 			sourceTree = "<group>";
 		};
 		C4941283206F854500FE19A9 /* View */ = {
@@ -1662,6 +1694,7 @@
 		E566870F2059627A003D5EAB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C4856BA72082FBCE00DB552D /* MD5 */,
 				E59C7B0B20596C9200075053 /* Category */,
 				E59C7B3420596C9200075053 /* Tools */,
 			);
@@ -1811,6 +1844,7 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C4856BA62082F96000DB552D /* Networking */,
 				C404C9A9207CF58B0083DF2B /* Model */,
 				C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */,
 				C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */,
@@ -2012,6 +2046,8 @@
 				E59C7B2120596C9200075053 /* UIImage+DZCategory.m */,
 				E59C7B2220596C9200075053 /* UIImage+fixOrientation.h */,
 				E59C7B2320596C9200075053 /* UIImage+fixOrientation.m */,
+				C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */,
+				C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */,
 				E59C7B2420596C9200075053 /* UIImage+ZNTAdd.h */,
 				E59C7B2520596C9200075053 /* UIImage+ZNTAdd.m */,
 				E59C7B2620596C9200075053 /* UIImageView+ZNTAdd.h */,
@@ -3387,6 +3423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4856BAE2082FD4B00DB552D /* UIImage+UploadImage.h in Sources */,
 				E59C7E5620596CE100075053 /* IQPreviousNextView.m in Sources */,
 				C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */,
 				E59C7ECF20596CE100075053 /* ZXBitArrayBuilder.m in Sources */,
@@ -3437,6 +3474,7 @@
 				E59C7E6020596CE100075053 /* MJPhotoToolbar.m in Sources */,
 				E59C7F9C20596F6300075053 /* CLMainPageVC.m in Sources */,
 				E59C7EDE20596CE100075053 /* ZXCode128Reader.m in Sources */,
+				C4856BA52082F95700DB552D /* CLMineNetworking.m in Sources */,
 				E59C7F2A20596CE100075053 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				E566872D20596A30003D5EAB /* UINavigationBar+Transition.m in Sources */,
 				E59C7F7A20596CE100075053 /* ZXUPCAReader.m in Sources */,
@@ -3538,6 +3576,7 @@
 				E59C7F0720596CE100075053 /* ZXExpandedProductResultParser.m in Sources */,
 				E59C7EE220596CE100075053 /* ZXCode93Reader.m in Sources */,
 				E59C7FC820692FB800075053 /* CLCommentList.m in Sources */,
+				C4856BB120835C5D00DB552D /* CLAddressRequsetModel.m in Sources */,
 				E59C7E4D20596CE100075053 /* IQUIScrollView+Additions.m in Sources */,
 				E59C7FD020692FE900075053 /* CLCommentRequest.m in Sources */,
 				E59C7EFD20596CE100075053 /* ZXEAN13Writer.m in Sources */,
@@ -3653,6 +3692,7 @@
 				E59C7F4720596CE100075053 /* ZXQRCodeBitMatrixParser.m in Sources */,
 				E59C7F7B20596CE100075053 /* ZXUPCAWriter.m in Sources */,
 				C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */,
+				C4856BAD2082FC6300DB552D /* UIImage+UploadImage.m in Sources */,
 				E59C7E8720596CE100075053 /* MWPhoto.m in Sources */,
 				E59C7F7C20596CE100075053 /* ZXUPCEANExtension2Support.m in Sources */,
 				E59C7F6920596CE100075053 /* ZXRSSExpandedDecodedObject.m in Sources */,
@@ -3698,6 +3738,7 @@
 				E59C7F2220596CE100075053 /* ZXMultiFormatOneDReader.m in Sources */,
 				E59C7F2120596CE100075053 /* ZXMultiFinderPatternFinder.m in Sources */,
 				E59C7EEB20596CE100075053 /* ZXDataMatrixDetector.m in Sources */,
+				C4856BAA2082FBCE00DB552D /* NSString+MD5.m in Sources */,
 				E59C7E8520596CE100075053 /* MWGridCell.m in Sources */,
 				E59C7EC120596CE100075053 /* ZXAztecCode.m in Sources */,
 				E59C7F4B20596CE100075053 /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
@@ -3789,7 +3830,6 @@
 				E59C7F4D20596CE100075053 /* ZXQRCodeDecoderMetaData.m in Sources */,
 				E59C7EE520596CE100075053 /* ZXDataMatrixBitMatrixParser.m in Sources */,
 				E59C7F7F20596CE100075053 /* ZXUPCEANReader.m in Sources */,
-				C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */,
 				E59C7E4020596CE100075053 /* QNDnspodEnterprise.m in Sources */,
 				E59C7EEA20596CE100075053 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E59C7FA220596F8600075053 /* CLMineVC.m in Sources */,

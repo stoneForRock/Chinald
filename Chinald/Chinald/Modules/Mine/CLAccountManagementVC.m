@@ -9,6 +9,7 @@
 #import "CLAccountManagementVC.h"
 #import "EIPChoosePhotoViewController.h"
 #import "CLUserModel.h"
+#import "CLMineNetworking.h"
 @interface CLAccountManagementVC ()
 @property (strong, nonatomic) IBOutlet UITableView *managementTableView;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
@@ -31,11 +32,14 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _userModel = [CLUserModel sharedUserModel];
+
    _userPhone = _userModel.phone ? _userModel.phone :@"";
     
     _tableViewData = @[@{@"headTitle":@"个人资料",@"cellTitel":@[@{@"title":@"会员号",@"detailTitle":_userModel.number ? _userModel.number :@""},@{@"title":@"推荐人",@"detailTitle":_userModel.recommendName ? _userModel.recommendName :@""},@{@"title":@"关注时间",@"detailTitle":_userModel.addTime ? _userModel.addTime :@""},@{@"title":@"手机号码",@"detailTitle":_userModel.phone ? _userModel.phone :@""}]},@{@"headTitle":@"修改资料",@"cellTitel":@[@"更换头像",@"更换昵称",@"公开手机号",@"修改绑定手机",@"收货地址管理"]}];
-//    [_managementTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:managementTableCellString];
-    _userPhone = [_userPhone stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+
+    if (_userPhone != nil && _userPhone.length >= 11) {
+        _userPhone = [_userPhone stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+    }
 
     _showUserPhoneButton = [[UIButton alloc]init];
     _showUserPhoneButton.frame = CGRectMake(10, 0, 39, 24);
@@ -44,7 +48,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     _showUserPhoneButton.layer.borderWidth = 1;
     _showUserPhoneButton.layer.borderColor = [UIColor clDividingLineColor].CGColor;
     [_showUserPhoneButton setTitleColor:Color5 forState:0];
-    [_showUserPhoneButton addTarget:self action:@selector(shouAllUserPhoneNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [_showUserPhoneButton addTarget:self action:@selector(showAllUserPhoneNumber:) forControlEvents:UIControlEventTouchUpInside];
     [_showUserPhoneButton setTitle:@"显示" forState:0];
     
     _logoutButton.layer.borderColor = [UIColor colorWithHexRGB:@"0x999999"].CGColor;
@@ -98,8 +102,11 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             cell.detailTextLabel.text = _userModel.name;
         }
         if (indexPath.row == 2) {
+            
             UISwitch *switchView = [[UISwitch alloc]initWithFrame:CGRectMake(0, 7, 32, 30)];
             cell.accessoryView = switchView;
+            [switchView addTarget:self action:@selector(changeOpenPhone:) forControlEvents:UIControlEventValueChanged];
+            switchView.on = _userModel.openPhone;
         }
             cell.textLabel.text = _tableViewData[indexPath.section][@"cellTitel"][indexPath.row];
     }
@@ -191,7 +198,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 }
 
 
--(void)shouAllUserPhoneNumber:(UIButton *)button{
+-(void)showAllUserPhoneNumber:(UIButton *)button{
     if ([button.titleLabel.text isEqualToString:@"显示"]) {
         [button setTitle:@"隐藏" forState:0];
             _userPhone = _userModel.phone;
@@ -206,6 +213,41 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 //    [_managementTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
     [_managementTableView reloadData];
 }
+
+-(void)changeOpenPhone:(UISwitch *)switchView{
+    switchView.on = !switchView.on;
+    if (switchView.isOn) {
+        //公开手机号
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"华婴圣纸" message:@"公开后，您的上级推荐人可查看您的手机号码，是否确认公开？" preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alertController animated:YES completion:nil];
+        UIAlertAction *escAction = [UIAlertAction actionWithTitle:@"不公开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            switchView.on = !switchView.on;
+        }];
+        UIAlertAction *openAction = [UIAlertAction actionWithTitle:@"公开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on]} complete:^(NSMutableDictionary *resultsObj) {
+                
+            } theFailure:^(NSString *errorCode) {
+                switchView.on = !switchView.on;
+                [self.view znt_showToast:errorCode];
+            }];
+        }];
+        [escAction setValue:[UIColor blueColor] forKey:@"_titleTextColor"];
+        [openAction setValue:[UIColor blueColor] forKey:@"_titleTextColor"];
+        
+        [alertController addAction:escAction];
+        [alertController addAction:openAction];
+    }else{
+        //关闭公开手机号
+        [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on]} complete:^(NSMutableDictionary *resultsObj) {
+            
+        } theFailure:^(NSString *errorCode) {
+            switchView.on = !switchView.on;
+            [self.view znt_showToast:errorCode];
+        }];
+
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

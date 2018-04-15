@@ -160,7 +160,9 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
             [self.view znt_showToast:@"请输入验证码"];
             return;
         }
+    [self.view znt_showHUD:nil];
         [CLLoginRequest userLogin:@{@"phone":_phoneTextField.text,@"code":_codeTextField.text} complete:^(CLUserModel *resultsObj) {
+            [self.view znt_hideHUD];
 
 
             [weakself dismissViewControllerAnimated:YES completion:nil];
@@ -168,7 +170,9 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
             NSLog(@"userModel.userId是%@",userModel.userId);
             NSLog(@"userModel是%@",userModel.token);
         } theFailure:^(NSString *errorCode) {
-            [self.view znt_showToast:errorCode];
+            [self.view znt_hideHUD];
+
+           [self.view znt_showToast:errorCode];
         }];
 
 }
@@ -180,9 +184,14 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
     [_codeTextField resignFirstResponder];
 }
 
-
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+    [self textFieldResginFirstResponder];
+
 }
 
 - (void)didReceiveMemoryWarning {
