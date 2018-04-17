@@ -38,6 +38,8 @@
 		C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */; };
 		C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */; };
 		C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A32070D28A00FE19A9 /* CLDottedLineView.m */; };
+		C499BE072084E29500903121 /* CLMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C499BE062084E29500903121 /* CLMessageVC.m */; };
+		C499BE092084E2A900903121 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C499BE082084E2A900903121 /* Message.storyboard */; };
 		C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */; };
 		C4E860012073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860002073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m */; };
 		C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */; };
@@ -54,6 +56,11 @@
 		C4E860262078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */; };
 		C4E860292078B37100B0264E /* CLLogisticsCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */; };
 		C4E8602C2078D5F300B0264E /* CLRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8602B2078D5F300B0264E /* CLRefundViewController.m */; };
+		C4EB1EA9208575C6006590F3 /* CLMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EA8208575C6006590F3 /* CLMessageModel.m */; };
+		C4EB1EAC208575E8006590F3 /* CLMessageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */; };
+		C4EB1EAF2085761E006590F3 /* CLMessageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */; };
+		C4EB1EB220857634006590F3 /* CLMessageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */; };
+		C4EB1EB5208576BE006590F3 /* CLMessageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -573,6 +580,9 @@
 		C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderTableViewCell.m; sourceTree = "<group>"; };
 		C49412A22070D28A00FE19A9 /* CLDottedLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDottedLineView.h; sourceTree = "<group>"; };
 		C49412A32070D28A00FE19A9 /* CLDottedLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDottedLineView.m; sourceTree = "<group>"; };
+		C499BE052084E29500903121 /* CLMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageVC.h; sourceTree = "<group>"; };
+		C499BE062084E29500903121 /* CLMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageVC.m; sourceTree = "<group>"; };
+		C499BE082084E2A900903121 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderGoodsTableViewCell.h; sourceTree = "<group>"; };
 		C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderGoodsTableViewCell.m; sourceTree = "<group>"; };
 		C4E85FFF2073BB4F00B0264E /* CLOrderCostDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderCostDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -605,6 +615,16 @@
 		C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLogisticsCompanyTableViewCell.m; sourceTree = "<group>"; };
 		C4E8602A2078D5F300B0264E /* CLRefundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLRefundViewController.h; sourceTree = "<group>"; };
 		C4E8602B2078D5F300B0264E /* CLRefundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLRefundViewController.m; sourceTree = "<group>"; };
+		C4EB1EA7208575C6006590F3 /* CLMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageModel.h; sourceTree = "<group>"; };
+		C4EB1EA8208575C6006590F3 /* CLMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageModel.m; sourceTree = "<group>"; };
+		C4EB1EAA208575E8006590F3 /* CLMessageDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailModel.h; sourceTree = "<group>"; };
+		C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailModel.m; sourceTree = "<group>"; };
+		C4EB1EAD2085761E006590F3 /* CLMessageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageListTableViewCell.h; sourceTree = "<group>"; };
+		C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageListTableViewCell.m; sourceTree = "<group>"; };
+		C4EB1EB020857634006590F3 /* CLMessageDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailTableViewCell.h; sourceTree = "<group>"; };
+		C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailTableViewCell.m; sourceTree = "<group>"; };
+		C4EB1EB3208576BE006590F3 /* CLMessageDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailVC.h; sourceTree = "<group>"; };
+		C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailVC.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1593,6 +1613,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C499BE042084E17000903121 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EA620857287006590F3 /* Networking */,
+				C4EB1EA52085727F006590F3 /* Model */,
+				C4EB1EA420857274006590F3 /* View */,
+				C499BE052084E29500903121 /* CLMessageVC.h */,
+				C499BE062084E29500903121 /* CLMessageVC.m */,
+				C4EB1EB3208576BE006590F3 /* CLMessageDetailVC.h */,
+				C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */,
+				C499BE082084E2A900903121 /* Message.storyboard */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		C4E860082075D44500B0264E /* OrderOperationItemView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1612,6 +1647,35 @@
 				C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */,
 			);
 			path = OrderOperationItemView;
+			sourceTree = "<group>";
+		};
+		C4EB1EA420857274006590F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EAD2085761E006590F3 /* CLMessageListTableViewCell.h */,
+				C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */,
+				C4EB1EB020857634006590F3 /* CLMessageDetailTableViewCell.h */,
+				C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4EB1EA52085727F006590F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EA7208575C6006590F3 /* CLMessageModel.h */,
+				C4EB1EA8208575C6006590F3 /* CLMessageModel.m */,
+				C4EB1EAA208575E8006590F3 /* CLMessageDetailModel.h */,
+				C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4EB1EA620857287006590F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D21D8E5620689BCC00CDD04F /* Network */ = {
@@ -1757,6 +1821,7 @@
 		E56687132059629C003D5EAB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C499BE042084E17000903121 /* Message */,
 				E566873A20596AA5003D5EAB /* Guide */,
 				E566873920596A9C003D5EAB /* Launch */,
 				E566873820596A97003D5EAB /* Login */,
@@ -3222,6 +3287,7 @@
 				E59C7E7820596CE100075053 /* UIBarButtonItemArrowLeft.png in Resources */,
 				E59C7E7020596CE100075053 /* ImageSelectedSmallOn@2x.png in Resources */,
 				E59C7E7D20596CE100075053 /* UIBarButtonItemArrowRight@3x.png in Resources */,
+				C499BE092084E2A900903121 /* Message.storyboard in Resources */,
 				E59C7E3320596CE100075053 /* AMap.bundle in Resources */,
 				E59C7E7720596CE100075053 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
 				E59C7E6420596CE100075053 /* ImageError@2x.png in Resources */,
@@ -3484,6 +3550,7 @@
 				E59C7EB420596CE100075053 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
 				E59C7E3C20596CE100075053 /* QNDomain.m in Sources */,
 				E59C7F4020596CE100075053 /* ZXPerspectiveTransform.m in Sources */,
+				C4EB1EB220857634006590F3 /* CLMessageDetailTableViewCell.m in Sources */,
 				E59C7E9720596CE100075053 /* QNResponseInfo.m in Sources */,
 				E59C7F4420596CE100075053 /* ZXQRCode.m in Sources */,
 				E59C7EA020596CE100075053 /* QNUpToken.m in Sources */,
@@ -3626,6 +3693,7 @@
 				E59C7F5620596CE100075053 /* ZXQRCodeMatrixUtil.m in Sources */,
 				E59C7F6620596CE100075053 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				E59C7F6420596CE100075053 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
+				C4EB1EB5208576BE006590F3 /* CLMessageDetailVC.m in Sources */,
 				E59C7F7D20596CE100075053 /* ZXUPCEANExtension5Support.m in Sources */,
 				E59C7F6720596CE100075053 /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				E59C7F8020596CE100075053 /* ZXUPCEANWriter.m in Sources */,
@@ -3645,6 +3713,7 @@
 				E59C7F3020596CE100075053 /* ZXPDF417CodewordDecoder.m in Sources */,
 				E59C7E9A20596CE100075053 /* QNFileRecorder.m in Sources */,
 				E59C7B0820596C5B00075053 /* UISearchBar+ZNTStyle.m in Sources */,
+				C4EB1EA9208575C6006590F3 /* CLMessageModel.m in Sources */,
 				C4E860232077769100B0264E /* CLLogisticsDetailViewController.m in Sources */,
 				E59C7F8120596CE100075053 /* ZXUPCEReader.m in Sources */,
 				E59C7EBC20596CE100075053 /* ZXAI01AndOtherAIs.m in Sources */,
@@ -3682,6 +3751,7 @@
 				E59C7F0D20596CE100075053 /* ZXGlobalHistogramBinarizer.m in Sources */,
 				E59C7EED20596CE100075053 /* ZXDataMatrixEncoderContext.m in Sources */,
 				E59C7F8220596CE100075053 /* ZXURIParsedResult.m in Sources */,
+				C4EB1EAC208575E8006590F3 /* CLMessageDetailModel.m in Sources */,
 				E59C7ECB20596CE100075053 /* ZXAztecWriter.m in Sources */,
 				E566876320596B97003D5EAB /* ZNTRegisterVC.m in Sources */,
 				E59C7B5020596C9200075053 /* UIButton+ZNTStyle.m in Sources */,
@@ -3714,6 +3784,7 @@
 				E59C7F3C20596CE100075053 /* ZXPDF417Reader.m in Sources */,
 				E59C7F3720596CE100075053 /* ZXPDF417DetectorResult.m in Sources */,
 				E59C7F6220596CE100075053 /* ZXRSS14Reader.m in Sources */,
+				C499BE072084E29500903121 /* CLMessageVC.m in Sources */,
 				E59C7B5520596C9200075053 /* UIImage+ZNTAdd.m in Sources */,
 				E59C7F4520596CE100075053 /* ZXQRCodeAlignmentPattern.m in Sources */,
 				E59C7F2B20596CE100075053 /* ZXPDF417BarcodeMetadata.m in Sources */,
@@ -3782,6 +3853,7 @@
 				E59C7E4120596CE100075053 /* QNDnspodFree.m in Sources */,
 				C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */,
 				E59C7F2C20596CE100075053 /* ZXPDF417BarcodeRow.m in Sources */,
+				C4EB1EAF2085761E006590F3 /* CLMessageListTableViewCell.m in Sources */,
 				E59C7F0320596CE100075053 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				E59C7E8E20596CE100075053 /* QNALAssetFile.m in Sources */,
 				E59C7EA920596CE100075053 /* UIView+Layout.m in Sources */,

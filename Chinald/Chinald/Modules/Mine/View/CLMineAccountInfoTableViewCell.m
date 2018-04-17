@@ -31,7 +31,6 @@
             make.right.mas_offset(0);
             make.height.mas_offset(160);
         }];
-        
         self.amountBackgroundView = [[UIView alloc]init];
         self.amountBackgroundView.backgroundColor = ThemeBacgroundColor;
         [self.contentView addSubview:self.amountBackgroundView];

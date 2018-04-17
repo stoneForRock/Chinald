@@ -11,6 +11,7 @@
 
 #import "CLMainPageVC.h"
 #import "CLShoppingCartVC.h"
+#import "CLMessageVC.h"
 #import "CLMineVC.h"
 
 #import "ZNTTabBarController.h"
@@ -127,12 +128,13 @@
     NSArray *tabbarItemInfos = @[
                                  @{@"title":@"首页",@"selectedImage":@"nva_home_pre",@"image":@"nva_home"},
                                  @{@"title":@"购物车",@"selectedImage":@"nva_shoppingcar_pre",@"image":@"nva_shoppingcar"},
+                                 @{@"title":@"消息",@"selectedImage":@"nva_news_pre",@"image":@"nva_news"},
                                  @{@"title":@"个人中心",@"selectedImage":@"nva_mine_pre",@"image":@"nva_mine"}
                                  ];
     
     NSMutableArray *tabbarNavs = [NSMutableArray arrayWithCapacity:0];
     
-    NSArray *tabbarVCs = @[[CLMainPageVC instanceFromXib],[CLShoppingCartVC instanceFromXib],[CLMineVC instanceFromXib]];
+    NSArray *tabbarVCs = @[[CLMainPageVC instanceFromXib],[CLShoppingCartVC instanceFromXib],[CLMessageVC instanceFromXib],[CLMineVC instanceFromXib]];
     
     for (int i = 0; i < tabbarVCs.count; i ++)
     {

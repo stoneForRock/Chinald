@@ -52,13 +52,20 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
 }
 - (IBAction)codeButtonClick:(id)sender {
     [self textFieldResginFirstResponder];
+    __block UIButton *button = (UIButton *)sender;
     KWeakSelf(self);
     if ([NSString clCheckPhoneNumberLength:_phoneTextField.text]) {
-
+        button.enabled = NO;
+        [self.view znt_showHUD:nil];
         [CLLoginRequest userCode:@{@"phone":_phoneTextField.text,@"type":@"0"} complete:^(NSDictionary *resultsObj) {
+            button.enabled = YES;
+
             NSLog(@"获取验证码===%@",resultsObj);
+            [self.view znt_hideHUD];
             [weakself startTime];
         } theFailure:^(NSString *errorCode) {
+            button.enabled = YES;
+            [self.view znt_hideHUD];
             [self.view znt_showToast:errorCode];
         }];
     }else{
@@ -161,8 +168,11 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
             return;
         }
     [self.view znt_showHUD:nil];
+    __block UIButton *button = (UIButton *)sender;
+    button.enabled = NO;
         [CLLoginRequest userLogin:@{@"phone":_phoneTextField.text,@"code":_codeTextField.text} complete:^(CLUserModel *resultsObj) {
             [self.view znt_hideHUD];
+            button.enabled = YES;
 
 
             [weakself dismissViewControllerAnimated:YES completion:nil];
@@ -170,6 +180,8 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
             NSLog(@"userModel.userId是%@",userModel.userId);
             NSLog(@"userModel是%@",userModel.token);
         } theFailure:^(NSString *errorCode) {
+            button.enabled = YES;
+
             [self.view znt_hideHUD];
 
            [self.view znt_showToast:errorCode];
