@@ -9,8 +9,12 @@
 #import "CLMessageVC.h"
 #import "CLMessageModel.h"
 #import "CLMessageListTableViewCell.h"
+#import "CLMessageNetworking.h"
+#import "UIView+ZNTHud.h"
 @interface CLMessageVC ()
 @property(nonatomic, strong)NSMutableArray *messageArray;  //!<
+@property (strong, nonatomic) IBOutlet UITableView *messageTableView;
+
 @end
 
 @implementation CLMessageVC
@@ -23,6 +27,20 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
     self.navigationItem.title = @"消息";
     
     _messageArray = [[NSMutableArray alloc]initWithCapacity:0];
+}
+-(void)requestMessageList{
+    [self.view znt_showHUD:nil];
+    [CLMessageNetworking messageIndex:nil complete:^(NSMutableArray *resultsObj) {
+        [self.view znt_hideHUD];
+        [_messageArray removeAllObjects];
+        [_messageArray addObjectsFromArray:resultsObj];
+        if (_messageTableView) {
+            [_messageTableView reloadData];
+        }
+    } theFailure:^(NSString *errorCode) {
+        [self.view znt_hideHUD];
+        [self.view znt_showToast:errorCode];
+    }];
 }
 #pragma mark-------tableview代理方法  UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -39,7 +57,7 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
             cell = [[CLMessageListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageListCell];
             
         }
-//    cell.messageModel = _messageArray[indexPath.row];
+    cell.messageModel = _messageArray[indexPath.row];
     
         return cell;
     

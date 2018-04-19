@@ -22,20 +22,23 @@
 @implementation CLForGoodsAddressViewController
 static NSString *addAddressCell = @"addAddressCell";
 static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self requestAddressList];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"收货地址";
     _addressArray = [[NSMutableArray alloc]initWithCapacity:0];
     [_forGoodsAddressTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:addAddressCell];
-    
 }
 -(void)requestAddressList{
     KWeakSelf(self);
     [CLMineNetworking addressIndexComplete:^(NSMutableArray *resultsObj) {
         [weakself.addressArray removeAllObjects];
         [weakself.addressArray addObjectsFromArray:resultsObj];
+        [weakself.forGoodsAddressTableView reloadData];
     } theFailure:^(NSString *errorCode) {
         [weakself.view znt_showToast:errorCode];
     }];
@@ -86,12 +89,14 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-        //选择头像
     
     if (indexPath.section == 0) {
         _selectAddressModel = nil;
-        [self performSegueWithIdentifier:@"addressListVCToEditAddressVC" sender:nil];
+    }else{
+        _selectAddressModel = _addressArray[indexPath.section - 1];
     }
+    [self performSegueWithIdentifier:@"addressListVCToEditAddressVC" sender:nil];
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -9,6 +9,7 @@
 #import "CLChangePhoneViewController.h"
 #import "NSString+DZCategory.h"
 #import "CLLoginRequest.h"
+#import "CLUserModel.h"
 #import "CLMineNetworking.h"
 #define KWeakSelf(type)  __weak typeof(type) weak##type = type
 
@@ -31,9 +32,11 @@
 - (IBAction)sendCodeButtonClick:(id)sender {
     [self textFieldResginFirstResponder];
     KWeakSelf(self);
+
     if ([NSString clCheckPhoneNumberLength:_phoneTextField.text]) {
-        
-        [CLLoginRequest userCode:@{@"phone":_phoneTextField.text,@"type":@"1"} complete:^(NSDictionary *resultsObj) {
+        CLUserModel *userModel = [CLUserModel sharedUserModel];
+
+        [CLLoginRequest userCode:@{@"phone":_phoneTextField.text,@"type":@"1",@"token":userModel.token} complete:^(NSDictionary *resultsObj) {
             NSLog(@"获取验证码===%@",resultsObj);
             [weakself startTime];
         } theFailure:^(NSString *errorCode) {

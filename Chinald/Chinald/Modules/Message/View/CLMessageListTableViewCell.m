@@ -15,7 +15,16 @@
 
 @end
 @implementation CLMessageListTableViewCell
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    NSArray *imageArray = @[@"icon_news_mem",@"icon_news_ind",@"icon_news_sys",@"img_none_eva"];
+    NSArray *messageName = @[@"会员通知",@"订单通知",@"系统通知",@"我的评价"];
 
+    self.messageTItleImage.image = [UIImage imageNamed:imageArray[self.messageModel.type - 1]];
+    self.messageTypeTitle.text = messageName[self.messageModel.type - 1];
+    self.messageTimeLabel.text = self.messageModel.lastTime;
+    self.messageContentLabel.text = self.messageModel.content;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

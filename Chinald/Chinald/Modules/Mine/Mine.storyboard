@@ -191,6 +191,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonClick:" destination="jyU-qw-Voe" eventType="touchUpInside" id="t8y-3e-Ufz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -1308,6 +1311,7 @@
                                             <outlet property="forGoodsAddressLabel" destination="XFX-Ds-rbQ" id="kbY-Xy-Ou9"/>
                                             <outlet property="forGoodsAddressLabelHeight" destination="eWn-DR-bHg" id="aHo-M5-kqC"/>
                                             <outlet property="forGoodsUserNameLabel" destination="nK9-Vr-hca" id="MWo-GY-BN7"/>
+                                            <outlet property="forGoodsUserNameLabelWidth" destination="h9u-EE-rgb" id="8c2-d4-0B1"/>
                                             <outlet property="forGoodsUserPhoneLabel" destination="BRB-Ny-1AM" id="ACL-du-oyk"/>
                                             <outlet property="setDefaultButton" destination="daI-Hu-kcd" id="gfL-zO-biS"/>
                                         </connections>

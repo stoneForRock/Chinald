@@ -68,7 +68,7 @@ static int refreshTokenCount = 0;
     //设置请求数据的形式
 //    AFJSONRequestSerializer *requestSerizlizer = [AFJSONRequestSerializer serializer];
 //    kHTTPSession.requestSerializer = requestSerizlizer;
-    [kHTTPSession.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//    [kHTTPSession.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
 
     //设置请求头 Token、Platform、DeviceId、Latlng
     
@@ -76,14 +76,15 @@ static int refreshTokenCount = 0;
     [kHTTPSession.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     kHTTPSession.requestSerializer.timeoutInterval = 10.f;
     [kHTTPSession.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    [kHTTPSession.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
-    [kHTTPSession setObservationInfo:(__bridge void * _Nullable)([NSDictionary dictionaryWithObjectsAndKeys:@"data",@"name", nil])];
+//    [kHTTPSession.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
+//    [kHTTPSession setObservationInfo:(__bridge void * _Nullable)([NSDictionary dictionaryWithObjectsAndKeys:@"data",@"name", nil])];
     
     //设置接收数据的形式
     AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
-    //    response.removesKeysWithNullValues = YES;
+    response.removesKeysWithNullValues = YES;
     kHTTPSession.responseSerializer = response;
-    kHTTPSession.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",nil];//设置接收的数据形式
+//    kHTTPSession.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",nil];//设置接收的数据形式
+    kHTTPSession.responseSerializer.acceptableContentTypes = [kHTTPSession.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
 }
 
 //git 请求
@@ -159,7 +160,7 @@ static int refreshTokenCount = 0;
     [self creatHTTPSessionIsHaveRequestHeader:have theSignature:nil];
     
     NSMutableDictionary *parameter = [parameters mutableCopy];
-    
+
     NSURLSessionDataTask *task = [kHTTPSession POST:urlStr parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -231,7 +232,40 @@ static int refreshTokenCount = 0;
     [kRequestTaskArray addObject:task];
 }
 
-
++(void)clPostFormRequestTheUrl:(NSString *)urlStr parametersArray:(NSDictionary *)parameters theRequsetHeader:(BOOL)have complete:(void(^)(NSMutableDictionary * resultsObj))complete theFailure:(void(^)(NSString *errorStr))theFailure{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
+    response.removesKeysWithNullValues = YES;
+    manager.responseSerializer = response;
+    
+    [manager POST:urlStr parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+//        for (int i = 0; i < images.count; i++) {
+//            NSData *data = [[NSData alloc]init];
+//            NSString *fileName = @"";
+//            if (images[i]) {
+//                data = UIImageJPEGRepresentation(images[i], 0.85);
+//                fileName = [NSString stringWithFormat:@"%@.%@",[[data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength] MD5],[UIImage clImageFormat:images[i]]];
+//                [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"file%d",i+1] fileName:fileName mimeType:[UIImage clImageFormat:images[i]]];
+//
+//            }
+//        }
+//
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"图片上传的结果是===%@",responseObject);
+        if ([[responseObject objectForKey:@"status"] intValue] == 1) {
+            complete(responseObject);
+        }else{
+            theFailure([responseObject objectForKey:@"msg"]);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"图片上传失败===%@",error);
+        theFailure(error.localizedDescription);
+    }];
+}
 
 
 

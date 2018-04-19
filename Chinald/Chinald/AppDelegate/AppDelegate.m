@@ -13,7 +13,7 @@
 #import "CLShoppingCartVC.h"
 #import "CLMessageVC.h"
 #import "CLMineVC.h"
-
+#import "CLUserModel.h"
 #import "ZNTTabBarController.h"
 
 #import "ZNTRequest.h"
@@ -46,10 +46,17 @@
     BOOL result = [self setupAppUI:launchOptions];
     //与界面无关的操作
     [self setupAppConfigure:launchOptions];
-    
+    [self initUserInfo];
     return result;
 }
 
+-(void)initUserInfo{
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];    NSDictionary *userDic = [NSDictionary dictionaryWithContentsOfFile:path];
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    CLUserModel *user = [[CLUserModel alloc]initWithDictionary:userDic error:nil];
+    userModel = user;
+}
 - (void)initAppConfigure:(NSDictionary *)launchOptions
 {
     [self registerRemoteNotification];
@@ -165,6 +172,9 @@
     self.tabBarController = [[ZNTTabBarController alloc] init];
     self.tabBarController.viewControllers = tabbarNavs;
     self.window.rootViewController = self.tabBarController;
+    
+    
+    
     
 }
 

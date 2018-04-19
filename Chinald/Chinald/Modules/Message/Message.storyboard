@@ -96,6 +96,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="snC-7N-3fq" id="l14-FS-YGD"/>
+                                    <outlet property="delegate" destination="snC-7N-3fq" id="OpH-bk-3uR"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,6 +111,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="messageTableView" destination="PTH-uv-5Iq" id="LVG-aR-eyb"/>
                         <segue destination="hxM-jA-o44" kind="push" id="XjI-iG-53V"/>
                     </connections>
                 </viewController>

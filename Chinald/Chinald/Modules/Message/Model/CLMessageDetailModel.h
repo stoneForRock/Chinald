@@ -9,5 +9,6 @@
 #import <JSONModel/JSONModel.h>
 
 @interface CLMessageDetailModel : JSONModel
-
+@property(nonatomic, copy)NSString *content;  //!<
+@property(nonatomic, copy)NSString *addTime;  //!<
 @end

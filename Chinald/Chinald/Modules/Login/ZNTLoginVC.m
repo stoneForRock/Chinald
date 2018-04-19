@@ -47,7 +47,7 @@ INSTANCE_XIB_M(@"Login", ZNTLoginVC)
 //    
 //    [self initUI];
     _phoneTextField.text = @"18872830987";
-    _codeTextField.text = @"4665";
+    _codeTextField.text = @"4078";
     
 }
 - (IBAction)codeButtonClick:(id)sender {

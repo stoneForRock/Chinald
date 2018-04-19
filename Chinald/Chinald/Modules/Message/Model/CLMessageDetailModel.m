@@ -9,5 +9,14 @@
 #import "CLMessageDetailModel.h"
 
 @implementation CLMessageDetailModel
-
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"content": @"content",
+                                                                  @"addTime": @"add_time"
+                                                                  }];
+}
++(BOOL)propertyIsOptional:(NSString *)propertyName{
+    return true;
+}
 @end

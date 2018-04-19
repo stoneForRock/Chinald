@@ -247,6 +247,11 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
 
     }
 }
+- (IBAction)logoutButtonClick:(id)sender {
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    userModel.token = nil;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

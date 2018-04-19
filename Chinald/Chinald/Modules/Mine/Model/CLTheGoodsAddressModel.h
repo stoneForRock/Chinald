@@ -17,7 +17,7 @@
 @property(nonatomic, copy)NSString *area;  //!<区
 @property(nonatomic, copy)NSString *provinceCode;  //!<省份编码
 @property(nonatomic, copy)NSString *cityCode;  //!<市编码
-@property(nonatomic, copy)NSString *areCode;  //!<区编码
+@property(nonatomic, copy)NSString *areaCode;  //!<区编码
 @property(nonatomic, copy)NSString *detail;  //!<详细地址
 @property(nonatomic, assign)BOOL isDefault;  //!<是否是默认地址
 @end

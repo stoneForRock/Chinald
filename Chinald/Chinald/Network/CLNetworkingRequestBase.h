@@ -75,6 +75,7 @@
  */
 +(void)eipRefreshTokenLastRequestURL:(NSString *)urlStr parameters:(NSDictionary *)parameters Complete:(void(^)(NSMutableDictionary * resultsObj))complete theFailure:(void(^)(NSString *errorStr))theFailure;
 
++(void)clPostFormRequestTheUrl:(NSString *)urlStr parametersArray:(NSDictionary *)parameters theRequsetHeader:(BOOL)have complete:(void(^)(NSMutableDictionary * resultsObj))complete theFailure:(void(^)(NSString *errorStr))theFailure;
 /**
  取消所有请求
  */

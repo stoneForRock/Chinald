@@ -10,7 +10,7 @@
 #import "NSString+DZCategory.h"
 #import "CLTheGoodsAddressModel.h"
 #import "CLMineNetworking.h"
-#import "UIView+ZNTHud.h"
+#import "CLAddressPickerView.h"
 #define KWeakSelf(type)  __weak typeof(type) weak##type = type
 
 @interface CLEditAddressViewController ()
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *selectCityButton;
 @property (strong, nonatomic) IBOutlet UITextView *detailAddressTextView;
 @property (strong, nonatomic) IBOutlet UIButton *changeDefaultButton;
-
+@property(nonatomic, strong)CLAddressPickerView *addressPickerView;  //!<
 @end
 
 @implementation CLEditAddressViewController
@@ -31,10 +31,22 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewChange) name:UITextViewTextDidChangeNotification object:nil];
     self.navigationItem.title = @"编辑收货地址";
 
-    if (_addressOperationType == CL_EDIT_ADDRESS_ADD) {
+    if (!_addressModel.addressId) {
         _addressModel = [[CLTheGoodsAddressModel alloc]init];
+    }else{
+        _forGoodsUserNameTextField.text = _addressModel.name;
+        _forGoodsUserPhoneTextField.text = _addressModel.phone;
+        if (_addressModel.province) {
+            [_selectCityButton setTitleColor:[UIColor blackColor]forState:0];
+            NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@",_addressModel.province ? _addressModel.province : @"" ,_addressModel.city ? _addressModel.city : @"",_addressModel.area ? _addressModel.area : @""];
+        [self.selectCityButton setTitle:addressString forState:0];
+        }
+        if (_addressModel.detail) {
+            _detailAddressTextView.text = _addressModel.detail;
+            _detailAddressTextView.alpha = 1;
+        }
     }
-
+    
 }
 #pragma mark =========== 输入textField、textView内容改变监听 ===========
 -(void)textFieldChange{
@@ -49,7 +61,11 @@
 
 -(void)textViewChange{
     NSCharacterSet  *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-
+    if (_detailAddressTextView.text.length > 0) {
+        _detailAddressTextView.alpha = 1;
+    }else{
+        _detailAddressTextView.alpha = 0.7;
+    }
     [NSString restrictionInputTextView:_detailAddressTextView maxNumber:100];
     _addressModel.detail = _detailAddressTextView.text;
     _addressModel.detail = [_addressModel.detail stringByTrimmingCharactersInSet:set];
@@ -71,6 +87,26 @@
     return YES;
 }
 - (IBAction)selectCityButtonClick:(id)sender {
+    __weak __typeof(self) weakSelf = self;
+    [_detailAddressTextView resignFirstResponder];
+    [_forGoodsUserNameTextField resignFirstResponder];
+    [_forGoodsUserPhoneTextField resignFirstResponder];
+   _addressPickerView = [[CLAddressPickerView alloc]initWithFrame:CGRectMake(0, 0, ScreenFullWidth, ScreenFullHeight)];
+    
+    [self.view.window addSubview:_addressPickerView];
+    _addressPickerView.selectAddressClickBlock = ^{
+        NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@",weakSelf.addressPickerView.province ? weakSelf.addressPickerView.province : @"" ,weakSelf.addressPickerView.city ? weakSelf.addressPickerView.city : @"",weakSelf.addressPickerView.area ? weakSelf.addressPickerView.area : @""];
+        
+        [weakSelf.selectCityButton setTitle:addressString forState:0];
+        [weakSelf.selectCityButton setTitleColor:[UIColor blackColor] forState:0];
+        weakSelf.addressModel.province = weakSelf.addressPickerView.province;
+        weakSelf.addressModel.city = weakSelf.addressPickerView.city;
+        weakSelf.addressModel.area = weakSelf.addressPickerView.area;
+        weakSelf.addressModel.provinceCode = weakSelf.addressPickerView.provinceCode;
+        weakSelf.addressModel.cityCode = weakSelf.addressPickerView.cityCode;
+        weakSelf.addressModel.areaCode = weakSelf.addressPickerView.areaCode;
+    };
+
 }
 - (IBAction)changeDefaultButtonClick:(id)sender {
     _addressModel.isDefault = !_addressModel.isDefault;
@@ -89,11 +125,20 @@
         return;
     }
     KWeakSelf(self);
-    [CLMineNetworking addressAdd:_addressModel complete:^(NSMutableDictionary *resultsObj) {
-        [weakself.navigationController popViewControllerAnimated:YES];
-    } theFailure:^(NSString *errorCode) {
-        [weakself.view znt_showToast:errorCode];
-    }];
+    if (_addressModel.addressId) {
+        [CLMineNetworking addressEdit:_addressModel complete:^(NSMutableDictionary *resultsObj) {
+            [weakself.navigationController popViewControllerAnimated:YES];
+        } theFailure:^(NSString *errorCode) {
+            [weakself.view znt_showToast:errorCode];
+        }];
+    }else{
+        [CLMineNetworking addressAdd:_addressModel complete:^(NSMutableDictionary *resultsObj) {
+            [weakself.navigationController popViewControllerAnimated:YES];
+        } theFailure:^(NSString *errorCode) {
+            [weakself.view znt_showToast:errorCode];
+        }];
+    }
+
 }
 
 

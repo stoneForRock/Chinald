@@ -13,8 +13,19 @@
 +(void)userLogin:(NSDictionary *)parameters complete:(void(^)(CLUserModel *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     NSString *urlString = [NSString stringWithFormat:@"%@/user/login",[ZNTURLPathManager sharedURLPathManager].baseUrl];
     [self clPostRequestTheURL:urlString parameters:parameters theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+//        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];
+//        if ([fileManager fileExistsAtPath:path]) {
+//            [fileManager removeItemAtPath:path error:nil];
+//        }
+        NSDictionary *userDic = resultsObj[@"data"];
+//        dispatch_queue_t queue = dispatch_queue_create([path UTF8String], NULL);
+//        dispatch_async(queue, ^{
+            [userDic writeToFile:path atomically:YES];
+//        });
+        
         CLUserModel *userModel = [CLUserModel sharedUserModel];
-        CLUserModel *user = [[CLUserModel alloc]initWithDictionary:resultsObj[@"data"] error:nil];
+        CLUserModel *user = [[CLUserModel alloc]initWithDictionary:userDic error:nil];
         userModel = user;
         complete(userModel);
     } theFailure:^(NSString *errorStr) {

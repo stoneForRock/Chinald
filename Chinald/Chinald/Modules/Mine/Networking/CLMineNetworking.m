@@ -11,6 +11,7 @@
 #import "NSString+MD5.h"
 #import "UIImage+UploadImage.h"
 #import "CLTheGoodsAddressModel.h"
+#import "CLUserModel.h"
 #import <JSONModel.h>
 #import <AFNetworking.h>
 @implementation CLMineNetworking
@@ -76,6 +77,13 @@
     } theFailure:^(NSString *errorStr) {
         theFailure(errorStr);
     }];
+    
+    
+//    [self clPostFormRequestTheUrl:urlString parametersArray:parameters theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+//        complete(resultsObj);
+//    } theFailure:^(NSString *errorStr) {
+//        theFailure(errorStr);
+//    }];
 }
 
 /**
@@ -103,7 +111,8 @@
 + (void)addressIndexComplete:(void(^)(NSMutableArray *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     
     NSString *urlString = [NSString stringWithFormat:@"%@/address/index",[ZNTURLPathManager sharedURLPathManager].baseUrl];
-    [self clPostRequestTheURL:urlString parameters:nil theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    [self clPostRequestTheURL:urlString parameters:@{@"token":userModel.token} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         NSMutableArray *array = [CLTheGoodsAddressModel arrayOfModelsFromDictionaries:resultsObj[@"data"] error:nil];
         complete(array);
     } theFailure:^(NSString *errorStr) {
@@ -118,7 +127,8 @@
  @param theFailure 错误信息
  */
 + (void)addressAdd:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
-    NSDictionary *dic = [parameters toDictionary];
+    NSMutableDictionary *dic = [[parameters toDictionary] mutableCopy];
+    [dic setObject:[CLUserModel sharedUserModel].token forKey:@"token"];
     NSString *urlString = [NSString stringWithFormat:@"%@/address/add",[ZNTURLPathManager sharedURLPathManager].baseUrl];
     [self clPostRequestTheURL:urlString parameters:dic theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         complete(resultsObj);
@@ -134,7 +144,8 @@
  @param theFailure 错误信息
  */
 + (void)addressEdit:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
-    NSDictionary *dic = [parameters toDictionary];
+    NSMutableDictionary *dic = [[parameters toDictionary] mutableCopy];
+    [dic setObject:[CLUserModel sharedUserModel].token forKey:@"token"];
     NSString *urlString = [NSString stringWithFormat:@"%@/address/edit",[ZNTURLPathManager sharedURLPathManager].baseUrl];
     [self clPostRequestTheURL:urlString parameters:dic theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         complete(resultsObj);
@@ -152,7 +163,7 @@
 + (void)addressDelete:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
    
     NSString *urlString = [NSString stringWithFormat:@"%@/address/delete",[ZNTURLPathManager sharedURLPathManager].baseUrl];
-    [self clPostRequestTheURL:urlString parameters:@{@"address_id":parameters.addressId} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+    [self clPostRequestTheURL:urlString parameters:@{@"address_id":parameters.addressId,@"token":[CLUserModel sharedUserModel].token} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         complete(resultsObj);
     } theFailure:^(NSString *errorStr) {
         theFailure(errorStr);
@@ -167,7 +178,7 @@
  */
 + (void)addressDefault:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     NSString *urlString = [NSString stringWithFormat:@"%@/address/default",[ZNTURLPathManager sharedURLPathManager].baseUrl];
-    [self clPostRequestTheURL:urlString parameters:@{@"address_id":parameters.addressId} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+    [self clPostRequestTheURL:urlString parameters:@{@"address_id":parameters.addressId,@"token":[CLUserModel sharedUserModel].token} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         complete(resultsObj);
     } theFailure:^(NSString *errorStr) {
         theFailure(errorStr);

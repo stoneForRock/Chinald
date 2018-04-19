@@ -20,7 +20,7 @@
                                                        @"area": @"area",
                                                        @"provinceCode": @"province_code",
                                                        @"cityCode": @"city_code",
-                                                       @"areCode": @"area_code",
+                                                       @"areaCode": @"area_code",
                                                        @"detail": @"detail",
                                                        @"isDefault": @"is_default"
                                                        }];

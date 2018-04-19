@@ -14,19 +14,22 @@
 @property (strong, nonatomic) IBOutlet UILabel *forGoodsAddressLabel;
 @property (strong, nonatomic) IBOutlet UIButton *setDefaultButton;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *forGoodsAddressLabelHeight;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *forGoodsUserNameLabelWidth;
 
 @end
 @implementation CLAddressTableViewCell
 -(void)layoutSubviews{
     [super layoutSubviews];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    CGSize forGoodsUserNameLabeSize = [self.goodsAddressModel.name kd_sizeForMaxWidth:ScreenFullWidth - 100 font:[UIFont zntFont14] numberOfLines:1];
+    self.forGoodsUserNameLabelWidth.constant = forGoodsUserNameLabeSize.width;
     self.forGoodsUserNameLabel.text = self.goodsAddressModel.name;
     self.forGoodsUserPhoneLabel.text = self.goodsAddressModel.phone;
     
     NSString *forGoodsAddressDetailString = [NSString stringWithFormat:@"%@,%@,%@,%@",self.goodsAddressModel.province,self.goodsAddressModel.city,self.goodsAddressModel.area,self.goodsAddressModel.detail];
-    CGSize size = [forGoodsAddressDetailString kd_sizeForMaxWidth:ScreenFullWidth - 26 font:[UIFont zntFont13]];
-    self.forGoodsAddressLabelHeight.constant = size.height;
+    
+    CGSize forGoodsAddressLabelSize = [forGoodsAddressDetailString kd_sizeForMaxWidth:ScreenFullWidth - 26 font:[UIFont zntFont13]];
+    self.forGoodsAddressLabelHeight.constant = forGoodsAddressLabelSize.height;
     self.forGoodsAddressLabel.text = forGoodsAddressDetailString;
     //是否是默认的收货地址
     if (self.goodsAddressModel.isDefault) {

@@ -8,6 +8,9 @@
 
 #import "CLChangeNicknameVC.h"
 #import "CLMineNetworking.h"
+#import "CLUserModel.h"
+#import "CLMineRequest.h"
+
 #import "UIView+ZNTHud.h"
 @interface CLChangeNicknameVC ()
 @property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
@@ -35,11 +38,17 @@
         [self.view znt_showToast:@"请输入昵称"];
         return;
     }
-    [CLMineNetworking userEditInfo:@{@"name":nicknameString} complete:^(NSMutableDictionary *resultsObj) {
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    [CLMineNetworking userEditInfo:@{@"name":nicknameString,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
         [self.navigationController popViewControllerAnimated:YES];
     } theFailure:^(NSString *errorCode) {
         [self.view znt_showToast:errorCode];
     }];
+//    [CLMineRequest userEditInfo:@{@"name":nicknameString,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
+//
+//    } theFailure:^(NSString *errorCode) {
+//
+//    }];
     
 }
 

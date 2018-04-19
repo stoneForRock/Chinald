@@ -28,13 +28,13 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     CLUserModel *userModel = [CLUserModel sharedUserModel];
-//    if (!userModel.token) {
-//        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
-//        [self presentViewController:loginVC animated:YES completion:^{
-//        }];
-//    }else{
-//        [_mineTableView reloadData];
-//    }
+    if (!userModel.token) {
+        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+        [self presentViewController:loginVC animated:YES completion:^{
+        }];
+    }else{
+        [_mineTableView reloadData];
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

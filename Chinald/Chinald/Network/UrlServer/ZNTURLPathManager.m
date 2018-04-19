@@ -10,16 +10,16 @@
 
 //正式环境
 //static NSString *const ZNTURL = @"http://www.chinald.cc";
-static NSString *const ZNTURL = @"http://www.jujia168.com";
+static NSString *const ZNTURL = @"http://www.yizhimin.com";
 
 //Test
 //static NSString *const ZNTURL_TEST = @"http://www.chinald.cc";
-static NSString *const ZNTURL_TEST = @"http://www.jujia168.com";
+static NSString *const ZNTURL_TEST = @"http://www.yizhimin.com";
 
 ////Dev
 //static NSString *const ZNTURL_Dev = @"http://www.chinald.cc";
 
-static NSString *const ZNTURL_Dev = @"http://www.jujia168.com";
+static NSString *const ZNTURL_Dev = @"http://www.yizhimin.com";
 
 
 NSString *const ZNTURLChangeNotification = @"ZNTURLChangeNotification";
