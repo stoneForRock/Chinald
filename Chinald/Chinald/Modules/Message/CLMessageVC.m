@@ -7,12 +7,16 @@
 //
 
 #import "CLMessageVC.h"
+#import "CLMessageDetailVC.h"
+#import "CLUserModel.h"
+#import "ZNTLoginVC.h"
 #import "CLMessageModel.h"
 #import "CLMessageListTableViewCell.h"
 #import "CLMessageNetworking.h"
 #import "UIView+ZNTHud.h"
 @interface CLMessageVC ()
 @property(nonatomic, strong)NSMutableArray *messageArray;  //!<
+@property(nonatomic, strong)CLMessageModel *selectMessageModel;  //!<
 @property (strong, nonatomic) IBOutlet UITableView *messageTableView;
 
 @end
@@ -27,6 +31,18 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
     self.navigationItem.title = @"消息";
     
     _messageArray = [[NSMutableArray alloc]initWithCapacity:0];
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    if (!userModel.token) {
+        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+        [self presentViewController:loginVC animated:YES completion:^{
+        }];
+    }else{
+        [self requestMessageList];
+    }
 }
 -(void)requestMessageList{
     [self.view znt_showHUD:nil];
@@ -47,8 +63,7 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //return _messageArray.count;
-    return 4;
+    return _messageArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
@@ -64,7 +79,16 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    _selectMessageModel = _messageArray[indexPath.row];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"messageVCToMessageDetailVC"]) {
+        CLMessageDetailVC *detailVC = (CLMessageDetailVC *)segue.destinationViewController;
+        detailVC.messageModel = _selectMessageModel;
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }

@@ -8,13 +8,17 @@
 
 #import "CLMineVC.h"
 #import "ZNTLoginVC.h"
+#import "CLMyOrderVC.h"
 #import "CLUserModel.h"
+#import "CLOrderOperationItem.h"
+
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
 @interface CLMineVC ()
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;
 @property(nonatomic, strong) NSArray *cellTitleStringArray; //!<
+@property(nonatomic, assign) NSInteger selectOrderType;  //!<
 @end
 
 @implementation CLMineVC
@@ -50,7 +54,7 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     _cellTitleStringArray = @[@[@""],@[@"我的订单",@""],@[@""],@[@"关于我们",@"我要吐槽",@"APP设置"]];
     [_mineTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:otherTableViewCellString];
     [_mineTableView registerClass:[CLMineAccountInfoTableViewCell class] forCellReuseIdentifier:accountInfoCellString];
-    
+    _selectOrderType = 0;
 }
 
 #pragma mark-------tableview代理方法  UITableViewDelegate,UITableViewDataSource
@@ -91,7 +95,11 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
             cell = [[CLMineOrderAboutTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:orderAboutTableViewCellString];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectOrderTypeBlock = ^(NSInteger orderType) {
+            weakSelf.selectOrderType = orderType;
+            [weakSelf performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
 
+        };
         return cell;
     }
     if (indexPath.section == 2) {
@@ -121,6 +129,7 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
+            _selectOrderType = 0;
             [self performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
         }
     }
@@ -144,7 +153,12 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.0001f;
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"mineVCToOrderVC"]) {
+        CLMyOrderVC *orderVC = (CLMyOrderVC *)segue.destinationViewController;
+        orderVC.orderType = _selectOrderType;
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

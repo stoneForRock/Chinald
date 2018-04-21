@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CLOrderOperationItem.h"
 @interface CLMineOrderAboutTableViewCell : UITableViewCell
+@property(nonatomic, strong)void(^selectOrderTypeBlock)(NSInteger orderType);  //!<
 
 @end

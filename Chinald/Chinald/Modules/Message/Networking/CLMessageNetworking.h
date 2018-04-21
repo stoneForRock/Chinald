@@ -7,12 +7,7 @@
 //
 
 #import "CLNetworkingRequestBase.h"
-@interface CLMessageNoticeRequestModel : JSONModel
-@property(nonatomic, assign)int type;  //!<通知类型
-@property(nonatomic, assign)int page;  //!<页码
-@property(nonatomic, assign)int pagesize;  //!<每页数量
-@property(nonatomic, copy) NSString *token; //!<
-@end
+#import "CLMessageModel.h"
 @interface CLMessageNetworking : CLNetworkingRequestBase
 
 /**
@@ -31,5 +26,5 @@
  @param complete 成功响应结果
  @param theFailure 错误
  */
-+(void)messageNotice:(CLMessageNoticeRequestModel *)parameters complete:(void(^)(NSMutableArray *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure;
++(void)messageNotice:(CLMessageDetailRequsetModel *)parameters complete:(void(^)(NSMutableArray *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure;
 @end

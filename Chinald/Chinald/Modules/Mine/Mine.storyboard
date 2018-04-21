@@ -40,6 +40,9 @@
                                                     <state key="normal" title="待付款" image="icon_mine_dfk">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="forPayButtonClick:" destination="bmE-Kf-hvd" eventType="touchUpInside" id="nIF-9x-Oac"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZt-cw-WWz">
                                                     <rect key="frame" x="94" y="0.0" width="93.5" height="75"/>
@@ -47,6 +50,9 @@
                                                     <state key="normal" title="待收货" image="icon_mine_dsh">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="forReceiveButtonClick:" destination="bmE-Kf-hvd" eventType="touchUpInside" id="485-Q6-pyq"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0M-s7-ZeJ">
                                                     <rect key="frame" x="187.5" y="0.0" width="94" height="75"/>
@@ -54,6 +60,9 @@
                                                     <state key="normal" title="待评价" image="icon_mine_dpj">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="forEvaluateButtonClick:" destination="bmE-Kf-hvd" eventType="touchUpInside" id="9fT-F8-ugf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-Nw-Mx4">
                                                     <rect key="frame" x="281.5" y="0.0" width="93.5" height="75"/>
@@ -61,6 +70,9 @@
                                                     <state key="normal" title="售后" image="icon_mine_sh">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="saleServiceButtonClick:" destination="bmE-Kf-hvd" eventType="touchUpInside" id="cvP-Vb-yUm"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -84,9 +96,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="forPayButton" destination="Uyx-Y4-Azl" id="sLi-JT-AFh"/>
                                             <outlet property="noEvaluateOrderButton" destination="x0M-s7-ZeJ" id="RfF-Hy-CGa"/>
                                             <outlet property="noReceiveButton" destination="WZt-cw-WWz" id="pDZ-kX-4l1"/>
-                                            <outlet property="obligationButton" destination="Uyx-Y4-Azl" id="NCn-gB-omL"/>
                                             <outlet property="saleServiceButton" destination="cfP-Nw-Mx4" id="sFa-QD-mB5"/>
                                         </connections>
                                     </tableViewCell>
@@ -241,6 +253,9 @@
                                 <state key="normal" title="全部">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="allOrderButtonClick:" destination="IFn-Xa-Mvs" eventType="touchUpInside" id="XKR-2c-Vue"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckl-0B-5oI">
                                 <rect key="frame" x="75" y="20" width="75" height="44"/>
@@ -251,6 +266,9 @@
                                 <state key="normal" title="待付款">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forPayOrderButtonClick:" destination="IFn-Xa-Mvs" eventType="touchUpInside" id="Qrb-YB-9HE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-b8-YY2">
                                 <rect key="frame" x="150" y="20" width="75" height="44"/>
@@ -261,6 +279,9 @@
                                 <state key="normal" title="待发货">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forSendOrderButtonClick:" destination="IFn-Xa-Mvs" eventType="touchUpInside" id="Gjl-PE-DbN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-hb-KhV">
                                 <rect key="frame" x="225" y="20" width="75" height="44"/>
@@ -271,6 +292,9 @@
                                 <state key="normal" title="待收货">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forGoodsButtonClick:" destination="IFn-Xa-Mvs" eventType="touchUpInside" id="8bJ-Xi-BzD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAW-5k-p06">
                                 <rect key="frame" x="300" y="20" width="75" height="44"/>
@@ -281,6 +305,9 @@
                                 <state key="normal" title="售后">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="afterSalesButtonClick:" destination="IFn-Xa-Mvs" eventType="touchUpInside" id="gCI-33-Ucb"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jds-8y-X9e">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1"/>
@@ -292,7 +319,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ocy-VG-UVP">
                                 <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TzP-1v-118">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TzP-1v-118">
                                     <size key="itemSize" width="375" height="603"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -425,6 +452,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Npb-9B-ajA"/>
                     <connections>
+                        <outlet property="afterSalesButton" destination="uAW-5k-p06" id="ar4-5y-CPK"/>
+                        <outlet property="allOrderButton" destination="J2k-3v-mQq" id="VCT-F6-XNj"/>
+                        <outlet property="forGoodsButton" destination="mfh-hb-KhV" id="uuP-QK-Ntr"/>
+                        <outlet property="forPayOrderButton" destination="ckl-0B-5oI" id="Loq-iu-Bfc"/>
+                        <outlet property="forSendOrderButton" destination="SbF-b8-YY2" id="XI4-Qm-Wpa"/>
+                        <outlet property="orderCollectionView" destination="ocy-VG-UVP" id="lu2-v1-5cF"/>
                         <segue destination="dyX-ds-JMW" kind="push" identifier="orderListToOrderDetailVC" id="UlI-W8-mbP"/>
                         <segue destination="lar-qf-45M" kind="push" identifier="orderListVCToRefundVC" id="F7j-OI-aTK"/>
                     </connections>
@@ -1603,6 +1636,6 @@
         <image name="icon_mine_sh" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w1d-Rh-ZqW"/>
+        <segue reference="F7j-OI-aTK"/>
     </inferredMetricsTieBreakers>
 </document>

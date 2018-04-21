@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CLMessageDetailModel.h"
+#import "CLMessageModel.h"
 @interface CLMessageDetailTableViewCell : UITableViewCell
 @property(nonatomic, strong)CLMessageDetailModel *messageDetailModel;  //!<
 @end

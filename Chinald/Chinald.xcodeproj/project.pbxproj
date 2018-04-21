@@ -62,7 +62,6 @@
 		C4E860292078B37100B0264E /* CLLogisticsCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */; };
 		C4E8602C2078D5F300B0264E /* CLRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8602B2078D5F300B0264E /* CLRefundViewController.m */; };
 		C4EB1EA9208575C6006590F3 /* CLMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EA8208575C6006590F3 /* CLMessageModel.m */; };
-		C4EB1EAC208575E8006590F3 /* CLMessageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */; };
 		C4EB1EAF2085761E006590F3 /* CLMessageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */; };
 		C4EB1EB220857634006590F3 /* CLMessageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */; };
 		C4EB1EB5208576BE006590F3 /* CLMessageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */; };
@@ -631,8 +630,6 @@
 		C4E8602B2078D5F300B0264E /* CLRefundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLRefundViewController.m; sourceTree = "<group>"; };
 		C4EB1EA7208575C6006590F3 /* CLMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageModel.h; sourceTree = "<group>"; };
 		C4EB1EA8208575C6006590F3 /* CLMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageModel.m; sourceTree = "<group>"; };
-		C4EB1EAA208575E8006590F3 /* CLMessageDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailModel.h; sourceTree = "<group>"; };
-		C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailModel.m; sourceTree = "<group>"; };
 		C4EB1EAD2085761E006590F3 /* CLMessageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageListTableViewCell.h; sourceTree = "<group>"; };
 		C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageListTableViewCell.m; sourceTree = "<group>"; };
 		C4EB1EB020857634006590F3 /* CLMessageDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -1681,8 +1678,6 @@
 			children = (
 				C4EB1EA7208575C6006590F3 /* CLMessageModel.h */,
 				C4EB1EA8208575C6006590F3 /* CLMessageModel.m */,
-				C4EB1EAA208575E8006590F3 /* CLMessageDetailModel.h */,
-				C4EB1EAB208575E8006590F3 /* CLMessageDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3778,7 +3773,6 @@
 				E59C7F0D20596CE100075053 /* ZXGlobalHistogramBinarizer.m in Sources */,
 				E59C7EED20596CE100075053 /* ZXDataMatrixEncoderContext.m in Sources */,
 				E59C7F8220596CE100075053 /* ZXURIParsedResult.m in Sources */,
-				C4EB1EAC208575E8006590F3 /* CLMessageDetailModel.m in Sources */,
 				E59C7ECB20596CE100075053 /* ZXAztecWriter.m in Sources */,
 				E566876320596B97003D5EAB /* ZNTRegisterVC.m in Sources */,
 				E59C7B5020596C9200075053 /* UIButton+ZNTStyle.m in Sources */,

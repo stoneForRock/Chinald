@@ -21,3 +21,32 @@
     return true;
 }
 @end
+
+
+@implementation CLMessageDetailModel
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"content": @"content",
+                                                                  @"addTime": @"add_time"
+                                                                  }];
+}
++(BOOL)propertyIsOptional:(NSString *)propertyName{
+    return true;
+}
+@end
+@implementation CLMessageDetailRequsetModel
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"page": @"page",
+                                                                  @"pagesize": @"pagesize",
+                                                                  @"type": @"type",
+                                                                  @"token":
+                                                    @"token"
+                                                                  }];
+}
++(BOOL)propertyIsOptional:(NSString *)propertyName{
+    return true;
+}
+@end

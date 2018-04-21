@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CLMessageModel;
 @interface CLMessageDetailVC : UIViewController
-
+@property(nonatomic, strong)CLMessageModel *messageModel;  //!<
 @end

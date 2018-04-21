@@ -12,7 +12,10 @@
 
 @end
 @implementation CLMessageDetailTableViewCell
-
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    _messageContentLabel.text = _messageDetailModel.content;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

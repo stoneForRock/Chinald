@@ -9,14 +9,8 @@
 #import "CLMessageNetworking.h"
 #import "ZNTURLPathManager.h"
 #import "CLUserModel.h"
-#import "CLMessageModel.h"
-#import "CLMessageDetailModel.h"
 #import <JSONModel.h>
-@implementation CLMessageNoticeRequestModel
-+(BOOL)propertyIsOptional:(NSString *)propertyName{
-    return true;
-}
-@end
+
 
 @implementation CLMessageNetworking
 /**
@@ -43,12 +37,12 @@
  @param complete 成功响应结果
  @param theFailure 错误
  */
-+(void)messageNotice:(NSDictionary *)parameters complete:(void(^)(NSMutableArray *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
++(void)messageNotice:(CLMessageDetailRequsetModel *)parameters complete:(void(^)(NSMutableArray *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     NSString *urlString = [NSString stringWithFormat:@"%@/message/notice",[ZNTURLPathManager sharedURLPathManager].baseUrl];
-    CLUserModel *userModel = [CLUserModel sharedUserModel];
-    [self clPostRequestTheURL:urlString parameters:@{@"token":userModel.token} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+    [self clPostRequestTheURL:urlString parameters:[parameters toDictionary] theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         NSMutableArray *resultsArrat = [CLMessageDetailModel arrayOfModelsFromDictionaries:resultsObj[@"data"] error:nil];
-        complete(resultsArrat);    } theFailure:^(NSString *errorStr) {
+        complete(resultsArrat);
+    } theFailure:^(NSString *errorStr) {
         theFailure(errorStr);
     }];
 }

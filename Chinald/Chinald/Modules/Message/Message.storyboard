@@ -112,7 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="messageTableView" destination="PTH-uv-5Iq" id="LVG-aR-eyb"/>
-                        <segue destination="hxM-jA-o44" kind="push" id="XjI-iG-53V"/>
+                        <segue destination="hxM-jA-o44" kind="push" identifier="messageVCToMessageDetailVC" id="XjI-iG-53V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5F-7n-rpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,6 +181,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hxM-jA-o44" id="a6g-Xj-G9j"/>
+                                    <outlet property="delegate" destination="hxM-jA-o44" id="tlU-wO-iH7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,6 +196,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cG4-GM-O8m"/>
+                    <connections>
+                        <outlet property="tableView" destination="OiV-mD-ATb" id="MkE-No-Df5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAW-ap-Amr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

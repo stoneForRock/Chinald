@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CLMyOrderVC : UIViewController
-
+@property(nonatomic, assign)NSInteger orderType;   //!<
 @end
