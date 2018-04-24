@@ -67,7 +67,7 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-        CLMessageListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        CLMessageListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageListCell];
         if (!cell) {
             cell = [[CLMessageListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageListCell];
             
@@ -80,6 +80,7 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     _selectMessageModel = _messageArray[indexPath.row];
+    [self performSegueWithIdentifier:@"messageVCToMessageDetailVC" sender:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

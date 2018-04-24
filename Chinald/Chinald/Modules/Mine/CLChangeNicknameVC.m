@@ -38,8 +38,9 @@
         [self.view znt_showToast:@"请输入昵称"];
         return;
     }
-    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    __block CLUserModel *userModel = [CLUserModel sharedUserModel];
     [CLMineNetworking userEditInfo:@{@"name":nicknameString,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
+        userModel.name = nicknameString;
         [self.navigationController popViewControllerAnimated:YES];
     } theFailure:^(NSString *errorCode) {
         [self.view znt_showToast:errorCode];

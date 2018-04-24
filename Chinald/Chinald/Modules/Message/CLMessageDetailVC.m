@@ -27,6 +27,7 @@ static NSString  *messageDetailCell = @"messageDetailCell";
     _messageArray = [[NSMutableArray alloc]initWithCapacity:0];
     _detailRequestModel = [[CLMessageDetailRequsetModel alloc]init];
     [self initRequestModel];
+    [self requestMessageList];
 }
 -(void)initRequestModel{
     _detailRequestModel.page = 1;
@@ -57,7 +58,7 @@ static NSString  *messageDetailCell = @"messageDetailCell";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    CLMessageDetailTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CLMessageDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageDetailCell];
     if (!cell) {
         cell = [[CLMessageDetailTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageDetailCell];
         

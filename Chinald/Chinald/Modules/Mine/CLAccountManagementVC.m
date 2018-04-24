@@ -27,6 +27,10 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     [super viewWillAppear:animated];
     
 //    [self.tabBarController.tabBar setHidden:YES];
+    if (_managementTableView) {
+        _userModel = [CLUserModel sharedUserModel];
+        [_managementTableView reloadData];
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -165,23 +169,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     return view;
     
 }
-//- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//    if (section == 1) {
-//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenFullWidth, 43)];
-//        view.backgroundColor = CLVCBackgroundColor;
-//        UIButton *logOutButton = [[UIButton alloc]initWithFrame:CGRectMake(38, 34, ScreenFullWidth - 76, 44)];
-//        [logOutButton setTitle:@"退出登录" forState:0];
-//        [logOutButton setTitleColor:Color6 forState:0];
-//        logOutButton.titleLabel.font = [UIFont zntFont16];
-//        logOutButton.backgroundColor = [UIColor whiteColor];
-//        logOutButton.layer.cornerRadius = 22;
-//        logOutButton.layer.borderWidth = 1;
-//        logOutButton.layer.borderColor = [UIColor colorWithHexRGB:@"0x999999"].CGColor;
-//        [view addSubview:logOutButton];
-//        return view;
-//    }
-//    return nil;
-//}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1 && indexPath.row == 0) return 64;
     return 44;
@@ -209,13 +197,13 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             _userPhone = [_userPhone stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
         }
     }
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
 //    [_managementTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
     [_managementTableView reloadData];
 }
 
 -(void)changeOpenPhone:(UISwitch *)switchView{
-    switchView.on = !switchView.on;
+    NSLog(@"switchView.on===%d",switchView.on);
     if (switchView.isOn) {
         //公开手机号
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"华婴圣纸" message:@"公开后，您的上级推荐人可查看您的手机号码，是否确认公开？" preferredStyle:UIAlertControllerStyleAlert];
@@ -224,7 +212,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             switchView.on = !switchView.on;
         }];
         UIAlertAction *openAction = [UIAlertAction actionWithTitle:@"公开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on]} complete:^(NSMutableDictionary *resultsObj) {
+            [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on],@"token":_userModel.token} complete:^(NSMutableDictionary *resultsObj) {
                 
             } theFailure:^(NSString *errorCode) {
                 switchView.on = !switchView.on;
@@ -238,7 +226,7 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
         [alertController addAction:openAction];
     }else{
         //关闭公开手机号
-        [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on]} complete:^(NSMutableDictionary *resultsObj) {
+        [CLMineNetworking userEditInfo:@{@"open_phone":[NSNumber numberWithBool:switchView.on],@"token":_userModel.token} complete:^(NSMutableDictionary *resultsObj) {
             
         } theFailure:^(NSString *errorCode) {
             switchView.on = !switchView.on;

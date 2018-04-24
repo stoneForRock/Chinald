@@ -86,8 +86,9 @@
         [self.view znt_showToast:@"请输入验证码"];
         return;
     }
-    [CLMineNetworking userChangePhone:@{@"phone":_phoneTextField.text,@"code":_codeTextField.text} complete:^(NSMutableDictionary *resultsObj) {
-        
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    [CLMineNetworking userChangePhone:@{@"phone":_phoneTextField.text,@"code":_codeTextField.text,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
+        userModel.phone = weakself.phoneTextField.text;
         [weakself.navigationController popViewControllerAnimated:YES];
     } theFailure:^(NSString *errorCode) {
         [weakself.view znt_showToast:errorCode];
