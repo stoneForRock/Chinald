@@ -16,6 +16,7 @@
 		C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C406FAF6207E5D2A00FC6682 /* CLUserModel.m */; };
 		C42F8E3420863BCD007DB281 /* CLMineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C42F8E3320863BCD007DB281 /* CLMineRequest.m */; };
 		C42F8E362086462D007DB281 /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = C42F8E352086462D007DB281 /* address.json */; };
+		C43B98F1208F7E8200D79BE0 /* CLSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */; };
 		C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696222081E19800437E3B /* CLNetworkingRequestBase.m */; };
 		C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696262081FB4600437E3B /* CLLoginRequest.m */; };
 		C44C967220877CDA009ECCA5 /* CLAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */; };
@@ -28,6 +29,7 @@
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
 		C48DDB94207A556A0067D5BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48DDB93207A55690067D5BC /* MobileCoreServices.framework */; };
+		C490CC812090CE4F00D6DB09 /* CLAboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */; };
 		C494127C206F853500FE19A9 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494127B206F853500FE19A9 /* Mine.storyboard */; };
 		C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */; };
 		C4941282206F854300FE19A9 /* CLAccountManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941280206F854200FE19A9 /* CLAccountManagementVC.m */; };
@@ -540,6 +542,8 @@
 		C42F8E3220863BCD007DB281 /* CLMineRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMineRequest.h; sourceTree = "<group>"; };
 		C42F8E3320863BCD007DB281 /* CLMineRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMineRequest.m; sourceTree = "<group>"; };
 		C42F8E352086462D007DB281 /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
+		C43B98EF208F7E8200D79BE0 /* CLSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSetViewController.h; sourceTree = "<group>"; };
+		C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSetViewController.m; sourceTree = "<group>"; };
 		C44696222081E19800437E3B /* CLNetworkingRequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNetworkingRequestBase.m; sourceTree = "<group>"; };
 		C44696232081E19800437E3B /* CLNetworkingRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetworkingRequestBase.h; sourceTree = "<group>"; };
 		C44696252081FB4600437E3B /* CLLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLoginRequest.h; sourceTree = "<group>"; };
@@ -564,6 +568,8 @@
 		C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EIPUploadImage.m"; sourceTree = "<group>"; };
 		C48DDB91207A544F0067D5BC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C48DDB93207A55690067D5BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAboutUsVC.h; sourceTree = "<group>"; };
+		C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAboutUsVC.m; sourceTree = "<group>"; };
 		C494127B206F853500FE19A9 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		C494127D206F854100FE19A9 /* CLAccountManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAccountManagementVC.h; sourceTree = "<group>"; };
 		C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLChangePhoneViewController.m; sourceTree = "<group>"; };
@@ -1952,6 +1958,10 @@
 				C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */,
 				C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */,
 				C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */,
+				C43B98EF208F7E8200D79BE0 /* CLSetViewController.h */,
+				C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */,
+				C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */,
+				C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -3536,6 +3546,7 @@
 				E59C7F8A20596CE100075053 /* ZXWifiParsedResult.m in Sources */,
 				E59C7ED320596CE100075053 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				E59C7B5C20596C9200075053 /* UIView+ZNTHud.m in Sources */,
+				C490CC812090CE4F00D6DB09 /* CLAboutUsVC.m in Sources */,
 				E59C7E8420596CE100075053 /* MWCaptionView.m in Sources */,
 				E59C7F4120596CE100075053 /* ZXPlanarYUVLuminanceSource.m in Sources */,
 				E59C7EFF20596CE100075053 /* ZXEAN8Writer.m in Sources */,
@@ -3650,6 +3661,7 @@
 				C44C9675208783A2009ECCA5 /* CLAddressModel.m in Sources */,
 				E59C7EB920596CE100075053 /* ZXAI01393xDecoder.m in Sources */,
 				E59C7F2420596CE100075053 /* ZXMultiFormatUPCEANReader.m in Sources */,
+				C43B98F1208F7E8200D79BE0 /* CLSetViewController.m in Sources */,
 				E59C7EBD20596CE100075053 /* ZXAI01decoder.m in Sources */,
 				C4941298207080DB00FE19A9 /* CLFeedbackVC.m in Sources */,
 				E59C7EC420596CE100075053 /* ZXAztecDetectorResult.m in Sources */,

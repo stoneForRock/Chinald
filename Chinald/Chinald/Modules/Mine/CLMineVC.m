@@ -137,7 +137,11 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         if (indexPath.row == 1) {
             [self performSegueWithIdentifier:@"mineVCToFeedbackVC" sender:nil];
         }
+        if (indexPath.row == 2) {
+            [self performSegueWithIdentifier:@"mineVCToSetVC" sender:nil];
+        }
     }
+
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) return 200;

@@ -158,6 +158,7 @@
                         <segue destination="jyU-qw-Voe" kind="push" identifier="mineToAccountManagementVC" id="P0g-2b-K96"/>
                         <segue destination="cbC-Hi-3hg" kind="push" identifier="mineVCToFeedbackVC" id="Agj-ea-pH4"/>
                         <segue destination="IFn-Xa-Mvs" kind="push" identifier="mineVCToOrderVC" id="dbF-9L-W5h"/>
+                        <segue destination="cLg-ma-Hfw" kind="push" identifier="mineVCToSetVC" id="5PA-fb-v2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBI-Bh-het" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1217,6 +1218,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gam-WT-zGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="38" y="1129"/>
+        </scene>
+        <!--Set View Controller-->
+        <scene sceneID="48V-DG-a5L">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="cLg-ma-Hfw" customClass="CLSetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DJH-nL-aYe"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZQL-qR-dDr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p2V-QJ-Wfy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-wv-ejw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cLg-ma-Hfw" id="RZH-xq-dnT"/>
+                                    <outlet property="delegate" destination="cLg-ma-Hfw" id="gms-bg-0vK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZQL-qR-dDr" firstAttribute="top" secondItem="5JS-wv-ejw" secondAttribute="bottom" id="I35-HX-hjb"/>
+                            <constraint firstItem="5JS-wv-ejw" firstAttribute="leading" secondItem="p2V-QJ-Wfy" secondAttribute="leading" id="Nrr-eA-QNv"/>
+                            <constraint firstAttribute="trailing" secondItem="5JS-wv-ejw" secondAttribute="trailing" id="PBl-am-bo2"/>
+                            <constraint firstItem="5JS-wv-ejw" firstAttribute="top" secondItem="DJH-nL-aYe" secondAttribute="bottom" id="xAB-7q-cR2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qbw-Ui-wx1"/>
+                    <connections>
+                        <outlet property="setTableView" destination="5JS-wv-ejw" id="uHm-e3-Omd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juu-2e-u31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="1128"/>
         </scene>
         <!--For Goods Address View Controller-->
         <scene sceneID="pvX-vG-RDo">
