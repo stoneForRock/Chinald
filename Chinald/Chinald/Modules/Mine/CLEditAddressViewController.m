@@ -30,9 +30,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange) name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewChange) name:UITextViewTextDidChangeNotification object:nil];
     self.navigationItem.title = @"编辑收货地址";
-
+    _changeDefaultButton.imageEdgeInsets = UIEdgeInsetsMake(0, ScreenFullWidth - 35, 0, 0);
     if (!_addressModel.addressId) {
         _addressModel = [[CLTheGoodsAddressModel alloc]init];
+        [_changeDefaultButton setImage:[UIImage imageNamed:_addressModel.isDefault ?@"icon_address_default" : @"icon_address_no_default"] forState:0];
     }else{
         _forGoodsUserNameTextField.text = _addressModel.name;
         _forGoodsUserPhoneTextField.text = _addressModel.phone;
@@ -109,7 +110,10 @@
 
 }
 - (IBAction)changeDefaultButtonClick:(id)sender {
+    UIButton *button = (UIButton *)sender;
     _addressModel.isDefault = !_addressModel.isDefault;
+    [button setImage:[UIImage imageNamed:_addressModel.isDefault ? @"icon_address_default" : @"icon_address_no_default"] forState:0];
+    
 }
 - (IBAction)saveAddressButtonClick:(id)sender {
     if (_addressModel.name == nil || _addressModel.name.length == 0) {

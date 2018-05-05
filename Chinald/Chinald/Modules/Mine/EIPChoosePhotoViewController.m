@@ -30,9 +30,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
     // Do any additional setup after loading the view.
 }
+
 -(void)seletTheImageFormAlert:(UIViewController *)viewController AlertTitle:(NSString *)titleString{
     _listViewController  = viewController;
     _imagePickerController = [[UIImagePickerController alloc]init];
@@ -107,7 +108,6 @@
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
             self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:300000]);
 //            self.entryInvoiceDataBlock(image);
-
         }else{
             _backView = [[UIView alloc] init];
             _backView.backgroundColor = [UIColor blackColor];

@@ -89,16 +89,20 @@
 }
 -(void)orderTypeButtonClick:(id)sender collectionScrollToIndexPath:(NSIndexPath *)indexPath{
     UIButton *button = (UIButton *)sender;
-    [_selectButton setTitleColor:Color7 forState:0];
+    [self orderTypeButtonChange:button];
 
+    [_orderCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    
+}
+-(void)orderTypeButtonChange:(UIButton *)button{
+    [_selectButton setTitleColor:Color7 forState:0];
+    
     [button setTitleColor:[UIColor zntThemeTintColor] forState:0];
     _selectButton = button;
     [UIView animateWithDuration:0.3 animations:^{
         _articleView.frame = CGRectMake(button.frame.origin.x + 5, button.frame.origin.y + button.frame.size.height,button.frame.size.width - 10 , 2);
-
+        
     }];
-    [_orderCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-    
 }
 #pragma mark =========== UICollectionViewDataSource ===========
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -121,7 +125,32 @@
 
 #pragma mark =========== UIScrollViewDelegate ===========
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
- 
+
+    
+    CGFloat offsetX = scrollView.contentOffset.x;
+    
+    NSInteger indexRow = offsetX / ScreenFullWidth;
+    if (indexRow == 0) {
+        UIButton *button = [self.view viewWithTag:100];
+        [self orderTypeButtonChange:button];
+    }
+    if (indexRow == 1) {
+        UIButton *button = [self.view viewWithTag:101];
+        [self orderTypeButtonChange:button];
+    }
+    if (indexRow == 2) {
+        UIButton *button = [self.view viewWithTag:102];
+        [self orderTypeButtonChange:button];
+    }
+    if (indexRow == 3) {
+        UIButton *button = [self.view viewWithTag:103];
+        [self orderTypeButtonChange:button];
+    }
+    if (indexRow == 4) {
+        UIButton *button = [self.view viewWithTag:104];
+        [self orderTypeButtonChange:button];
+    }
+
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

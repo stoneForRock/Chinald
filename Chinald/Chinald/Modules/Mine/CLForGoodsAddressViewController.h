@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CLTheGoodsAddressModel;
 @interface CLForGoodsAddressViewController : UIViewController
+@property(nonatomic, strong)void(^selectAddressBlock)(CLTheGoodsAddressModel *addressModel);  //!<
 
 @end

@@ -120,22 +120,33 @@
         
         [self.contentView addSubview:buttonBackgroundView];
         [buttonBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.contentView.mas_right).with.offset(25);
-            make.top.equalTo(self.contentView.mas_top).with.offset(62);
-            make.width.mas_offset(120);
-            make.height.mas_offset(26);
+            make.right.equalTo(self.contentView.mas_right).with.offset(10);
+            make.top.equalTo(self.contentView.mas_top).with.offset(64);
+            make.width.mas_offset(95);
+            make.height.mas_offset(22);
         }];
-        buttonBackgroundView.layer.cornerRadius = 13;
+        buttonBackgroundView.layer.cornerRadius = 11;
         buttonBackgroundView.layer.borderColor = [UIColor whiteColor].CGColor;
         buttonBackgroundView.layer.borderWidth = 1;
         buttonBackgroundView.layer.masksToBounds = YES;
         
+        
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.image = [UIImage imageNamed:@"icon_more_white"];
+        [self.contentView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.contentView.mas_right).with.offset(-3);
+            make.top.equalTo(self.contentView.mas_top).with.offset(68);
+            make.width.mas_offset(15);
+            make.height.mas_offset(15);
+        }];
         UIButton *managementButton = [[UIButton alloc]init];
         managementButton.titleLabel.font = [UIFont zntFont12];
         [managementButton addTarget:self action:@selector(managementButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         [managementButton setTitleColor:ThemeBacgroundColor forState:0];
         [managementButton setTitle:@"账户管理" forState:0];
+//        [managementButton setImage:[UIImage imageNamed:@"icon_more_white"] forState:0];
         managementButton.backgroundColor = [UIColor clearColor];
         managementButton.layer.opaque = YES;
         
@@ -143,7 +154,7 @@
         [managementButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.contentView.mas_right).with.offset(0);
             make.top.equalTo(self.contentView.mas_top).with.offset(60);
-            make.width.mas_offset(95);
+            make.width.mas_offset(90);
             make.height.mas_offset(31);
         }];
     }

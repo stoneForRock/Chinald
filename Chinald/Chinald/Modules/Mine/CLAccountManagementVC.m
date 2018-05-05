@@ -119,7 +119,6 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     cell.textLabel.textColor = Color5;
     cell.detailTextLabel.font = [UIFont zntFont13];
     cell.detailTextLabel.textColor = Color5;
-
     return cell;
 }
 
@@ -133,8 +132,6 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
             [choosePhotoVC seletTheImageFormAlert:self AlertTitle:@"选择头像照片"];
             choosePhotoVC.isCropperImage = YES;
             choosePhotoVC.entryInvoiceDataBlock = ^(UIImage *image){
-                
-                
                 [self dismissViewControllerAnimated:YES completion:^{
                     weakSelf.headIcon = image;
                     [weakSelf.managementTableView reloadData];

@@ -117,6 +117,21 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:otherTableViewCellString];
 
     }
+    [[cell viewWithTag:1000] removeFromSuperview];
+    UIView *hLineView = [[UIView alloc]init];
+    hLineView.tag = 1000;
+    hLineView.backgroundColor = CLLineColor;
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        hLineView.frame = CGRectMake(17, cell.bounds.size.height - 0.5, ScreenFullWidth - 30, 0.5);
+        [cell addSubview:hLineView];
+
+    }
+    if (indexPath.section == 3 && indexPath.row != 2) {
+        hLineView.frame = CGRectMake(0, cell.bounds.size.height - 0.5, ScreenFullWidth, 0.5);
+        [cell addSubview:hLineView];
+
+    }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
