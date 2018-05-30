@@ -95,10 +95,13 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
         }
         if (indexPath.row == 0) {
             UIImageView *headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 7, 50, 50)];
-            headImageView.image = _headIcon;
+            if (_headIcon) {
+                headImageView.image = _headIcon;
+            }else{
+                [headImageView sd_setImageWithURL:[NSURL URLWithString:_userModel.headIcon]];
+            }
             headImageView.layer.cornerRadius = 25;
             headImageView.layer.masksToBounds = YES;
-            [headImageView sd_setImageWithURL:[NSURL URLWithString:_userModel.headIcon]];
             cell.accessoryView = headImageView;
         }
         

@@ -10,6 +10,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Qr CodeVC-->
+        <scene sceneID="crK-zj-1lV">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ld7-Ov-ckH" customClass="CLMyQrCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x3h-UB-mJD"/>
+                        <viewControllerLayoutGuide type="bottom" id="sRl-AE-394"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I0r-M1-HYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IV8-dV-seX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ad5-u9-5hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2497" y="1123"/>
+        </scene>
+        <!--About UsVC-->
+        <scene sceneID="thL-9P-4KM">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="PFg-NM-YXb" customClass="CLAboutUsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t4u-JS-zqB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rf7-6y-GAZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qLP-Xg-AEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qHM-Ri-Zv1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62h-GK-yJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1617" y="1128"/>
+        </scene>
         <!--MineVC-->
         <scene sceneID="157-vK-GoQ">
             <objects>
@@ -116,6 +154,9 @@
                                                     <state key="normal" title="我的二维码" image="icon_mine_ewm">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="myQrcodeClick:" destination="gfA-dO-b9g" eventType="touchUpInside" id="LZc-6b-Zli"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-4J-XAI">
                                                     <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
@@ -124,6 +165,9 @@
                                                     <state key="normal" title="分享给好友" image="icon_mine_fx">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="shareButtonClick:" destination="gfA-dO-b9g" eventType="touchUpInside" id="6DB-sD-TzL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -159,6 +203,8 @@
                         <segue destination="cbC-Hi-3hg" kind="push" identifier="mineVCToFeedbackVC" id="Agj-ea-pH4"/>
                         <segue destination="IFn-Xa-Mvs" kind="push" identifier="mineVCToOrderVC" id="dbF-9L-W5h"/>
                         <segue destination="cLg-ma-Hfw" kind="push" identifier="mineVCToSetVC" id="5PA-fb-v2c"/>
+                        <segue destination="PFg-NM-YXb" kind="push" identifier="mineVCToAboutUsVC" id="Pt0-rW-E47"/>
+                        <segue destination="ld7-Ov-ckH" kind="push" identifier="mineVCToMyQrcodeVC" id="4LB-Ed-LXx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBI-Bh-het" userLabel="First Responder" sceneMemberID="firstResponder"/>

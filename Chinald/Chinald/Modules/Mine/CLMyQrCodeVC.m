@@ -1,23 +1,23 @@
 //
-//  CLAboutUsVC.m
+//  CLMyQrCodeVC.m
 //  Chinald
 //
-//  Created by WPFBob on 2018/4/25.
+//  Created by WPFBob on 2018/5/5.
 //  Copyright © 2018年 HuaYing. All rights reserved.
 //
 
-#import "CLAboutUsVC.h"
+#import "CLMyQrCodeVC.h"
 
-@interface CLAboutUsVC ()
+@interface CLMyQrCodeVC ()
 
 @end
 
-@implementation CLAboutUsVC
+@implementation CLMyQrCodeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"关于我们";
+    self.navigationItem.title = @"我的二维码";
 }
 
 - (void)didReceiveMemoryWarning {

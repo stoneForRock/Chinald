@@ -27,8 +27,9 @@
 @implementation CLMyOrderVC
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationCustomStyleWithColor:[UIColor whiteColor]];
     [self.navigationController setNavigationStyle:ZNTNavigationStyleCustom];
+    [self.navigationController setNavigationCustomStyleWithColor:[UIColor whiteColor]];
+
 //    _articleView.frame = CGRectMake(_selectButton.frame.origin.x + 5, _selectButton.frame.origin.y + _selectButton.frame.size.height - 1,_selectButton.frame.size.width - 10 , 2);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_orderType inSection:0];
     [self orderTypeButtonClick:_selectButton collectionScrollToIndexPath:indexPath];

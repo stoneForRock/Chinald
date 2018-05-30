@@ -10,7 +10,7 @@
 #import "CLMainPageVC.h"
 #import "CLShoppingCartVC.h"
 #import "CLMineVC.h"
-
+#import "CLMessageVC.h"
 @implementation UITabBar (ZNTAdd)
 
 //- (void)rotation {
@@ -224,7 +224,8 @@
     
     if([[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLMainPageVC class]] || [[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLShoppingCartVC class]] || [[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLMineVC class]])
     {
-        [[(UINavigationController *)viewController topViewController] setNavigationStyle:ZNTNavigationStyleBlue];
+        [[(UINavigationController *)viewController topViewController] setNavigationStyle:ZNTNavigationStyleCustom];
+        [[(UINavigationController *)viewController topViewController] setNavigationCustomStyleWithColor:[UIColor whiteColor]];
     }
     else
     {

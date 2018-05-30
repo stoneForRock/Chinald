@@ -15,6 +15,7 @@
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
+#import <UShareUI/UShareUI.h>
 @interface CLMineVC ()
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;
 @property(nonatomic, strong) NSArray *cellTitleStringArray; //!<
@@ -107,6 +108,25 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         if (!cell) {
             cell = [[CLMineShareTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:shareTableViewCellString];
         }
+        cell.selectShareOrMyQrcodeBlock = ^(ShareQrcodeItemType orderType) {
+            if (orderType == CL_MINE_QRCODE) {
+                [weakSelf performSegueWithIdentifier:@"mineVCToMyQrcodeVC" sender:nil];
+            }
+            if (orderType == CL_MINE_SHARE) {
+//                [weakSelf performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
+//                [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+//                    [weakSelf shareTextToPlatformType:platformType];
+//                }];
+                
+                [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ),@(UMSocialPlatformType_WechatSession)]];
+                [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+                    // 根据获取的platformType确定所选平台进行下一步操作
+                    [weakSelf shareTextToPlatformType:platformType];
+
+                }];
+            }
+            
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         return cell;
@@ -140,6 +160,25 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     cell.textLabel.text = _cellTitleStringArray[indexPath.section][indexPath.row];
     return cell;
 }
+
+//分享文本消息
+- (void)shareTextToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    //设置文本
+    messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
+        }
+    }];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     if (indexPath.section == 1) {
@@ -149,6 +188,9 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         }
     }
     if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"mineVCToAboutUsVC" sender:nil];
+        }
         if (indexPath.row == 1) {
             [self performSegueWithIdentifier:@"mineVCToFeedbackVC" sender:nil];
         }

@@ -18,13 +18,22 @@ pod 'Mantle',           '2.0.7'
   pod 'YTKKeyValueStore', '0.1.2'
   pod 'MJRefresh',        '3.1.9'
   pod 'DateTools',        '1.7.0'
-  pod 'UTDID', '~> 1.0.0'
+#  pod 'UTDID', '~> 1.0.0'
   pod 'ZipArchive', '~> 1.4.0'
   pod 'JSONModel', '~> 1.7.0'
   pod 'YYText'
   pod 'SHSPhoneComponent','~> 2.15'
   pod 'DACircularProgress', '~> 2.3'
-
+    pod 'UMCCommon'
+    pod 'UMCSecurityPlugins'
+ # U-Share SDK UI模块（分享面板，建议添加）
+    pod 'UMCShare/UI'
+  # 集成微信(精简版0.2M)
+    pod 'UMCShare/Social/ReducedWeChat'
+  # 集成QQ/QZone/TIM(精简版0.5M)
+    pod 'UMCShare/Social/ReducedQQ'
+    # 集成新浪微博(精简版1M)
+    pod 'UMCShare/Social/ReducedSina'
   target 'ChinaldTests' do
     inherit! :search_paths
     # Pods for testing

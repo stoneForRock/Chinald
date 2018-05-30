@@ -419,11 +419,34 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>阿里悟空 © 2014. See http://m.laiwang.com/market/laiwang/wukong-serviceagreement.php</string>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright</string>
 			<key>Title</key>
-			<string>UTDID</string>
+			<string>UMCCommon</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCSecurityPlugins</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCShare</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
