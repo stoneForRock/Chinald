@@ -7,8 +7,13 @@
 //
 
 #import "CLChangeNicknameVC.h"
+#import "CLMineNetworking.h"
+#import "CLUserModel.h"
+#import "CLMineRequest.h"
 
+#import "UIView+ZNTHud.h"
 @interface CLChangeNicknameVC ()
+@property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
 
 @end
 
@@ -17,6 +22,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)saveNickname:(id)sender {
+    [_nicknameTextField resignFirstResponder];
+    NSString *nicknameString = _nicknameTextField.text;
+    if (nicknameString == nil) {
+        [self.view znt_showToast:@"请输入昵称"];
+        return;
+    }
+    NSCharacterSet  *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    
+    
+    nicknameString = [nicknameString stringByTrimmingCharactersInSet:set];
+    if (nicknameString == 0) {
+        [self.view znt_showToast:@"请输入昵称"];
+        return;
+    }
+    __block CLUserModel *userModel = [CLUserModel sharedUserModel];
+    [CLMineNetworking userEditInfo:@{@"name":nicknameString,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
+        userModel.name = nicknameString;
+        [self.navigationController popViewControllerAnimated:YES];
+    } theFailure:^(NSString *errorCode) {
+        [self.view znt_showToast:errorCode];
+    }];
+//    [CLMineRequest userEditInfo:@{@"name":nicknameString,@"token":userModel.token} complete:^(NSMutableDictionary *resultsObj) {
+//
+//    } theFailure:^(NSString *errorCode) {
+//
+//    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

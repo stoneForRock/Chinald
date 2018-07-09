@@ -15,4 +15,6 @@ typedef NS_ENUM(NSInteger, MineAccountSelectType) {
 };
 @interface CLMineAccountInfoTableViewCell : UITableViewCell
 @property(nonatomic, strong)void(^selectMineAccountCellBlock)(MineAccountSelectType accountCellSelectType);  //!<
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 @end

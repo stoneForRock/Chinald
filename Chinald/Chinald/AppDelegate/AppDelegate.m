@@ -11,8 +11,9 @@
 
 #import "CLMainPageVC.h"
 #import "CLShoppingCartVC.h"
+#import "CLMessageVC.h"
 #import "CLMineVC.h"
-
+#import "CLUserModel.h"
 #import "ZNTTabBarController.h"
 
 #import "ZNTRequest.h"
@@ -45,10 +46,17 @@
     BOOL result = [self setupAppUI:launchOptions];
     //与界面无关的操作
     [self setupAppConfigure:launchOptions];
-    
+    [self initUserInfo];
     return result;
 }
 
+-(void)initUserInfo{
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];    NSDictionary *userDic = [NSDictionary dictionaryWithContentsOfFile:path];
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    CLUserModel *user = [[CLUserModel alloc]initWithDictionary:userDic error:nil];
+    userModel = user;
+}
 - (void)initAppConfigure:(NSDictionary *)launchOptions
 {
     [self registerRemoteNotification];
@@ -127,12 +135,13 @@
     NSArray *tabbarItemInfos = @[
                                  @{@"title":@"首页",@"selectedImage":@"nva_home_pre",@"image":@"nva_home"},
                                  @{@"title":@"购物车",@"selectedImage":@"nva_shoppingcar_pre",@"image":@"nva_shoppingcar"},
+                                 @{@"title":@"消息",@"selectedImage":@"nva_news_pre",@"image":@"nva_news"},
                                  @{@"title":@"个人中心",@"selectedImage":@"nva_mine_pre",@"image":@"nva_mine"}
                                  ];
     
     NSMutableArray *tabbarNavs = [NSMutableArray arrayWithCapacity:0];
     
-    NSArray *tabbarVCs = @[[CLMainPageVC instanceFromXib],[CLShoppingCartVC instanceFromXib],[CLMineVC instanceFromXib]];
+    NSArray *tabbarVCs = @[[CLMainPageVC instanceFromXib],[CLShoppingCartVC instanceFromXib],[CLMessageVC instanceFromXib],[CLMineVC instanceFromXib]];
     
     for (int i = 0; i < tabbarVCs.count; i ++)
     {
@@ -163,6 +172,9 @@
     self.tabBarController = [[ZNTTabBarController alloc] init];
     self.tabBarController.viewControllers = tabbarNavs;
     self.window.rootViewController = self.tabBarController;
+    
+    
+    
     
 }
 

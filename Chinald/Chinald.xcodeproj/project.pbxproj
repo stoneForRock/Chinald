@@ -9,10 +9,27 @@
 /* Begin PBXBuildFile section */
 		11E33201928AAF8F4A9F62C9 /* libPods-ChinaldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C0F8CE18543136DCD21F3 /* libPods-ChinaldUITests.a */; };
 		36DAD4771F173842BEF7B904 /* libPods-ChinaldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */; };
+		C404C9A8207CF4B70083DF2B /* CLAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */; };
+		C404C9AC207CF5AC0083DF2B /* CLTheGoodsAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */; };
+		C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */; };
+		C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */; };
+		C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C406FAF6207E5D2A00FC6682 /* CLUserModel.m */; };
+		C42F8E3420863BCD007DB281 /* CLMineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C42F8E3320863BCD007DB281 /* CLMineRequest.m */; };
+		C42F8E362086462D007DB281 /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = C42F8E352086462D007DB281 /* address.json */; };
+		C43B98F1208F7E8200D79BE0 /* CLSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */; };
+		C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696222081E19800437E3B /* CLNetworkingRequestBase.m */; };
+		C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696262081FB4600437E3B /* CLLoginRequest.m */; };
+		C44C967220877CDA009ECCA5 /* CLAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */; };
+		C44C9675208783A2009ECCA5 /* CLAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C44C9674208783A2009ECCA5 /* CLAddressModel.m */; };
+		C4856BA52082F95700DB552D /* CLMineNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BA42082F95700DB552D /* CLMineNetworking.m */; };
+		C4856BAA2082FBCE00DB552D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BA92082FBCE00DB552D /* NSString+MD5.m */; };
+		C4856BAD2082FC6300DB552D /* UIImage+UploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */; };
+		C4856BAE2082FD4B00DB552D /* UIImage+UploadImage.h in Sources */ = {isa = PBXBuildFile; fileRef = C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */; };
+		C4856BB120835C5D00DB552D /* CLAddressRequsetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */; };
 		C48DDB8A207A51B90067D5BC /* EIPChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */; };
 		C48DDB8F207A539C0067D5BC /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */; };
-		C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */; };
 		C48DDB94207A556A0067D5BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48DDB93207A55690067D5BC /* MobileCoreServices.framework */; };
+		C490CC812090CE4F00D6DB09 /* CLAboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */; };
 		C494127C206F853500FE19A9 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494127B206F853500FE19A9 /* Mine.storyboard */; };
 		C4941281206F854300FE19A9 /* CLChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */; };
 		C4941282206F854300FE19A9 /* CLAccountManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4941280206F854200FE19A9 /* CLAccountManagementVC.m */; };
@@ -27,6 +44,9 @@
 		C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C494129D2070AC1B00FE19A9 /* CLMyOrderVC.m */; };
 		C49412A12070BADD00FE19A9 /* CLOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */; };
 		C49412A42070D28A00FE19A9 /* CLDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49412A32070D28A00FE19A9 /* CLDottedLineView.m */; };
+		C499BE072084E29500903121 /* CLMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C499BE062084E29500903121 /* CLMessageVC.m */; };
+		C499BE092084E2A900903121 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C499BE082084E2A900903121 /* Message.storyboard */; };
+		C4CA878D2088EA5100D7CCB5 /* CLMessageNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CA878C2088EA5100D7CCB5 /* CLMessageNetworking.m */; };
 		C4E85FFE2072FD6800B0264E /* CLOrderGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */; };
 		C4E860012073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860002073BB4F00B0264E /* CLOrderCostDetailTableViewCell.m */; };
 		C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860032073C40600B0264E /* CLOrderInfoTableViewCell.m */; };
@@ -43,6 +63,10 @@
 		C4E860262078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */; };
 		C4E860292078B37100B0264E /* CLLogisticsCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */; };
 		C4E8602C2078D5F300B0264E /* CLRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8602B2078D5F300B0264E /* CLRefundViewController.m */; };
+		C4EB1EA9208575C6006590F3 /* CLMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EA8208575C6006590F3 /* CLMessageModel.m */; };
+		C4EB1EAF2085761E006590F3 /* CLMessageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */; };
+		C4EB1EB220857634006590F3 /* CLMessageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */; };
+		C4EB1EB5208576BE006590F3 /* CLMessageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */; };
 		D21D8E5920689BEF00CDD04F /* CLMainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */; };
 		D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21D8E6020689C4A00CDD04F /* CLMainPageListModel.m */; };
 		D278537A205A1E990035FA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2785377205A1E990035FA27 /* Assets.xcassets */; };
@@ -505,6 +529,37 @@
 		A848BABA19E4FB9B75E12D5F /* libPods-ChinaldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChinaldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D1C375971345AC814F7F48 /* Pods-ChinaldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinaldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChinaldUITests/Pods-ChinaldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD60B07014DCBC5E8DAF9378 /* Pods-Chinald.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinald.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chinald/Pods-Chinald.debug.xcconfig"; sourceTree = "<group>"; };
+		C404C9A6207CF4B70083DF2B /* CLAddressTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressTableViewCell.h; sourceTree = "<group>"; };
+		C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressTableViewCell.m; sourceTree = "<group>"; };
+		C404C9AA207CF5AC0083DF2B /* CLTheGoodsAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTheGoodsAddressModel.h; sourceTree = "<group>"; };
+		C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTheGoodsAddressModel.m; sourceTree = "<group>"; };
+		C404C9AD207D06390083DF2B /* CLForGoodsAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLForGoodsAddressViewController.h; sourceTree = "<group>"; };
+		C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLForGoodsAddressViewController.m; sourceTree = "<group>"; };
+		C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLEditAddressViewController.h; sourceTree = "<group>"; };
+		C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLEditAddressViewController.m; sourceTree = "<group>"; };
+		C406FAF5207E5D2A00FC6682 /* CLUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUserModel.h; sourceTree = "<group>"; };
+		C406FAF6207E5D2A00FC6682 /* CLUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLUserModel.m; sourceTree = "<group>"; };
+		C42F8E3220863BCD007DB281 /* CLMineRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMineRequest.h; sourceTree = "<group>"; };
+		C42F8E3320863BCD007DB281 /* CLMineRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMineRequest.m; sourceTree = "<group>"; };
+		C42F8E352086462D007DB281 /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
+		C43B98EF208F7E8200D79BE0 /* CLSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSetViewController.h; sourceTree = "<group>"; };
+		C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSetViewController.m; sourceTree = "<group>"; };
+		C44696222081E19800437E3B /* CLNetworkingRequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNetworkingRequestBase.m; sourceTree = "<group>"; };
+		C44696232081E19800437E3B /* CLNetworkingRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetworkingRequestBase.h; sourceTree = "<group>"; };
+		C44696252081FB4600437E3B /* CLLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLoginRequest.h; sourceTree = "<group>"; };
+		C44696262081FB4600437E3B /* CLLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLoginRequest.m; sourceTree = "<group>"; };
+		C44C967020877CDA009ECCA5 /* CLAddressPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressPickerView.h; sourceTree = "<group>"; };
+		C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressPickerView.m; sourceTree = "<group>"; };
+		C44C9673208783A2009ECCA5 /* CLAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressModel.h; sourceTree = "<group>"; };
+		C44C9674208783A2009ECCA5 /* CLAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressModel.m; sourceTree = "<group>"; };
+		C4856BA32082F95700DB552D /* CLMineNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMineNetworking.h; sourceTree = "<group>"; };
+		C4856BA42082F95700DB552D /* CLMineNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMineNetworking.m; sourceTree = "<group>"; };
+		C4856BA82082FBCE00DB552D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		C4856BA92082FBCE00DB552D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UploadImage.h"; sourceTree = "<group>"; };
+		C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UploadImage.m"; sourceTree = "<group>"; };
+		C4856BAF20835C5D00DB552D /* CLAddressRequsetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressRequsetModel.h; sourceTree = "<group>"; };
+		C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressRequsetModel.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
 		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
@@ -513,6 +568,8 @@
 		C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EIPUploadImage.m"; sourceTree = "<group>"; };
 		C48DDB91207A544F0067D5BC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C48DDB93207A55690067D5BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAboutUsVC.h; sourceTree = "<group>"; };
+		C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAboutUsVC.m; sourceTree = "<group>"; };
 		C494127B206F853500FE19A9 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		C494127D206F854100FE19A9 /* CLAccountManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAccountManagementVC.h; sourceTree = "<group>"; };
 		C494127E206F854200FE19A9 /* CLChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLChangePhoneViewController.m; sourceTree = "<group>"; };
@@ -540,6 +597,11 @@
 		C49412A02070BADD00FE19A9 /* CLOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderTableViewCell.m; sourceTree = "<group>"; };
 		C49412A22070D28A00FE19A9 /* CLDottedLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDottedLineView.h; sourceTree = "<group>"; };
 		C49412A32070D28A00FE19A9 /* CLDottedLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDottedLineView.m; sourceTree = "<group>"; };
+		C499BE052084E29500903121 /* CLMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageVC.h; sourceTree = "<group>"; };
+		C499BE062084E29500903121 /* CLMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageVC.m; sourceTree = "<group>"; };
+		C499BE082084E2A900903121 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		C4CA878B2088EA5100D7CCB5 /* CLMessageNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageNetworking.h; sourceTree = "<group>"; };
+		C4CA878C2088EA5100D7CCB5 /* CLMessageNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageNetworking.m; sourceTree = "<group>"; };
 		C4E85FFC2072FD6800B0264E /* CLOrderGoodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderGoodsTableViewCell.h; sourceTree = "<group>"; };
 		C4E85FFD2072FD6800B0264E /* CLOrderGoodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLOrderGoodsTableViewCell.m; sourceTree = "<group>"; };
 		C4E85FFF2073BB4F00B0264E /* CLOrderCostDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLOrderCostDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -572,6 +634,14 @@
 		C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLogisticsCompanyTableViewCell.m; sourceTree = "<group>"; };
 		C4E8602A2078D5F300B0264E /* CLRefundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLRefundViewController.h; sourceTree = "<group>"; };
 		C4E8602B2078D5F300B0264E /* CLRefundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLRefundViewController.m; sourceTree = "<group>"; };
+		C4EB1EA7208575C6006590F3 /* CLMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageModel.h; sourceTree = "<group>"; };
+		C4EB1EA8208575C6006590F3 /* CLMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageModel.m; sourceTree = "<group>"; };
+		C4EB1EAD2085761E006590F3 /* CLMessageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageListTableViewCell.h; sourceTree = "<group>"; };
+		C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageListTableViewCell.m; sourceTree = "<group>"; };
+		C4EB1EB020857634006590F3 /* CLMessageDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailTableViewCell.h; sourceTree = "<group>"; };
+		C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailTableViewCell.m; sourceTree = "<group>"; };
+		C4EB1EB3208576BE006590F3 /* CLMessageDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMessageDetailVC.h; sourceTree = "<group>"; };
+		C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMessageDetailVC.m; sourceTree = "<group>"; };
 		D21D8E5720689BEF00CDD04F /* CLMainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageRequest.h; sourceTree = "<group>"; };
 		D21D8E5820689BEF00CDD04F /* CLMainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMainPageRequest.m; sourceTree = "<group>"; };
 		D21D8E5F20689C4A00CDD04F /* CLMainPageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMainPageListModel.h; sourceTree = "<group>"; };
@@ -1498,6 +1568,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C404C9A9207CF58B0083DF2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C404C9AA207CF5AC0083DF2B /* CLTheGoodsAddressModel.h */,
+				C404C9AB207CF5AC0083DF2B /* CLTheGoodsAddressModel.m */,
+				C406FAF5207E5D2A00FC6682 /* CLUserModel.h */,
+				C406FAF6207E5D2A00FC6682 /* CLUserModel.m */,
+				C4856BAF20835C5D00DB552D /* CLAddressRequsetModel.h */,
+				C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4856BA62082F96000DB552D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C4856BA32082F95700DB552D /* CLMineNetworking.h */,
+				C4856BA42082F95700DB552D /* CLMineNetworking.m */,
+				C42F8E3220863BCD007DB281 /* CLMineRequest.h */,
+				C42F8E3320863BCD007DB281 /* CLMineRequest.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C4856BA72082FBCE00DB552D /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				C4856BA82082FBCE00DB552D /* NSString+MD5.h */,
+				C4856BA92082FBCE00DB552D /* NSString+MD5.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
 		C4941283206F854500FE19A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,8 +1626,25 @@
 				C4E860252078AFF900B0264E /* CLLogisticsHistoryTableViewCell.m */,
 				C4E860272078B37100B0264E /* CLLogisticsCompanyTableViewCell.h */,
 				C4E860282078B37100B0264E /* CLLogisticsCompanyTableViewCell.m */,
+				C404C9A6207CF4B70083DF2B /* CLAddressTableViewCell.h */,
+				C404C9A7207CF4B70083DF2B /* CLAddressTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C499BE042084E17000903121 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EA620857287006590F3 /* Networking */,
+				C4EB1EA52085727F006590F3 /* Model */,
+				C4EB1EA420857274006590F3 /* View */,
+				C499BE052084E29500903121 /* CLMessageVC.h */,
+				C499BE062084E29500903121 /* CLMessageVC.m */,
+				C4EB1EB3208576BE006590F3 /* CLMessageDetailVC.h */,
+				C4EB1EB4208576BE006590F3 /* CLMessageDetailVC.m */,
+				C499BE082084E2A900903121 /* Message.storyboard */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		C4E860082075D44500B0264E /* OrderOperationItemView */ = {
@@ -1546,6 +1666,35 @@
 				C4E8601C2075FD1000B0264E /* CLReceivedOperationItemView.m */,
 			);
 			path = OrderOperationItemView;
+			sourceTree = "<group>";
+		};
+		C4EB1EA420857274006590F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EAD2085761E006590F3 /* CLMessageListTableViewCell.h */,
+				C4EB1EAE2085761E006590F3 /* CLMessageListTableViewCell.m */,
+				C4EB1EB020857634006590F3 /* CLMessageDetailTableViewCell.h */,
+				C4EB1EB120857634006590F3 /* CLMessageDetailTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4EB1EA52085727F006590F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB1EA7208575C6006590F3 /* CLMessageModel.h */,
+				C4EB1EA8208575C6006590F3 /* CLMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4EB1EA620857287006590F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C4CA878B2088EA5100D7CCB5 /* CLMessageNetworking.h */,
+				C4CA878C2088EA5100D7CCB5 /* CLMessageNetworking.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D21D8E5620689BCC00CDD04F /* Network */ = {
@@ -1592,6 +1741,7 @@
 		D2785375205A1E990035FA27 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C42F8E352086462D007DB281 /* address.json */,
 				D2785376205A1E990035FA27 /* Images */,
 				D2785378205A1E990035FA27 /* LaunchScreen.storyboard */,
 			);
@@ -1628,6 +1778,7 @@
 		E566870F2059627A003D5EAB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C4856BA72082FBCE00DB552D /* MD5 */,
 				E59C7B0B20596C9200075053 /* Category */,
 				E59C7B3420596C9200075053 /* Tools */,
 			);
@@ -1679,6 +1830,8 @@
 		E566871220596295003D5EAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C44696232081E19800437E3B /* CLNetworkingRequestBase.h */,
+				C44696222081E19800437E3B /* CLNetworkingRequestBase.m */,
 				E59C7ADE20596C1100075053 /* RequestServer */,
 				E59C7AE320596C1100075053 /* UrlServer */,
 			);
@@ -1688,6 +1841,7 @@
 		E56687132059629C003D5EAB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C499BE042084E17000903121 /* Message */,
 				E566873A20596AA5003D5EAB /* Guide */,
 				E566873920596A9C003D5EAB /* Launch */,
 				E566873820596A97003D5EAB /* Login */,
@@ -1775,6 +1929,8 @@
 		E566873520596A6C003D5EAB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C4856BA62082F96000DB552D /* Networking */,
+				C404C9A9207CF58B0083DF2B /* Model */,
 				C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */,
 				C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */,
 				C4E860082075D44500B0264E /* OrderOperationItemView */,
@@ -1798,6 +1954,14 @@
 				C4E860222077769100B0264E /* CLLogisticsDetailViewController.m */,
 				C4E8602A2078D5F300B0264E /* CLRefundViewController.h */,
 				C4E8602B2078D5F300B0264E /* CLRefundViewController.m */,
+				C404C9AD207D06390083DF2B /* CLForGoodsAddressViewController.h */,
+				C404C9AE207D06390083DF2B /* CLForGoodsAddressViewController.m */,
+				C404C9B0207D1FB90083DF2B /* CLEditAddressViewController.h */,
+				C404C9B1207D1FB90083DF2B /* CLEditAddressViewController.m */,
+				C43B98EF208F7E8200D79BE0 /* CLSetViewController.h */,
+				C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */,
+				C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */,
+				C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1878,6 +2042,8 @@
 			children = (
 				E566874620596B97003D5EAB /* ZNTLoginRequest.h */,
 				E566874720596B97003D5EAB /* ZNTLoginRequest.m */,
+				C44696252081FB4600437E3B /* CLLoginRequest.h */,
+				C44696262081FB4600437E3B /* CLLoginRequest.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1969,6 +2135,8 @@
 				E59C7B2120596C9200075053 /* UIImage+DZCategory.m */,
 				E59C7B2220596C9200075053 /* UIImage+fixOrientation.h */,
 				E59C7B2320596C9200075053 /* UIImage+fixOrientation.m */,
+				C4856BAB2082FC6200DB552D /* UIImage+UploadImage.h */,
+				C4856BAC2082FC6300DB552D /* UIImage+UploadImage.m */,
 				E59C7B2420596C9200075053 /* UIImage+ZNTAdd.h */,
 				E59C7B2520596C9200075053 /* UIImage+ZNTAdd.m */,
 				E59C7B2620596C9200075053 /* UIImageView+ZNTAdd.h */,
@@ -2910,6 +3078,8 @@
 				E59C7FA62059724D00075053 /* ZLZAddressPickerView.h */,
 				E59C7FA72059724D00075053 /* ZLZAddressPickerView.m */,
 				E59C7FA82059724D00075053 /* ZLZAddressPickerView.xib */,
+				C44C967020877CDA009ECCA5 /* CLAddressPickerView.h */,
+				C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2919,6 +3089,8 @@
 			children = (
 				E59C7FAD2059726D00075053 /* ZNTArea.h */,
 				E59C7FAE2059726D00075053 /* ZNTArea.m */,
+				C44C9673208783A2009ECCA5 /* CLAddressModel.h */,
+				C44C9674208783A2009ECCA5 /* CLAddressModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3143,6 +3315,7 @@
 				E59C7E7820596CE100075053 /* UIBarButtonItemArrowLeft.png in Resources */,
 				E59C7E7020596CE100075053 /* ImageSelectedSmallOn@2x.png in Resources */,
 				E59C7E7D20596CE100075053 /* UIBarButtonItemArrowRight@3x.png in Resources */,
+				C499BE092084E2A900903121 /* Message.storyboard in Resources */,
 				E59C7E3320596CE100075053 /* AMap.bundle in Resources */,
 				E59C7E7720596CE100075053 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
 				E59C7E6420596CE100075053 /* ImageError@2x.png in Resources */,
@@ -3169,6 +3342,7 @@
 				E59C7E6C20596CE100075053 /* ImageSelectedSmallOff.png in Resources */,
 				E59C7E6A20596CE100075053 /* ImageSelectedOn@2x.png in Resources */,
 				E59C7E7E20596CE100075053 /* UIBarButtonItemGrid.png in Resources */,
+				C42F8E362086462D007DB281 /* address.json in Resources */,
 				E59C7E7C20596CE100075053 /* UIBarButtonItemArrowRight@2x.png in Resources */,
 				E59C7E6820596CE100075053 /* ImageSelectedOff@3x.png in Resources */,
 				E59C7FAB2059724D00075053 /* ZLZAddressPickerView.xib in Resources */,
@@ -3344,7 +3518,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4856BAE2082FD4B00DB552D /* UIImage+UploadImage.h in Sources */,
 				E59C7E5620596CE100075053 /* IQPreviousNextView.m in Sources */,
+				C406FAF7207E5D2A00FC6682 /* CLUserModel.m in Sources */,
 				E59C7ECF20596CE100075053 /* ZXBitArrayBuilder.m in Sources */,
 				E59C7EDC20596CE100075053 /* ZXCodaBarReader.m in Sources */,
 				E59C7EC620596CE100075053 /* ZXAztecHighLevelEncoder.m in Sources */,
@@ -3370,6 +3546,7 @@
 				E59C7F8A20596CE100075053 /* ZXWifiParsedResult.m in Sources */,
 				E59C7ED320596CE100075053 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				E59C7B5C20596C9200075053 /* UIView+ZNTHud.m in Sources */,
+				C490CC812090CE4F00D6DB09 /* CLAboutUsVC.m in Sources */,
 				E59C7E8420596CE100075053 /* MWCaptionView.m in Sources */,
 				E59C7F4120596CE100075053 /* ZXPlanarYUVLuminanceSource.m in Sources */,
 				E59C7EFF20596CE100075053 /* ZXEAN8Writer.m in Sources */,
@@ -3393,6 +3570,7 @@
 				E59C7E6020596CE100075053 /* MJPhotoToolbar.m in Sources */,
 				E59C7F9C20596F6300075053 /* CLMainPageVC.m in Sources */,
 				E59C7EDE20596CE100075053 /* ZXCode128Reader.m in Sources */,
+				C4856BA52082F95700DB552D /* CLMineNetworking.m in Sources */,
 				E59C7F2A20596CE100075053 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				E566872D20596A30003D5EAB /* UINavigationBar+Transition.m in Sources */,
 				E59C7F7A20596CE100075053 /* ZXUPCAReader.m in Sources */,
@@ -3402,6 +3580,7 @@
 				E59C7EB420596CE100075053 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
 				E59C7E3C20596CE100075053 /* QNDomain.m in Sources */,
 				E59C7F4020596CE100075053 /* ZXPerspectiveTransform.m in Sources */,
+				C4EB1EB220857634006590F3 /* CLMessageDetailTableViewCell.m in Sources */,
 				E59C7E9720596CE100075053 /* QNResponseInfo.m in Sources */,
 				E59C7F4420596CE100075053 /* ZXQRCode.m in Sources */,
 				E59C7EA020596CE100075053 /* QNUpToken.m in Sources */,
@@ -3467,6 +3646,7 @@
 				E59C7EBA20596CE100075053 /* ZXAI013x0x1xDecoder.m in Sources */,
 				E59C7E9C20596CE100075053 /* QNFormUpload.m in Sources */,
 				E59C7F9F20596F7A00075053 /* CLShoppingCartVC.m in Sources */,
+				C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */,
 				C4E860142075D66000B0264E /* CLToSendGoodsOperationItemView.m in Sources */,
 				E59C7F4E20596CE100075053 /* ZXQRCodeDetector.m in Sources */,
 				E59C7B5220596C9200075053 /* UIDevice+ZNTAdd.m in Sources */,
@@ -3478,8 +3658,10 @@
 				E59C7F3A20596CE100075053 /* ZXPDF417ErrorCorrection.m in Sources */,
 				E59C7F3120596CE100075053 /* ZXPDF417Common.m in Sources */,
 				E59C7B5420596C9200075053 /* UIImage+fixOrientation.m in Sources */,
+				C44C9675208783A2009ECCA5 /* CLAddressModel.m in Sources */,
 				E59C7EB920596CE100075053 /* ZXAI01393xDecoder.m in Sources */,
 				E59C7F2420596CE100075053 /* ZXMultiFormatUPCEANReader.m in Sources */,
+				C43B98F1208F7E8200D79BE0 /* CLSetViewController.m in Sources */,
 				E59C7EBD20596CE100075053 /* ZXAI01decoder.m in Sources */,
 				C4941298207080DB00FE19A9 /* CLFeedbackVC.m in Sources */,
 				E59C7EC420596CE100075053 /* ZXAztecDetectorResult.m in Sources */,
@@ -3493,10 +3675,13 @@
 				E59C7F0720596CE100075053 /* ZXExpandedProductResultParser.m in Sources */,
 				E59C7EE220596CE100075053 /* ZXCode93Reader.m in Sources */,
 				E59C7FC820692FB800075053 /* CLCommentList.m in Sources */,
+				C4856BB120835C5D00DB552D /* CLAddressRequsetModel.m in Sources */,
+				C4CA878D2088EA5100D7CCB5 /* CLMessageNetworking.m in Sources */,
 				E59C7E4D20596CE100075053 /* IQUIScrollView+Additions.m in Sources */,
 				E59C7FD020692FE900075053 /* CLCommentRequest.m in Sources */,
 				E59C7EFD20596CE100075053 /* ZXEAN13Writer.m in Sources */,
 				E59C7E4720596CE100075053 /* QNRefresher.m in Sources */,
+				C404C9AF207D06390083DF2B /* CLForGoodsAddressViewController.m in Sources */,
 				E59C7EA320596CE100075053 /* TZImageManager.m in Sources */,
 				E59C7F2720596CE100075053 /* ZXOneDReader.m in Sources */,
 				E59C7B5820596C9200075053 /* UITableView+DZCategory.m in Sources */,
@@ -3541,6 +3726,7 @@
 				E59C7F5620596CE100075053 /* ZXQRCodeMatrixUtil.m in Sources */,
 				E59C7F6620596CE100075053 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				E59C7F6420596CE100075053 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
+				C4EB1EB5208576BE006590F3 /* CLMessageDetailVC.m in Sources */,
 				E59C7F7D20596CE100075053 /* ZXUPCEANExtension5Support.m in Sources */,
 				E59C7F6720596CE100075053 /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				E59C7F8020596CE100075053 /* ZXUPCEANWriter.m in Sources */,
@@ -3560,6 +3746,7 @@
 				E59C7F3020596CE100075053 /* ZXPDF417CodewordDecoder.m in Sources */,
 				E59C7E9A20596CE100075053 /* QNFileRecorder.m in Sources */,
 				E59C7B0820596C5B00075053 /* UISearchBar+ZNTStyle.m in Sources */,
+				C4EB1EA9208575C6006590F3 /* CLMessageModel.m in Sources */,
 				C4E860232077769100B0264E /* CLLogisticsDetailViewController.m in Sources */,
 				E59C7F8120596CE100075053 /* ZXUPCEReader.m in Sources */,
 				E59C7EBC20596CE100075053 /* ZXAI01AndOtherAIs.m in Sources */,
@@ -3593,6 +3780,7 @@
 				E59C7EC920596CE100075053 /* ZXAztecState.m in Sources */,
 				E59C7E9020596CE100075053 /* QNCrc32.m in Sources */,
 				E59C7E4320596CE100075053 /* QNHosts.m in Sources */,
+				C44C967220877CDA009ECCA5 /* CLAddressPickerView.m in Sources */,
 				E59C7EAF20596CE100075053 /* XTSafeCollection.m in Sources */,
 				E59C7F0D20596CE100075053 /* ZXGlobalHistogramBinarizer.m in Sources */,
 				E59C7EED20596CE100075053 /* ZXDataMatrixEncoderContext.m in Sources */,
@@ -3607,6 +3795,7 @@
 				E59C7F4720596CE100075053 /* ZXQRCodeBitMatrixParser.m in Sources */,
 				E59C7F7B20596CE100075053 /* ZXUPCAWriter.m in Sources */,
 				C4E860042073C40600B0264E /* CLOrderInfoTableViewCell.m in Sources */,
+				C4856BAD2082FC6300DB552D /* UIImage+UploadImage.m in Sources */,
 				E59C7E8720596CE100075053 /* MWPhoto.m in Sources */,
 				E59C7F7C20596CE100075053 /* ZXUPCEANExtension2Support.m in Sources */,
 				E59C7F6920596CE100075053 /* ZXRSSExpandedDecodedObject.m in Sources */,
@@ -3628,6 +3817,8 @@
 				E59C7F3C20596CE100075053 /* ZXPDF417Reader.m in Sources */,
 				E59C7F3720596CE100075053 /* ZXPDF417DetectorResult.m in Sources */,
 				E59C7F6220596CE100075053 /* ZXRSS14Reader.m in Sources */,
+				C499BE072084E29500903121 /* CLMessageVC.m in Sources */,
+				C42F8E3420863BCD007DB281 /* CLMineRequest.m in Sources */,
 				E59C7B5520596C9200075053 /* UIImage+ZNTAdd.m in Sources */,
 				E59C7F4520596CE100075053 /* ZXQRCodeAlignmentPattern.m in Sources */,
 				E59C7F2B20596CE100075053 /* ZXPDF417BarcodeMetadata.m in Sources */,
@@ -3642,6 +3833,7 @@
 				E59C7F6120596CE100075053 /* ZXRGBLuminanceSource.m in Sources */,
 				E59C7F7E20596CE100075053 /* ZXUPCEANExtensionSupport.m in Sources */,
 				E59C7EE920596CE100075053 /* ZXDataMatrixDecoder.m in Sources */,
+				C404C9AC207CF5AC0083DF2B /* CLTheGoodsAddressModel.m in Sources */,
 				E566872F20596A30003D5EAB /* UIViewController+NavigationStyle.m in Sources */,
 				E59C7F0A20596CE100075053 /* ZXGenericMultipleBarcodeReader.m in Sources */,
 				E59C7F5D20596CE100075053 /* ZXReedSolomonEncoder.m in Sources */,
@@ -3651,6 +3843,7 @@
 				E59C7F2220596CE100075053 /* ZXMultiFormatOneDReader.m in Sources */,
 				E59C7F2120596CE100075053 /* ZXMultiFinderPatternFinder.m in Sources */,
 				E59C7EEB20596CE100075053 /* ZXDataMatrixDetector.m in Sources */,
+				C4856BAA2082FBCE00DB552D /* NSString+MD5.m in Sources */,
 				E59C7E8520596CE100075053 /* MWGridCell.m in Sources */,
 				E59C7EC120596CE100075053 /* ZXAztecCode.m in Sources */,
 				E59C7F4B20596CE100075053 /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
@@ -3694,6 +3887,7 @@
 				E59C7E4120596CE100075053 /* QNDnspodFree.m in Sources */,
 				C494129E2070AC1B00FE19A9 /* CLMyOrderVC.m in Sources */,
 				E59C7F2C20596CE100075053 /* ZXPDF417BarcodeRow.m in Sources */,
+				C4EB1EAF2085761E006590F3 /* CLMessageListTableViewCell.m in Sources */,
 				E59C7F0320596CE100075053 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				E59C7E8E20596CE100075053 /* QNALAssetFile.m in Sources */,
 				E59C7EA920596CE100075053 /* UIView+Layout.m in Sources */,
@@ -3714,6 +3908,7 @@
 				E59C7F5520596CE100075053 /* ZXQRCodeMaskUtil.m in Sources */,
 				E59C7ECE20596CE100075053 /* ZXBitArray.m in Sources */,
 				E59C7F0B20596CE100075053 /* ZXGeoParsedResult.m in Sources */,
+				C44696242081E19900437E3B /* CLNetworkingRequestBase.m in Sources */,
 				E59C7E9E20596CE100075053 /* QNUploadManager.m in Sources */,
 				E59C7F4C20596CE100075053 /* ZXQRCodeDecoder.m in Sources */,
 				E59C7EDA20596CE100075053 /* ZXCGImageLuminanceSource.m in Sources */,
@@ -3741,13 +3936,14 @@
 				E59C7F4D20596CE100075053 /* ZXQRCodeDecoderMetaData.m in Sources */,
 				E59C7EE520596CE100075053 /* ZXDataMatrixBitMatrixParser.m in Sources */,
 				E59C7F7F20596CE100075053 /* ZXUPCEANReader.m in Sources */,
-				C48DDB90207A539C0067D5BC /* UIImage+EIPUploadImage.m in Sources */,
 				E59C7E4020596CE100075053 /* QNDnspodEnterprise.m in Sources */,
 				E59C7EEA20596CE100075053 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E59C7FA220596F8600075053 /* CLMineVC.m in Sources */,
 				D21D8E6120689C4A00CDD04F /* CLMainPageListModel.m in Sources */,
 				E59C7F3E20596CE100075053 /* ZXPDF417ScanningDecoder.m in Sources */,
+				C404C9A8207CF4B70083DF2B /* CLAddressTableViewCell.m in Sources */,
 				E59C7E8A20596CE100075053 /* MWTapDetectingView.m in Sources */,
+				C404C9B2207D1FB90083DF2B /* CLEditAddressViewController.m in Sources */,
 				E59C7F0E20596CE100075053 /* ZXGridSampler.m in Sources */,
 				E59C7EBE20596CE100075053 /* ZXAI01weightDecoder.m in Sources */,
 				C4941292206F859600FE19A9 /* UIButton+CLButton.m in Sources */,

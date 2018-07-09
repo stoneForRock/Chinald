@@ -10,6 +10,24 @@
 
 @implementation ZNTLoginRequest
 
+//验证码登录
++ (void)loginWithPhone:(NSString *)phone
+              phoneCode:(NSString *)code
+             onSuccess:(ZNTSuccessBlock)successBlock
+             onFailure:(ZNTFailureBlock)failureBlock {
+    [self sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"/user/login";
+        request.parameters = @{@"phone":phone,@"code":code};
+        request.httpMethod = kXMHTTPMethodPOST;
+
+    } onSuccess:^(id  _Nullable responseObject) {
+        successBlock(responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        failureBlock(error);
+    }];
+}
+
 + (void)loginWithPhone:(NSString *)telephone
               password:(NSString *)password
               userType:(NSString *)userType
@@ -41,11 +59,26 @@
     }];
 }
 
++ (void)sendCodeWithPhone:(NSString *)phone codeType:(int)type
+                onSuccess:(ZNTSuccessBlock)successBlock
+                onFailure:(ZNTFailureBlock)failureBlock {
+    [self sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"/user/code";
+        request.parameters = @{@"phone":phone,@"type":[NSNumber numberWithInt:type]};
+        request.httpMethod = kXMHTTPMethodPOST;
+    } onSuccess:^(id  _Nullable responseObject) {
+        successBlock(responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        failureBlock(error);
+    }];
+}
+
 + (void)sendCodeWithPhone:(NSString *)phone
                 onSuccess:(ZNTSuccessBlock)successBlock
                 onFailure:(ZNTFailureBlock)failureBlock {
     [self sendRequest:^(XMRequest * _Nonnull request) {
-        request.api = @"/znt2/sms/sendCode";
+        request.api = @"/user/code";
         request.parameters = @{@"phone":phone};
         request.httpMethod = kXMHTTPMethodPOST;
     } onSuccess:^(id  _Nullable responseObject) {
