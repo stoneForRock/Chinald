@@ -49,6 +49,14 @@ return [[UIStoryboard storyboardWithName:s bundle:nil] instantiateViewController
 #define kiOS9Later (kSystemVersion >= 9)
 #endif
 
+#ifndef kiOS10Later
+#define kiOS10Later (kSystemVersion >= 10)
+#endif
+
+#ifndef kiOS11Later
+#define kiOS11Later (kSystemVersion >= 11)
+#endif
+
 //尺寸
 #define ScreenBounds [[UIScreen mainScreen] bounds]     //屏幕
 #define ScreenFullHeight [[UIScreen mainScreen] bounds].size.height //屏幕高度

@@ -44,6 +44,32 @@ INSTANCE_XIB_M(@"MainPage", CLMainPageVC)
 
 - (void)requestMainPageData {
     
+    [self.view znt_showHUD:@"请稍侯..."];
+    [self requestBannerData];
+    [self requestGoodsList];
+    
+}
+
+- (void)requestBannerData {
+    [CLMainPageRequest getMainBannerListOnSuccess:^(id  _Nullable responseObject) {
+        [self.view znt_hideHUD];
+        NSLog(@"%@",responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        [self.view znt_hideHUD];
+        [self.view znt_showToast:error.domain];
+    }];
+}
+
+- (void)requestGoodsList {
+    [CLMainPageRequest getMainPageGoodListOnSuccess:^(id  _Nullable responseObject) {
+        [self.view znt_hideHUD];
+        NSLog(@"%@",responseObject);
+        
+    } onFailure:^(NSError * _Nullable error) {
+        [self.view znt_hideHUD];
+        [self.view znt_showToast:error.domain];
+    }];
 }
 
 

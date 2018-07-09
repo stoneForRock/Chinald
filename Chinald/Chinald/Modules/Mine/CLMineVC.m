@@ -29,8 +29,9 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     //self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = YES;
-    if (@available(iOS 11, *)){
-        _mineTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    
+    if (kiOS10Later){
+//        _mineTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }

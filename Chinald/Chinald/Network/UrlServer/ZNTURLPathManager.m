@@ -39,7 +39,6 @@ NSString *const ZNTURLChangeNotification = @"ZNTURLChangeNotification";
 }
 
 - (NSString *)serverBaseUrl {
-    
     if (_serverBaseUrl == nil) {
         switch ([self urlType]) {
             case ZNTURLTypeProduction:
@@ -58,6 +57,9 @@ NSString *const ZNTURLChangeNotification = @"ZNTURLChangeNotification";
                 break;
         }
     }
+    
+    //暂时更改
+    _serverBaseUrl = @"http://www.jujia168.com";
     
     return _serverBaseUrl;
 }

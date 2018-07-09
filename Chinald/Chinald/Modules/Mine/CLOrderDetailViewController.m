@@ -25,11 +25,11 @@ static NSString *orderGoodsTableViewCellString = @"orderGoodsTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (@available(iOS 11, *)){
-        _orderDetailTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }else{
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+//    if (@available(iOS 11, *)){
+//        _orderDetailTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    }else{
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
     self.navigationItem.title = @"订单详情";
     // Do any additional setup after loading the view.
     [self addTableViewAndOperationItems];
