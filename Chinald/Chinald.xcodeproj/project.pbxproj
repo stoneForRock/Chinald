@@ -1715,29 +1715,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D21D8E5B20689BFA00CDD04F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D21D8E5E20689C1B00CDD04F /* CustomViews */,
-				D21D8E5C20689C1100CDD04F /* Cells */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D21D8E5C20689C1100CDD04F /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		D21D8E5E20689C1B00CDD04F /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
 		D2785375205A1E990035FA27 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1979,7 +1956,6 @@
 		E566873720596A8F003D5EAB /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				D21D8E5B20689BFA00CDD04F /* Views */,
 				D21D8E5A20689BF400CDD04F /* Model */,
 				D21D8E5620689BCC00CDD04F /* Network */,
 				E59C7F9420596F3D00075053 /* MainPage.storyboard */,
