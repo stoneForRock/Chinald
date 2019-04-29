@@ -6,7 +6,7 @@ target 'Chinald' do
   # use_frameworks!
 
   # Pods for Chinald
-pod 'Mantle',           '2.0.7'
+  pod 'Mantle',           '2.0.7'
   pod 'ReactiveCocoa',    '2.5'
   pod 'GVUserDefaults',   '1.0.2'
   pod 'SDWebImage',       '3.8.1'
