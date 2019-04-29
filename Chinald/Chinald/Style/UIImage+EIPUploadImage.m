@@ -54,8 +54,6 @@
     NSData *data = UIImageJPEGRepresentation(image , 1);
     [data getBytes:&c length:1];
     
-    
-    
     switch (c) {
             
         case 0xFF:

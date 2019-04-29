@@ -279,6 +279,6 @@ static int refreshTokenCount = 0;
     for (NSURLSessionDataTask *task in kRequestTaskArray) {
         [task cancel];
     }
-    NSLog(@"取消了发票列表请求");
+    NSLog(@"取消了列表请求");
 }
 @end
