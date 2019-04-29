@@ -15,7 +15,7 @@
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
-@interface CLMineVC ()
+@interface CLMineVC ()<UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;
 @property(nonatomic, strong) NSArray *cellTitleStringArray; //!<
 @property(nonatomic, assign) NSInteger selectOrderType;  //!<
@@ -29,23 +29,11 @@ static NSString *shareTableViewCellString = @"CLMineShareTableViewCell";
 static NSString *otherTableViewCellString = @"CLMineOtherTableViewCell";
 
 INSTANCE_XIB_M(@"Mine", CLMineVC)
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    CLUserModel *userModel = [CLUserModel sharedUserModel];
-    if (!userModel.token) {
-        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
-        [self presentViewController:loginVC animated:YES completion:^{
-        }];
-    }else{
-        [_mineTableView reloadData];
-    }
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = YES;
-    
     if (kiOS10Later){
 //        _mineTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }else{
@@ -144,8 +132,9 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     }
 
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) return 200;
+    if (indexPath.section == 0) return 220;
     if (indexPath.section == 1 && indexPath.row == 1) return 75;
     if (indexPath.section == 2) return 50;
     return 44;

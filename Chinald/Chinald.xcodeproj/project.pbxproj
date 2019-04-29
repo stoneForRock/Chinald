@@ -562,10 +562,10 @@
 		C4856BB020835C5D00DB552D /* CLAddressRequsetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressRequsetModel.m; sourceTree = "<group>"; };
 		C48DDB88207A51B80067D5BC /* EIPChoosePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIPChoosePhotoViewController.h; sourceTree = "<group>"; };
 		C48DDB89207A51B80067D5BC /* EIPChoosePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIPChoosePhotoViewController.m; sourceTree = "<group>"; };
-		C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EIPUploadImage.h"; sourceTree = "<group>"; };
+		C48DDB8B207A539B0067D5BC /* UIImage+UploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UploadImage.h"; sourceTree = "<group>"; };
 		C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		C48DDB8D207A539C0067D5BC /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
-		C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EIPUploadImage.m"; sourceTree = "<group>"; };
+		C48DDB8E207A539C0067D5BC /* UIImage+UploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UploadImage.m"; sourceTree = "<group>"; };
 		C48DDB91207A544F0067D5BC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C48DDB93207A55690067D5BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAboutUsVC.h; sourceTree = "<group>"; };
@@ -1765,8 +1765,8 @@
 		E566871020596287003D5EAB /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				C48DDB8B207A539B0067D5BC /* UIImage+EIPUploadImage.h */,
-				C48DDB8E207A539C0067D5BC /* UIImage+EIPUploadImage.m */,
+				C48DDB8B207A539B0067D5BC /* UIImage+UploadImage.h */,
+				C48DDB8E207A539C0067D5BC /* UIImage+UploadImage.m */,
 				C48DDB8D207A539C0067D5BC /* UIImage+fixOrientation.h */,
 				C48DDB8C207A539B0067D5BC /* UIImage+fixOrientation.m */,
 				E59C7AF520596C5B00075053 /* KDInputView.h */,

@@ -90,7 +90,6 @@
 -(void)orderTypeButtonClick:(id)sender collectionScrollToIndexPath:(NSIndexPath *)indexPath{
     UIButton *button = (UIButton *)sender;
     [_selectButton setTitleColor:Color7 forState:0];
-
     [button setTitleColor:[UIColor zntThemeTintColor] forState:0];
     _selectButton = button;
     [UIView animateWithDuration:0.3 animations:^{
@@ -121,7 +120,12 @@
 
 #pragma mark =========== UIScrollViewDelegate ===========
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
- 
+    int pageIndex = scrollView.contentOffset.x / ScreenFullWidth;
+    NSLog(@"pageIndex==%d",pageIndex);
+    [UIView animateWithDuration:0.3 animations:^{
+        _articleView.frame = CGRectMake(pageIndex * (ScreenFullWidth / 5.0) + 5, _selectButton.frame.origin.y + _selectButton.frame.size.height,(ScreenFullWidth / 5.0) - 10 , 2);
+        
+    }];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

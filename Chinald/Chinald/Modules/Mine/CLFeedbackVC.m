@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *feedbackTextView;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfStringLabel;
 @property (strong, nonatomic) IBOutlet UIView *inputBackgroundView;
+@property (weak, nonatomic) IBOutlet UITextField *phoneText;
 
 @end
 
@@ -42,6 +43,11 @@
     }
     
 }
+- (IBAction)hideKeyboard:(id)sender {
+    [_feedbackTextView resignFirstResponder];
+    [_phoneText resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
