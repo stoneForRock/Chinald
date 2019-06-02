@@ -42,4 +42,17 @@ static CLUserModel *_userModel;
 +(BOOL)propertyIsOptional:(NSString *)propertyName{
     return true;
 }
+
+-(void)setUserInfo:(CLUserModel *)userModel{
+    self.userId = userModel.userId;
+    self.number = userModel.number;
+    self.phone = userModel.headIcon;
+    self.name = userModel.name;
+    self.openPhone = userModel.openPhone;
+    self.addTime = userModel.addTime;
+    self.token = userModel.token;
+    self.recommendName = userModel.recommendName;
+    self.haveSale = userModel.haveSale;
+    self.saveTree = userModel.saveTree;
+}
 @end

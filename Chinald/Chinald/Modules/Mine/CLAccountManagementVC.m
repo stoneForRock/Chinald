@@ -138,6 +138,14 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
                 [self dismissViewControllerAnimated:YES completion:^{
                     weakSelf.headIcon = image;
                     [weakSelf.managementTableView reloadData];
+                    [CLMineNetworking clUploadImages:@[image] witheType:@{@"type":@(2)} complete:^(NSMutableDictionary *resultsObj) {
+                        if (resultsObj && resultsObj[@"data"]) {
+                            CLUserModel *userModel = [CLUserModel sharedUserModel];
+                            userModel.headIcon = resultsObj[@"data"][@"url"];
+                        }
+                    } theFailure:^(NSString *errorCode) {
+                        
+                    }];
                 }];
             };
             
@@ -236,8 +244,12 @@ INSTANCE_XIB_M(@"Mine", CLAccountManagementVC)
     }
 }
 - (IBAction)logoutButtonClick:(id)sender {
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];
+
+    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    
     CLUserModel *userModel = [CLUserModel sharedUserModel];
-    userModel.token = nil;
+    userModel = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

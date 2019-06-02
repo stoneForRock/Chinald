@@ -9,12 +9,12 @@
 #import "UIImage+UploadImage.h"
 
 @implementation UIImage (UploadImage)
-+ (UIImage *)compressImageQuality:(UIImage *)image toByte:(NSInteger)maxLength {
++ (UIImage *)clCompressImageQuality:(UIImage *)image toByte:(NSInteger)maxLength {
     NSData *data1 = UIImageJPEGRepresentation(image, 1);
     
     NSLog(@"data.length=====%lu",(unsigned long)data1.length);
     
-    NSLog(@"image的图片格式是===%@",[self imageFormat:image]);
+    NSLog(@"image的图片格式是===%@",[self clImageFormat:image]);
     float imageMaxWidth = image.size.width > 1280 ? 1280 : image.size.width;
     UIGraphicsBeginImageContext(CGSizeMake(imageMaxWidth, image.size.height / (float)image.size.width * imageMaxWidth ));
     [image drawInRect:CGRectMake(0,0,imageMaxWidth, image.size.height / (float)image.size.width * imageMaxWidth )];
@@ -48,13 +48,11 @@
  @param image 需要获取格式的图片
  @return 返回图片格式
  */
-+ (NSString *)imageFormat:(UIImage *)image{
++ (NSString *)clImageFormat:(UIImage *)image{
     
     uint8_t c;
     NSData *data = UIImageJPEGRepresentation(image , 1);
     [data getBytes:&c length:1];
-    
-    
     
     switch (c) {
             

@@ -52,10 +52,15 @@
 
 -(void)initUserInfo{
 //    NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];    NSDictionary *userDic = [NSDictionary dictionaryWithContentsOfFile:path];
-    CLUserModel *userModel = [CLUserModel sharedUserModel];
-    CLUserModel *user = [[CLUserModel alloc]initWithDictionary:userDic error:nil];
-    userModel = user;
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"userInfo"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    if (data) {
+        NSDictionary *userDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:nil];
+        CLUserModel *userModel = [CLUserModel sharedUserModel];
+        CLUserModel *user = [[CLUserModel alloc]initWithDictionary:userDic error:nil];
+        [userModel setUserInfo:user];
+    }
+
 }
 - (void)initAppConfigure:(NSDictionary *)launchOptions
 {

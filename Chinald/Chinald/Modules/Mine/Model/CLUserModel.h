@@ -22,4 +22,6 @@
 @property(nonatomic, assign)double saveTree;  //!<拯救树
 
 + (instancetype)sharedUserModel;
+
+-(void)setUserInfo:(CLUserModel *)userMode;
 @end

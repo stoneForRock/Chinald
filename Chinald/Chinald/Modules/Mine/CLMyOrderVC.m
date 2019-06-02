@@ -126,6 +126,35 @@
         _articleView.frame = CGRectMake(pageIndex * (ScreenFullWidth / 5.0) + 5, _selectButton.frame.origin.y + _selectButton.frame.size.height,(ScreenFullWidth / 5.0) - 10 , 2);
         
     }];
+    [_selectButton setTitleColor:Color7 forState:0];
+    switch (pageIndex) {
+        case 0:
+            [_allOrderButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
+
+            _selectButton = _allOrderButton;
+            break;
+        case 1:
+            [_forPayOrderButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
+
+            _selectButton = _forPayOrderButton;
+            break;
+        case 2:
+            [_forSendOrderButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
+
+            _selectButton = _forSendOrderButton;
+            break;
+        case 3:
+            [_forGoodsButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
+
+            _selectButton = _forGoodsButton;
+            break;
+        case 4:
+            [_afterSalesButton setTitleColor:[UIColor zntThemeTintColor] forState:0];
+            _selectButton = _afterSalesButton;
+            break;
+        default:
+            break;
+    }
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

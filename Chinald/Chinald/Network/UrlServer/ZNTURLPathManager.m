@@ -64,7 +64,7 @@ NSString *const ZNTURLChangeNotification = @"ZNTURLChangeNotification";
     }
     
     //暂时更改
-    _serverBaseUrl = @"http://www.jujia168.com";
+    _serverBaseUrl = @"http://www.yizhimin.com";
     
     return _serverBaseUrl;
 }

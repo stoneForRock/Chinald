@@ -68,23 +68,24 @@ static int refreshTokenCount = 0;
     //设置请求数据的形式
 //    AFJSONRequestSerializer *requestSerizlizer = [AFJSONRequestSerializer serializer];
 //    kHTTPSession.requestSerializer = requestSerizlizer;
-//    [kHTTPSession.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
-
+//    [kHTTPSession.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    kHTTPSession.requestSerializer = [AFHTTPRequestSerializer serializer];
     //设置请求头 Token、Platform、DeviceId、Latlng
     
     //设置请求超时
     [kHTTPSession.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    kHTTPSession.requestSerializer.timeoutInterval = 10.f;
+    kHTTPSession.requestSerializer.timeoutInterval = 30.f;
     [kHTTPSession.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-//    [kHTTPSession.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
-//    [kHTTPSession setObservationInfo:(__bridge void * _Nullable)([NSDictionary dictionaryWithObjectsAndKeys:@"data",@"name", nil])];
+
     
     //设置接收数据的形式
-    AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
-    response.removesKeysWithNullValues = YES;
-    kHTTPSession.responseSerializer = response;
+//    AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
+//    response.removesKeysWithNullValues = YES;
+//    //AFHTTPResponseSerializer *response = [AFHTTPResponseSerializer serializer];
+//    kHTTPSession.responseSerializer = response;
 //    kHTTPSession.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",nil];//设置接收的数据形式
-    kHTTPSession.responseSerializer.acceptableContentTypes = [kHTTPSession.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    //kHTTPSession.responseSerializer.acceptableContentTypes = [kHTTPSession.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    kHTTPSession.responseSerializer = [AFHTTPResponseSerializer serializer];
 }
 
 //git 请求
@@ -123,7 +124,8 @@ static int refreshTokenCount = 0;
     
     NSURLSessionDataTask *task = [kHTTPSession POST:urlStr parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"url===%@===请求的结果====%@",urlStr,responseObject);
+              NSString *nameStr =  [[NSString alloc]initWithData: responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"url===%@===请求的结果====%@",urlStr,nameStr);
         
         
         if ([[responseObject objectForKey:@"ResCode"] intValue] == 1002){
@@ -165,15 +167,19 @@ static int refreshTokenCount = 0;
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if([[responseObject objectForKey:@"status"] intValue] == 1) {
-            complete(responseObject);
+        NSLog(@"responseObject==%@",responseObject);
+        NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:nil];
+        NSLog(@"dic==%@",dic);
+
+        if([[dic objectForKey:@"status"] intValue] == 1) {
+            complete(dic);
         }else{
-            theFailure([responseObject objectForKey:@"msg"]);
+            theFailure([dic objectForKey:@"msg"]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSHTTPURLResponse *errorRespomse = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.response"];
-       // NSLog(@"errorRespomse.statusCode==%ld",(long)errorRespomse.statusCode);
-        //NSLog(@"error.code==%ld",(long)error.code);
+    NSLog(@"errorRespomse.statusCode==%ld",(long)errorRespomse.statusCode);
+        NSLog(@"error.code==%ld",(long)error.code);
         
         if (errorRespomse.statusCode == 413) {
             theFailure(@"文件过大");
@@ -182,6 +188,7 @@ static int refreshTokenCount = 0;
         }else if ([error.localizedDescription isEqualToString:@"已取消"] || [error.localizedDescription isEqualToString:@"cancelled"]) {
             theFailure(@"");
         }else{
+            NSLog(@"error.localizedDescription==%@",error.localizedDescription);
             theFailure(error.localizedDescription);
             
         }

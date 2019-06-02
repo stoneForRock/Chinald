@@ -105,7 +105,7 @@ static NSString *forGoodsAddressCell = @"forGoodsAddressCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) return 0.5;
+    if (section == 0) return 3;
     return 10;
     
 }

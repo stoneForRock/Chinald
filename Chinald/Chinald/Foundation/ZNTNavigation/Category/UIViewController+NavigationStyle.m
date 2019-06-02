@@ -51,7 +51,7 @@
 
 
     [self ___viewDidLoad];
-    [self setNavigationStyle:ZNTNavigationStyleBlue];
+    [self setNavigationStyle:ZNTNavigationStyleNormal];
     if([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
         if (self.navigationController) {
             [self.navigationController.navigationBar setTranslucent:NO];
@@ -86,11 +86,11 @@
         case ZNTNavigationStyleNormal:
         {
             [self.navigationController.navigationBar setBarTintColor:ThemeNavBacgroundColor];
-            [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : Font16}];
-            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : Font16} forState:UIControlStateNormal];
-            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : Font16} forState:UIControlStateHighlighted];
-            [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : Font16} forState:UIControlStateNormal];
-            [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : Font16} forState:UIControlStateHighlighted];
+            [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : Color1, NSFontAttributeName : Font16}];
+            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : Color1, NSFontAttributeName : Font16} forState:UIControlStateNormal];
+            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : Color1, NSFontAttributeName : Font16} forState:UIControlStateHighlighted];
+            [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : Color1, NSFontAttributeName : Font16} forState:UIControlStateNormal];
+            [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : Color1, NSFontAttributeName : Font16} forState:UIControlStateHighlighted];
         }
             break;
         case ZNTNavigationStyleBlue:

@@ -16,8 +16,9 @@
 
     UIButton *backBtn = [UIButton backBtnInWhiteNavWithTitle:@""];
     [backBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [backBtn setImage:[UIImage imageNamed:@"icon_back"] forState:UIControlStateNormal];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-    backItem.tintColor = [UIColor whiteColor];
+    backItem.tintColor = Color5;
     return backItem;
 }
 

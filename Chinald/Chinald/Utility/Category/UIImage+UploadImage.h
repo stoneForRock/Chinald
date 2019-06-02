@@ -17,7 +17,7 @@
  @param maxLength 图片文件最大值
  @return 压缩后的文件
  */
-+ (UIImage *)compressImageQuality:(UIImage *)image toByte:(NSInteger)maxLength;
++ (UIImage *)clCompressImageQuality:(UIImage *)image toByte:(NSInteger)maxLength;
 
 /**
  图片格式
@@ -25,5 +25,5 @@
  @param image 需要获取格式的图片
  @return 返回图片格式
  */
-+ (NSString *)imageFormat:(UIImage *)image;
++ (NSString *)clImageFormat:(UIImage *)image;
 @end

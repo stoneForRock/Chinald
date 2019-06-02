@@ -36,13 +36,13 @@ INSTANCE_XIB_M(@"Message", CLMessageVC)
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     CLUserModel *userModel = [CLUserModel sharedUserModel];
-//    if (!userModel.token) {
-//        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
-//        [self presentViewController:loginVC animated:YES completion:^{
-//        }];
-//    }else{
-//        [self requestMessageList];
-//    }
+    if (!userModel.token) {
+        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+        [self presentViewController:loginVC animated:YES completion:^{
+        }];
+    }else{
+        [self requestMessageList];
+    }
 }
 -(void)requestMessageList{
     [self.view znt_showHUD:nil];

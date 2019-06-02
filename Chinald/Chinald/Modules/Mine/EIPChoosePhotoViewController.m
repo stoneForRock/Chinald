@@ -96,7 +96,7 @@
         
         _selectImage = [image fixOrientation];
 
-        self.entryInvoiceDataBlock([UIImage clCompressImageQuality:image toByte:250000]);
+        self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:250000]);
 
     }else{
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -105,7 +105,7 @@
 
         if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-            self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:300000]);
+            self.entryInvoiceDataBlock([UIImage clCompressImageQuality:_selectImage toByte:250000]);
 //            self.entryInvoiceDataBlock(image);
 
         }else{

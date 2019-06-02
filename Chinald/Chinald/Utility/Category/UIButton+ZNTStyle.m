@@ -55,8 +55,8 @@
     [btn.titleLabel setFont:Font13];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.6] forState:UIControlStateHighlighted];
-    [btn setImage:[[UIImage imageNamed:@"nav_btn_back_dark_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateNormal];
-    [btn setImage:[[UIImage imageNamed:@"nav_btn_back_dark_press"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateHighlighted];
+    [btn setImage:[[UIImage imageNamed:@"icon_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateNormal];
+    [btn setImage:[[UIImage imageNamed:@"icon_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateHighlighted];
     //这块逻辑好坑爹，没啥好的办法
     if (inNav) {
         if (isiPhone6Plus) {
@@ -137,41 +137,41 @@
     [btn.titleLabel setFont:Font14];
     [btn setTitleColor:ThemeColor forState:UIControlStateNormal];
     [btn setTitleColor:[ThemeColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
-    [btn setImage:[[UIImage imageNamed:@"nav_item_backarrow"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateNormal];
-    [btn setImage:[[UIImage imageNamed:@"nav_item_backarrow"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateHighlighted];
+    [btn setImage:[[UIImage imageNamed:@"icon_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateNormal];
+    [btn setImage:[[UIImage imageNamed:@"icon_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 0)] forState:UIControlStateHighlighted];
     //这块逻辑好坑爹，没啥好的办法
     if (inNav) {
         if (isiPhone6Plus) {
-            [btn setImageEdgeInsets:UIEdgeInsetsMake(0.667, -14, -0.667, 14)];
+            [btn setImageEdgeInsets:UIEdgeInsetsMake(0.667, -8, -0.667, 14)];
             if (isAboveiOS9) {
                 CGFloat space = 6;
                 if (title.length > 1) {
                     space = 0;
                 }
-                [btn setTitleEdgeInsets:UIEdgeInsetsMake(0.667, -7+space, -0.667, 7-space)];
+                [btn setTitleEdgeInsets:UIEdgeInsetsMake(0.667, -1+space, -0.667, 7-space)];
             }
             else {
-                [btn setTitleEdgeInsets:UIEdgeInsetsMake(0.667, -7, -0.667, 7)];
+                [btn setTitleEdgeInsets:UIEdgeInsetsMake(0.667, -1, -0.667, 7)];
             }
         }
         else {
-            [btn setImageEdgeInsets:UIEdgeInsetsMake(0.5, -12 , -0.5, 12)];
+            [btn setImageEdgeInsets:UIEdgeInsetsMake(0.5, -6 , -0.5, 12)];
             if (isAboveiOS9) {
                 CGFloat space = 5;
                 if (title.length > 1) {
                     space = 1;
                 }
-                [btn setTitleEdgeInsets:UIEdgeInsetsMake(1, -9+space , -1, 9-space)];
+                [btn setTitleEdgeInsets:UIEdgeInsetsMake(1, -3+space , -1, 9-space)];
             }
             else {
-                [btn setTitleEdgeInsets:UIEdgeInsetsMake(1, -9 , -1, 9)];
+                [btn setTitleEdgeInsets:UIEdgeInsetsMake(1, -3 , -1, 9)];
             }
         }
     }
     else {
         if (isiPhone6Plus) {
             [btn setImageEdgeInsets:UIEdgeInsetsMake(-0.333, 0, 0.333, 0)];
-            [btn setTitleEdgeInsets:UIEdgeInsetsMake(-0.333, 6, 0.333, -6)];
+            [btn setTitleEdgeInsets:UIEdgeInsetsMake(-0.333, 0, 0.333, -6)];
         }
         else {
             [btn setImageEdgeInsets:UIEdgeInsetsMake(-0.5, -4, 0.5, 4)];

@@ -12,6 +12,7 @@
 #import "UIImage+UploadImage.h"
 #import "CLTheGoodsAddressModel.h"
 #import "CLUserModel.h"
+#import "CLFeedbackRequest.h"
 #import <JSONModel.h>
 #import <AFNetworking.h>
 @implementation CLMineNetworking
@@ -19,8 +20,8 @@
  上传图片
  
  @param images 图片集
- @param parameters 上传的业务参数
- @param complete 上传结果
+ @param parameters 上传的业务参数 type 默认1，1为吐槽，2为用户头像，3为商品评论
+ @param complete 上传结果  {"status":1,"msg":0,"data":{"url":"http:\/\/www.chinald.com\/upload\/feedback\/20180402\/1522602586308923.png"}}
  @param theFailure 错误
  */
 + (void)clUploadImages:(NSArray *)images witheType:(NSDictionary *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
@@ -41,7 +42,7 @@
             if (images[i]) {
                 data = UIImageJPEGRepresentation(images[i], 0.85);
                 fileName = [NSString stringWithFormat:@"%@.%@",[[data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength] MD5],[UIImage clImageFormat:images[i]]];
-                [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"file%d",i+1] fileName:fileName mimeType:[UIImage clImageFormat:images[i]]];
+                [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:[UIImage clImageFormat:images[i]]];
                 
             }
         }
@@ -179,6 +180,22 @@
 + (void)addressDefault:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
     NSString *urlString = [NSString stringWithFormat:@"%@/address/default",[ZNTURLPathManager sharedURLPathManager].baseUrl];
     [self clPostRequestTheURL:urlString parameters:@{@"address_id":parameters.addressId,@"token":[CLUserModel sharedUserModel].token} theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
+        complete(resultsObj);
+    } theFailure:^(NSString *errorStr) {
+        theFailure(errorStr);
+    }];
+}
+
+/**
+ 我要吐槽
+ @param parameters 吐槽内容
+ @param complete 响应结果 {"status":1,"msg":0,"data":{}}
+ @param theFailure 错误信息
+ */
++ (void)feedback:(CLFeedbackRequest *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure{
+    NSString *urlString = [NSString stringWithFormat:@"%@/index/feedback",[ZNTURLPathManager sharedURLPathManager].baseUrl];
+    NSDictionary *dic = [parameters toDictionary];
+    [self clPostRequestTheURL:urlString parameters:dic theRequsetHeader:YES complete:^(NSMutableDictionary *resultsObj) {
         complete(resultsObj);
     } theFailure:^(NSString *errorStr) {
         theFailure(errorStr);

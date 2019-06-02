@@ -29,6 +29,10 @@ static NSString *shareTableViewCellString = @"CLMineShareTableViewCell";
 static NSString *otherTableViewCellString = @"CLMineOtherTableViewCell";
 
 INSTANCE_XIB_M(@"Mine", CLMineVC)
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [_mineTableView reloadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor blueColor];
@@ -71,8 +75,15 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
 
         cell.selectMineAccountCellBlock = ^(MineAccountSelectType accountCellSelectType) {
             if (accountCellSelectType == CL_MINE_ACCOUNT_MANAGEMENT) {
+                CLUserModel *userModel = [CLUserModel sharedUserModel];
+                if (!userModel.token) {
+                    ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+                    [weakSelf presentViewController:loginVC animated:YES completion:^{
+                    }];
+                }else{
+                    [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
 
-                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
+                }
             }
         };
         return cell;

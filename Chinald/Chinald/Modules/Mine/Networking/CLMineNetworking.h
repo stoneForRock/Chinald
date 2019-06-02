@@ -8,6 +8,7 @@
 
 #import "CLNetworkingRequestBase.h"
 @class CLTheGoodsAddressModel;
+@class CLFeedbackRequest;
 @interface CLMineNetworking : CLNetworkingRequestBase
 
 /**
@@ -78,4 +79,14 @@
  @param theFailure 错误信息
  */
 + (void)addressDefault:(CLTheGoodsAddressModel *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure;
+
+
+/**
+ 我要吐槽
+ @param parameters 吐槽内容
+ @param complete 响应结果
+ @param theFailure 错误信息
+ */
++ (void)feedback:(CLFeedbackRequest *)parameters complete:(void(^)(NSMutableDictionary *resultsObj))complete theFailure:(void(^)(NSString *errorCode))theFailure;
+
 @end

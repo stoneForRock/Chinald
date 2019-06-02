@@ -224,7 +224,7 @@
     
     if([[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLMainPageVC class]] || [[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLShoppingCartVC class]] || [[(UINavigationController *)viewController topViewController] isMemberOfClass:[CLMineVC class]])
     {
-        [[(UINavigationController *)viewController topViewController] setNavigationStyle:ZNTNavigationStyleBlue];
+        [[(UINavigationController *)viewController topViewController] setNavigationStyle:ZNTNavigationStyleNormal];
     }
     else
     {

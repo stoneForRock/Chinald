@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -186,14 +184,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-8b-tSJ">
-                                                <rect key="frame" x="23" y="399" width="329" height="0.0"/>
+                                                <rect key="frame" x="23" y="399" width="329" height="0.5"/>
                                                 <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="vbe-Rb-iO6"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkd-H6-BFf">
-                                                <rect key="frame" x="23" y="404" width="219" height="45"/>
+                                                <rect key="frame" x="23" y="404.5" width="219" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="bRj-69-tq0"/>
                                                 </constraints>
@@ -204,15 +202,15 @@
                                                     <outlet property="delegate" destination="aYn-hW-M8Y" id="4fr-hf-6Vp"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHG-j7-BqA">
-                                                <rect key="frame" x="242" y="412" width="110" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHG-j7-BqA">
+                                                <rect key="frame" x="242" y="412.5" width="110" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="FSq-9F-5Ax"/>
                                                     <constraint firstAttribute="height" constant="30" id="Vjc-nQ-JV2"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="获取短信验证码">
-                                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="loginBtn.layer.borderWidth">
@@ -227,7 +225,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-GT-B8k">
-                                                <rect key="frame" x="242" y="449" width="110" height="44"/>
+                                                <rect key="frame" x="242" y="449.5" width="110" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="VBk-1P-t2b"/>
                                                     <constraint firstAttribute="width" constant="110" id="kuq-JK-sQM"/>
@@ -277,7 +275,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-36-v3I">
-                                                <rect key="frame" x="23" y="449" width="329" height="0.0"/>
+                                                <rect key="frame" x="23" y="449.5" width="329" height="0.5"/>
                                                 <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="s6S-Ve-FAB"/>

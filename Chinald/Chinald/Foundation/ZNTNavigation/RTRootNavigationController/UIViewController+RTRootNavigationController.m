@@ -54,7 +54,7 @@
                                        action:(SEL)action
 {
     UIButton *defaultBackButton;
-    if (CGColorEqualToColor(self.navigationController.navigationBar.barTintColor.CGColor, ThemeColor.CGColor)) {
+    if (CGColorEqualToColor(self.navigationController.navigationBar.barTintColor.CGColor, Color1.CGColor)) {
         defaultBackButton = [UIButton backBtnInWhiteNavWithTitle:self.backBtnTitle inNav:YES];
         [defaultBackButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
