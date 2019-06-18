@@ -15,7 +15,8 @@
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
-@interface CLMineVC ()<UITableViewDelegate>
+#import <UShareUI/UShareUI.h>
+@interface CLMineVC ()
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;
 @property(nonatomic, strong) NSArray *cellTitleStringArray; //!<
 @property(nonatomic, assign) NSInteger selectOrderType;  //!<
@@ -29,17 +30,24 @@ static NSString *shareTableViewCellString = @"CLMineShareTableViewCell";
 static NSString *otherTableViewCellString = @"CLMineOtherTableViewCell";
 
 INSTANCE_XIB_M(@"Mine", CLMineVC)
-- (void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [_mineTableView reloadData];
+    CLUserModel *userModel = [CLUserModel sharedUserModel];
+    if (!userModel.token) {
+        ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
+        [self presentViewController:loginVC animated:YES completion:^{
+        }];
+    }else{
+        [_mineTableView reloadData];
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = YES;
-    if (kiOS10Later){
-//        _mineTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 11, *)){
+        _mineTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
@@ -69,21 +77,14 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         CLMineAccountInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:accountInfoCellString forIndexPath:indexPath];
         if (!cell) {
             cell = [[CLMineAccountInfoTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:accountInfoCellString];
-
+            
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+        
         cell.selectMineAccountCellBlock = ^(MineAccountSelectType accountCellSelectType) {
             if (accountCellSelectType == CL_MINE_ACCOUNT_MANAGEMENT) {
-                CLUserModel *userModel = [CLUserModel sharedUserModel];
-                if (!userModel.token) {
-                    ZNTLoginVC *loginVC = [ZNTLoginVC instanceFromXib];
-                    [weakSelf presentViewController:loginVC animated:YES completion:^{
-                    }];
-                }else{
-                    [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
-
-                }
+                
+                [weakSelf performSegueWithIdentifier:@"mineToAccountManagementVC" sender:nil];
             }
         };
         return cell;
@@ -98,7 +99,7 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         cell.selectOrderTypeBlock = ^(NSInteger orderType) {
             weakSelf.selectOrderType = orderType;
             [weakSelf performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
-
+            
         };
         return cell;
     }
@@ -107,24 +108,77 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         if (!cell) {
             cell = [[CLMineShareTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:shareTableViewCellString];
         }
+        cell.selectShareOrMyQrcodeBlock = ^(ShareQrcodeItemType orderType) {
+            if (orderType == CL_MINE_QRCODE) {
+                [weakSelf performSegueWithIdentifier:@"mineVCToMyQrcodeVC" sender:nil];
+            }
+            if (orderType == CL_MINE_SHARE) {
+                //                [weakSelf performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
+                //                [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+                //                    [weakSelf shareTextToPlatformType:platformType];
+                //                }];
+                
+                [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ),@(UMSocialPlatformType_WechatSession)]];
+                [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+                    // 根据获取的platformType确定所选平台进行下一步操作
+                    [weakSelf shareTextToPlatformType:platformType];
+                    
+                }];
+            }
+            
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+        
         return cell;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:otherTableViewCellString forIndexPath:indexPath];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:otherTableViewCellString];
-
+        
     }
+    [[cell viewWithTag:1000] removeFromSuperview];
+    UIView *hLineView = [[UIView alloc]init];
+    hLineView.tag = 1000;
+    hLineView.backgroundColor = CLLineColor;
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        hLineView.frame = CGRectMake(17, cell.bounds.size.height - 0.5, ScreenFullWidth - 30, 0.5);
+        [cell addSubview:hLineView];
+        
+    }
+    if (indexPath.section == 3 && indexPath.row != 2) {
+        hLineView.frame = CGRectMake(0, cell.bounds.size.height - 0.5, ScreenFullWidth, 0.5);
+        [cell addSubview:hLineView];
+        
+    }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
     cell.textLabel.font = [UIFont zntFont15];
     cell.textLabel.text = _cellTitleStringArray[indexPath.section][indexPath.row];
     return cell;
 }
+
+//分享文本消息
+- (void)shareTextToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    //设置文本
+    messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
+        }
+    }];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     if (indexPath.section == 1) {
@@ -134,6 +188,9 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         }
     }
     if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"mineVCToAboutUsVC" sender:nil];
+        }
         if (indexPath.row == 1) {
             [self performSegueWithIdentifier:@"mineVCToFeedbackVC" sender:nil];
         }
@@ -141,11 +198,10 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
             [self performSegueWithIdentifier:@"mineVCToSetVC" sender:nil];
         }
     }
-
+    
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) return 220;
+    if (indexPath.section == 0) return 200;
     if (indexPath.section == 1 && indexPath.row == 1) return 75;
     if (indexPath.section == 2) return 50;
     return 44;

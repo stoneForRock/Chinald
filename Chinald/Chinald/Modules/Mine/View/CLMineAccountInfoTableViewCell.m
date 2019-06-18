@@ -55,7 +55,7 @@
             make.width.mas_equalTo((ScreenFullWidth - 24) / 2.0);
         }];
         [UIView clAddShadowToView:self.amountBackgroundView withOpacity:1 shadowRadius:10 andCornerRadius:12 width:ScreenFullWidth - 24];
-
+        
         self.saveTreeButton = [[UIButton alloc]init];
         [self.saveTreeButton setTitleColor:Color1 forState:0];
         [self.saveTreeButton addTarget:self action:@selector(saveTreeButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -120,22 +120,33 @@
         
         [self.contentView addSubview:buttonBackgroundView];
         [buttonBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.contentView.mas_right).with.offset(25);
-            make.top.equalTo(self.contentView.mas_top).with.offset(62);
-            make.width.mas_offset(120);
-            make.height.mas_offset(26);
+            make.right.equalTo(self.contentView.mas_right).with.offset(10);
+            make.top.equalTo(self.contentView.mas_top).with.offset(64);
+            make.width.mas_offset(95);
+            make.height.mas_offset(22);
         }];
-        buttonBackgroundView.layer.cornerRadius = 13;
+        buttonBackgroundView.layer.cornerRadius = 11;
         buttonBackgroundView.layer.borderColor = [UIColor whiteColor].CGColor;
         buttonBackgroundView.layer.borderWidth = 1;
         buttonBackgroundView.layer.masksToBounds = YES;
         
+        
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.image = [UIImage imageNamed:@"icon_more_white"];
+        [self.contentView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.contentView.mas_right).with.offset(-3);
+            make.top.equalTo(self.contentView.mas_top).with.offset(68);
+            make.width.mas_offset(15);
+            make.height.mas_offset(15);
+        }];
         UIButton *managementButton = [[UIButton alloc]init];
         managementButton.titleLabel.font = [UIFont zntFont12];
         [managementButton addTarget:self action:@selector(managementButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         [managementButton setTitleColor:ThemeBacgroundColor forState:0];
         [managementButton setTitle:@"账户管理" forState:0];
+        //        [managementButton setImage:[UIImage imageNamed:@"icon_more_white"] forState:0];
         managementButton.backgroundColor = [UIColor clearColor];
         managementButton.layer.opaque = YES;
         
@@ -143,7 +154,7 @@
         [managementButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.contentView.mas_right).with.offset(0);
             make.top.equalTo(self.contentView.mas_top).with.offset(60);
-            make.width.mas_offset(95);
+            make.width.mas_offset(90);
             make.height.mas_offset(31);
         }];
     }
@@ -151,9 +162,9 @@
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-
+    
     self.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1];
-
+    
     
     CLUserModel *userModel = [CLUserModel sharedUserModel];
     [self.userHeadIcon sd_setImageWithURL:[NSURL URLWithString:userModel.headIcon]];
@@ -161,7 +172,7 @@
     self.nicknameLabel.text = userModel.name;
     [self.amountButton setTitle:[NSString stringWithFormat:@"%.2f元\n营业额",userModel.haveSale] forState:0];
     [self.saveTreeButton setTitle:[NSString stringWithFormat:@"%.2f棵\n拯救树",userModel.saveTree] forState:0];
-
+    
 }
 -(void)amountButtonClick{
     if (self.selectMineAccountCellBlock) {
@@ -194,7 +205,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

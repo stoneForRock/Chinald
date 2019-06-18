@@ -30,16 +30,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange) name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewChange) name:UITextViewTextDidChangeNotification object:nil];
     self.navigationItem.title = @"编辑收货地址";
-
+    _changeDefaultButton.imageEdgeInsets = UIEdgeInsetsMake(0, ScreenFullWidth - 35, 0, 0);
     if (!_addressModel.addressId) {
         _addressModel = [[CLTheGoodsAddressModel alloc]init];
+        [_changeDefaultButton setImage:[UIImage imageNamed:_addressModel.isDefault ?@"icon_address_default" : @"icon_address_no_default"] forState:0];
     }else{
         _forGoodsUserNameTextField.text = _addressModel.name;
         _forGoodsUserPhoneTextField.text = _addressModel.phone;
         if (_addressModel.province) {
             [_selectCityButton setTitleColor:[UIColor blackColor]forState:0];
             NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@",_addressModel.province ? _addressModel.province : @"" ,_addressModel.city ? _addressModel.city : @"",_addressModel.area ? _addressModel.area : @""];
-        [self.selectCityButton setTitle:addressString forState:0];
+            [self.selectCityButton setTitle:addressString forState:0];
         }
         if (_addressModel.detail) {
             _detailAddressTextView.text = _addressModel.detail;
@@ -81,7 +82,7 @@
             if (![NSString clCheckNumberInput:_forGoodsUserPhoneTextField.text]) {
                 return NO;
             }
-
+            
         }
     }
     return YES;
@@ -91,7 +92,7 @@
     [_detailAddressTextView resignFirstResponder];
     [_forGoodsUserNameTextField resignFirstResponder];
     [_forGoodsUserPhoneTextField resignFirstResponder];
-   _addressPickerView = [[CLAddressPickerView alloc]initWithFrame:CGRectMake(0, 0, ScreenFullWidth, ScreenFullHeight)];
+    _addressPickerView = [[CLAddressPickerView alloc]initWithFrame:CGRectMake(0, 0, ScreenFullWidth, ScreenFullHeight)];
     
     [self.view.window addSubview:_addressPickerView];
     _addressPickerView.selectAddressClickBlock = ^{
@@ -106,10 +107,13 @@
         weakSelf.addressModel.cityCode = weakSelf.addressPickerView.cityCode;
         weakSelf.addressModel.areaCode = weakSelf.addressPickerView.areaCode;
     };
-
+    
 }
 - (IBAction)changeDefaultButtonClick:(id)sender {
+    UIButton *button = (UIButton *)sender;
     _addressModel.isDefault = !_addressModel.isDefault;
+    [button setImage:[UIImage imageNamed:_addressModel.isDefault ? @"icon_address_default" : @"icon_address_no_default"] forState:0];
+    
 }
 - (IBAction)saveAddressButtonClick:(id)sender {
     if (_addressModel.name == nil || _addressModel.name.length == 0) {
@@ -138,7 +142,7 @@
             [weakself.view znt_showToast:errorCode];
         }];
     }
-
+    
 }
 
 
@@ -146,7 +150,7 @@
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UITextViewTextDidChangeNotification object:nil];
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -154,13 +158,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

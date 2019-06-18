@@ -39,7 +39,22 @@ PODS:
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
   - SHSPhoneComponent (2.31)
-  - UTDID (1.0.0)
+  - UMCCommon (2.0.1)
+  - UMCSecurityPlugins (1.0.6)
+  - UMCShare/Core (6.9.5):
+    - UMCCommon
+  - UMCShare/Social/ReducedQQ (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
   - YTKKeyValueStore (0.1.2):
     - FMDB (~> 2.0)
   - YYText (1.0.7)
@@ -60,10 +75,38 @@ DEPENDENCIES:
   - ReactiveCocoa (= 2.5)
   - SDWebImage (= 3.8.1)
   - SHSPhoneComponent (~> 2.15)
-  - UTDID (~> 1.0.0)
+  - UMCCommon
+  - UMCSecurityPlugins
+  - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedSina
+  - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI
   - YTKKeyValueStore (= 0.1.2)
   - YYText
   - ZipArchive (~> 1.4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CocoaSecurity
+    - DACircularProgress
+    - DateTools
+    - FMDB
+    - GVUserDefaults
+    - JSONModel
+    - Mantle
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - ReactiveCocoa
+    - SDWebImage
+    - SHSPhoneComponent
+    - UMCCommon
+    - UMCSecurityPlugins
+    - UMCShare
+    - YTKKeyValueStore
+    - YYText
+    - ZipArchive
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -80,11 +123,13 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SHSPhoneComponent: fa4401ae7c34511669287e62739b3da7c4c49807
-  UTDID: 05c4737c8cf5c210e86d0235570816ed00e023e8
+  UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 8dd1bd94f9ad0dd4fb940dc1c579fc6b586d010e
+PODFILE CHECKSUM: b5548a3aacd93861f08a88c0254d3444767f9d3a
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.6.0.beta.2

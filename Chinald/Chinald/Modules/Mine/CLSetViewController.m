@@ -7,6 +7,7 @@
 //
 
 #import "CLSetViewController.h"
+#import <UShareUI/UShareUI.h>
 
 @interface CLSetViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *setTableView;
@@ -41,7 +42,7 @@
     
     if (indexPath.row == 0) {
         NSDictionary *versionDic = [[NSBundle mainBundle]infoDictionary];
-
+        
         cell.detailTextLabel.text = [NSString stringWithFormat:@"当前版本%@",[versionDic objectForKey:@"CFBundleShortVersionString"]];
     }
     if (indexPath.row == 2) {
@@ -69,10 +70,37 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak __typeof(self) weakSelf = self;
+    
+    if (indexPath.row == 1) {
+        [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ),@(UMSocialPlatformType_WechatSession)]];
+        [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+            // 根据获取的platformType确定所选平台进行下一步操作
+            [weakSelf shareTextToPlatformType:platformType];
+            
+        }];
+    }
     if (indexPath.row == 2) {
         [self clearCache];
     }
+}
+
+//分享文本消息
+- (void)shareTextToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    //设置文本
+    messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
     
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
+        }
+    }];
 }
 //确定清除缓存
 -(void)clearCache
@@ -108,7 +136,7 @@
     return 0.0001f;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-
+    
     return 0.0001f;
 }
 - (void)didReceiveMemoryWarning {
@@ -117,13 +145,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

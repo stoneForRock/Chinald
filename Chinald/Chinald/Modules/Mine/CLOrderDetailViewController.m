@@ -57,6 +57,9 @@ static NSString *orderGoodsTableViewCellString = @"orderGoodsTableViewCell";
         if (operationType == ORDER_WAITING_LOGISTICS) {
             [self performSegueWithIdentifier:@"orderDetailvcToLogisticsDetailVC" sender:nil];
         }
+        if (operationType == ORDER_WAITING_REFUND) {
+            [self performSegueWithIdentifier:@"orderDetailVCToRefundVC" sender:nil];
+        }
     };
 }
 
