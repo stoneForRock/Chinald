@@ -15,6 +15,8 @@
 #import "CLMineOrderAboutTableViewCell.h"
 #import "CLMineShareTableViewCell.h"
 #import "CLMineAccountInfoTableViewCell.h"
+#import "CLAboutUsVC.h"
+#import "CLMyQrCodeVC.h"
 #import <UShareUI/UShareUI.h>
 @interface CLMineVC ()
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;
@@ -99,7 +101,8 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         cell.selectOrderTypeBlock = ^(NSInteger orderType) {
             weakSelf.selectOrderType = orderType;
             [weakSelf performSegueWithIdentifier:@"mineVCToOrderVC" sender:nil];
-            
+            CLMyQrCodeVC *qrCodeVC = [[UIStoryboard storyboardWithName:@"Mine" bundle:nil]instantiateViewControllerWithIdentifier:@"CLMyQrCodeVC"];
+            [weakSelf.navigationController pushViewController:qrCodeVC animated:YES];
         };
         return cell;
     }
@@ -110,6 +113,7 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
         }
         cell.selectShareOrMyQrcodeBlock = ^(ShareQrcodeItemType orderType) {
             if (orderType == CL_MINE_QRCODE) {
+                
                 [weakSelf performSegueWithIdentifier:@"mineVCToMyQrcodeVC" sender:nil];
             }
             if (orderType == CL_MINE_SHARE) {
@@ -189,7 +193,9 @@ INSTANCE_XIB_M(@"Mine", CLMineVC)
     }
     if (indexPath.section == 3) {
         if (indexPath.row == 0) {
-            [self performSegueWithIdentifier:@"mineVCToAboutUsVC" sender:nil];
+            CLAboutUsVC *aboutVC = [[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:@"CLAboutUsVC"];
+            [self.navigationController pushViewController:aboutVC animated:YES];
+            
         }
         if (indexPath.row == 1) {
             [self performSegueWithIdentifier:@"mineVCToFeedbackVC" sender:nil];

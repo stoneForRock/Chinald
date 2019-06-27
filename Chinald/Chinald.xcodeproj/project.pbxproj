@@ -24,6 +24,7 @@
 		C44696272081FB4600437E3B /* CLLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C44696262081FB4600437E3B /* CLLoginRequest.m */; };
 		C44C967220877CDA009ECCA5 /* CLAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */; };
 		C44C9675208783A2009ECCA5 /* CLAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C44C9674208783A2009ECCA5 /* CLAddressModel.m */; };
+		C454438B22B92E94003B858F /* CLMyQrCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C454438A22B92E94003B858F /* CLMyQrCodeVC.m */; };
 		C46B84DC22915E03001606B7 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C46B84D222915E02001606B7 /* selected@2x.png */; };
 		C46B84DD22915E03001606B7 /* picnumber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C46B84D322915E02001606B7 /* picnumber@2x.png */; };
 		C46B84DE22915E03001606B7 /* unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C46B84D422915E02001606B7 /* unselected@2x.png */; };
@@ -565,6 +566,8 @@
 		C44C967120877CDA009ECCA5 /* CLAddressPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressPickerView.m; sourceTree = "<group>"; };
 		C44C9673208783A2009ECCA5 /* CLAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAddressModel.h; sourceTree = "<group>"; };
 		C44C9674208783A2009ECCA5 /* CLAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAddressModel.m; sourceTree = "<group>"; };
+		C454438922B92E93003B858F /* CLMyQrCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMyQrCodeVC.h; sourceTree = "<group>"; };
+		C454438A22B92E94003B858F /* CLMyQrCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMyQrCodeVC.m; sourceTree = "<group>"; };
 		C46B84CF22915E02001606B7 /* PhotoAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumVC.h; sourceTree = "<group>"; };
 		C46B84D022915E02001606B7 /* PhotoAlbumSelectorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumSelectorVC.h; sourceTree = "<group>"; };
 		C46B84D222915E02001606B7 /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
@@ -1996,6 +1999,8 @@
 				C43B98F0208F7E8200D79BE0 /* CLSetViewController.m */,
 				C490CC7F2090CE4F00D6DB09 /* CLAboutUsVC.h */,
 				C490CC802090CE4F00D6DB09 /* CLAboutUsVC.m */,
+				C454438922B92E93003B858F /* CLMyQrCodeVC.h */,
+				C454438A22B92E94003B858F /* CLMyQrCodeVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -3708,6 +3713,7 @@
 				E59C7F6720596CE100075053 /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				E59C7F8020596CE100075053 /* ZXUPCEANWriter.m in Sources */,
 				C4155DDD229A8A470046B74E /* CLOrderNetworking.m in Sources */,
+				C454438B22B92E94003B858F /* CLMyQrCodeVC.m in Sources */,
 				E59C7F7220596CE100075053 /* ZXSMSMMSResultParser.m in Sources */,
 				E59C7ECA20596CE100075053 /* ZXAztecToken.m in Sources */,
 				E59C7EF720596CE100075053 /* ZXDecodeHints.m in Sources */,

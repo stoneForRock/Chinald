@@ -1684,6 +1684,42 @@
             </objects>
             <point key="canvasLocation" x="2280.8000000000002" y="1127.5862068965519"/>
         </scene>
+        <!--My Qr CodeVC-->
+        <scene sceneID="f6m-sn-n5m">
+            <objects>
+                <viewController storyboardIdentifier="CLMyQrCodeVC" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ajv-YR-Xip" customClass="CLMyQrCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTP-Pi-sqX"/>
+                        <viewControllerLayoutGuide type="bottom" id="vhr-l1-INT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L6S-CL-ZQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYh-PE-l8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2912" y="1126"/>
+        </scene>
+        <!--About UsVC-->
+        <scene sceneID="vOM-Vk-SSo">
+            <objects>
+                <viewController storyboardIdentifier="CLAboutUsVC" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pBB-2X-iEt" customClass="CLAboutUsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IQJ-gE-h5W"/>
+                        <viewControllerLayoutGuide type="bottom" id="JH4-ke-yQM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QXL-rX-uht">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XA6-kC-NTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3595" y="1124"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon_aft_call" width="50" height="50"/>
